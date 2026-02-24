@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -16,14 +17,19 @@ const navigation = [
 
 export default function Header() {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header className="border-b border-border bg-white sticky top-0 z-50">
-      <nav className="mx-auto max-w-7xl px-6 lg:px-8">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo/Brand */}
-          <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-foreground">
+          <div className="flex min-w-0 items-center">
+            <Link href="/" className="truncate text-base font-bold text-foreground sm:text-xl">
               <span className="text-primary">Apex</span> Garments Ltd.
             </Link>
           </div>
@@ -47,32 +53,54 @@ export default function Header() {
           </div>
 
           {/* CTA Button */}
-          <div className="flex items-center gap-x-4">
+          <div className="hidden items-center gap-x-4 lg:flex">
             <Link href="/inquiry">
               <Button>Request Evaluation</Button>
             </Link>
           </div>
+
+          {/* Mobile Menu Toggle */}
+          <div className="flex items-center lg:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              <span className="text-xl leading-none">{isMobileMenuOpen ? "×" : "☰"}</span>
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
-        <div className="lg:hidden py-4 space-y-1">
-          {navigation.map((item) => {
-            const isActive = pathname === item.href;
-            return (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isActive
-                    ? "bg-primary/10 text-primary"
-                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                }`}
-              >
-                {item.name}
+        {isMobileMenuOpen && (
+          <div id="mobile-navigation" className="lg:hidden py-4 space-y-1">
+            {navigation.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    isActive
+                      ? "bg-primary/10 text-primary"
+                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+
+            <div className="pt-3">
+              <Link href="/inquiry" className="block">
+                <Button className="w-full">Request Evaluation</Button>
               </Link>
-            );
-          })}
-        </div>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
