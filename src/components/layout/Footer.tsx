@@ -11,10 +11,10 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold text-foreground mb-4">
-              <span className="text-primary">Apex</span> Garments Ltd.
+              <span className="text-primary">Source</span>Loom
             </h3>
             <p className="text-sm text-muted-foreground mb-4 max-w-md">
-              Professional garment manufacturer specializing in knit, woven, and
+              Professional apparel manufacturer specializing in knit, woven, and
               denim apparel for EU, Canadian, and Australian markets. Committed
               to quality, compliance, and transparent sourcing partnerships.
             </p>
@@ -77,10 +77,10 @@ export default function Footer() {
               <p>Dhaka, Bangladesh</p>
               <p className="mt-4">
                 <a
-                  href="mailto:export@apexgarments.com"
+                  href="mailto:export@sourceloom.me"
                   className="hover:text-primary transition-colors"
                 >
-                  export@apexgarments.com
+                  export@sourceloom.me
                 </a>
               </p>
               <p>
@@ -98,7 +98,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Apex Garments Ltd. All rights reserved.
+            © {currentYear} SourceLoom. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link

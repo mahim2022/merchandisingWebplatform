@@ -140,7 +140,7 @@ export default function InquiryPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6">Production Evaluation Inquiry</h1>
           <p className="text-lg text-muted-foreground">
@@ -151,17 +151,17 @@ export default function InquiryPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="section-container">
+      <section className="section-container pattern-grid">
         <div className="grid gap-6 md:grid-cols-3 mb-12">
           <Card>
             <CardContent className="pt-6 text-center">
               <Mail className="h-8 w-8 text-primary mx-auto mb-3" />
               <h4 className="font-semibold mb-2">Email</h4>
               <a
-                href="mailto:export@apexgarments.com"
+                href="mailto:export@sourceloom.me"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                export@apexgarments.com
+                export@sourceloom.me
               </a>
             </CardContent>
           </Card>
@@ -543,10 +543,10 @@ export default function InquiryPage() {
 
         {/* Why Choose Us */}
         <div className="mt-12 max-w-4xl mx-auto">
-          <Card className="bg-muted/30">
+          <Card className="gradient-accent">
             <CardHeader>
               <CardTitle className="text-center">
-                Why Buyers Choose Apex Garments
+                Why Buyers Choose SourceLoom
               </CardTitle>
             </CardHeader>
             <CardContent>

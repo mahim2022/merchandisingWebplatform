@@ -342,12 +342,12 @@ For questions about this codebase:
 
 For factory inquiries:
 - Use the inquiry form at `/inquiry`
-- Email: export@apexgarments.com
+- Email: export@sourceloom.me
 - Phone: +880 1234 567 890
 
 ## 📜 License
 
-This is a proprietary B2B website for Apex Garments Ltd. All rights reserved.
+This is a proprietary B2B website for SourceLoom. All rights reserved.
 
 ---
 

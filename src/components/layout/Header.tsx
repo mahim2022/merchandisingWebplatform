@@ -30,7 +30,7 @@ export default function Header() {
           {/* Logo/Brand */}
           <div className="flex min-w-0 items-center">
             <Link href="/" className="truncate text-base font-bold text-foreground sm:text-xl">
-              <span className="text-primary">Apex</span> Garments Ltd.
+              <span className="text-primary">Source</span>Loom
             </Link>
           </div>
 

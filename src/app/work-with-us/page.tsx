@@ -8,7 +8,7 @@ import { ProcessStep } from "@/types";
 export const metadata: Metadata = {
   title: "How to Work With Us",
   description:
-    "Step-by-step sourcing process, requirements from buyers, communication workflow, payment terms, and how to start production with Apex Garments Ltd.",
+    "Step-by-step sourcing process, requirements from buyers, communication workflow, payment terms, and how to start production with SourceLoom.",
 };
 
 export default function WorkWithUsPage() {
@@ -72,7 +72,7 @@ export default function WorkWithUsPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6">How to Work With Us</h1>
           <p className="text-lg text-muted-foreground">
@@ -91,7 +91,7 @@ export default function WorkWithUsPage() {
       </section>
 
       {/* Requirements from Buyers */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container gradient-accent">
         <h2 className="mb-8 text-center">What We Need From You</h2>
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
@@ -148,7 +148,7 @@ export default function WorkWithUsPage() {
       </section>
 
       {/* Communication Workflow */}
-      <section className="section-container">
+      <section className="section-container pattern-grid">
         <h2 className="mb-8 text-center">Communication & Updates</h2>
         <Card>
           <CardContent className="pt-6">
@@ -197,7 +197,7 @@ export default function WorkWithUsPage() {
       </section>
 
       {/* Payment Terms */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container pattern-dots">
         <h2 className="mb-8 text-center">Payment Terms & Policy</h2>
         <Card>
           <CardHeader>
@@ -283,7 +283,7 @@ export default function WorkWithUsPage() {
       </section>
 
       {/* Additional Services */}
-      <section className="section-container">
+      <section className="section-container gradient-subtle">
         <h2 className="mb-8 text-center">Additional Services</h2>
         <div className="grid gap-6 md:grid-cols-3">
           <Card>

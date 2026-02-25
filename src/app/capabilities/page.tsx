@@ -53,7 +53,7 @@ export default function CapabilitiesPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6">Manufacturing Capabilities</h1>
           <p className="text-lg text-muted-foreground">
@@ -65,7 +65,7 @@ export default function CapabilitiesPage() {
       </section>
 
       {/* Knit Capabilities */}
-      <section id="knit" className="section-container">
+      <section id="knit" className="section-container pattern-grid">
         <div className="flex items-center gap-4 mb-8">
           <Shirt className="h-10 w-10 text-primary" />
           <div>
@@ -124,7 +124,7 @@ export default function CapabilitiesPage() {
       </section>
 
       {/* Woven Capabilities */}
-      <section id="woven" className="section-container bg-muted/30">
+      <section id="woven" className="section-container gradient-accent">
         <div className="flex items-center gap-4 mb-8">
           <Scan className="h-10 w-10 text-primary" />
           <div>
@@ -242,7 +242,7 @@ export default function CapabilitiesPage() {
       </section>
 
       {/* Stitch & Machine Capabilities */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container pattern-dots">
         <h2 className="mb-8 text-center">Stitch & Machine Capabilities</h2>
         <Card>
           <CardContent className="pt-6">
@@ -264,7 +264,7 @@ export default function CapabilitiesPage() {
       </section>
 
       {/* Sampling Policy */}
-      <section className="section-container">
+      <section className="section-container gradient-subtle">
         <h2 className="mb-8 text-center">Sampling Policy</h2>
         <div className="grid gap-6 md:grid-cols-3">
           <Card>

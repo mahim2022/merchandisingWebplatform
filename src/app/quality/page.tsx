@@ -39,7 +39,7 @@ export default function QualityPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <ShieldCheck className="h-16 w-16 text-primary mx-auto mb-6" />
           <h1 className="mb-6">Quality Control Process</h1>
@@ -97,7 +97,7 @@ export default function QualityPage() {
       </section>
 
       {/* Raw Material Inspection */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container gradient-accent">
         <h2 className="mb-8">Raw Material Inspection</h2>
         <Card>
           <CardHeader>
@@ -147,7 +147,7 @@ export default function QualityPage() {
       </section>
 
       {/* Inline QC */}
-      <section className="section-container">
+      <section className="section-container pattern-grid">
         <h2 className="mb-8">Inline Quality Checks</h2>
         <Card>
           <CardHeader>
@@ -231,7 +231,7 @@ export default function QualityPage() {
       </section>
 
       {/* Final Inspection & AQL */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container pattern-dots">
         <h2 className="mb-8">Final Inspection & AQL Standards</h2>
         <Card>
           <CardHeader>
@@ -314,7 +314,7 @@ export default function QualityPage() {
       </section>
 
       {/* Defect Handling & Rework */}
-      <section className="section-container">
+      <section className="section-container gradient-subtle">
         <h2 className="mb-8">Defect Handling & Rework Policy</h2>
         <div className="grid gap-6 md:grid-cols-2">
           <Card>

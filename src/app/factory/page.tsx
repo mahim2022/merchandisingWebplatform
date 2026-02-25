@@ -42,7 +42,7 @@ export default function FactoryPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6">Factory Overview</h1>
           <p className="text-lg text-muted-foreground">
@@ -64,14 +64,14 @@ export default function FactoryPage() {
       </section>
 
       {/* Company Background */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container gradient-accent">
         <h2 className="mb-8 text-center">Company Background</h2>
         <Card>
           <CardContent className="pt-6">
             <div className="space-y-6 text-muted-foreground">
               <p>
                 <strong className="text-foreground font-semibold">
-                  Apex Garments Ltd.
+                  SourceLoom
                 </strong>{" "}
                 was established in 2008 with a focus on producing quality knit,
                 woven, and denim garments for international markets. Over 17+ years,
@@ -95,7 +95,7 @@ export default function FactoryPage() {
       </section>
 
       {/* Management Team */}
-      <section className="section-container">
+      <section className="section-container pattern-grid">
         <h2 className="mb-8 text-center">Management Team</h2>
         <div className="grid gap-6 md:grid-cols-3">
           <Card>
@@ -173,7 +173,7 @@ export default function FactoryPage() {
       </section>
 
       {/* Infrastructure */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container pattern-dots">
         <h2 className="mb-8 text-center">Infrastructure & Facilities</h2>
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
@@ -247,7 +247,7 @@ export default function FactoryPage() {
       </section>
 
       {/* Sustainability Practices */}
-      <section className="section-container">
+      <section className="section-container gradient-subtle">
         <h2 className="mb-8 text-center">Sustainability Practices</h2>
         <Card>
           <CardContent className="pt-6">
@@ -289,7 +289,7 @@ export default function FactoryPage() {
       </section>
 
       {/* Values Statement */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container gradient-accent">
         <h2 className="mb-8 text-center">Our Values</h2>
         <div className="grid gap-6 md:grid-cols-3">
           <Card className="text-center">

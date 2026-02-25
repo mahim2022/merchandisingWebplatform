@@ -11,16 +11,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Apex Garments Ltd. - B2B Garment Manufacturing & Apparel Sourcing",
-    template: "%s | Apex Garments Ltd.",
+    default: "SourceLoom - B2B Apparel Manufacturing & Sourcing Platform",
+    template: "%s | SourceLoom",
   },
   description:
-    "Professional garment manufacturer for EU, Canadian, and Australian markets. Evaluate our manufacturing capability, compliance, capacity, lead times, and quality control. WRAP certified, BSCI compliant facility.",
+    "Professional apparel manufacturer for EU, Canadian, and Australian markets. Evaluate our manufacturing capability, compliance, capacity, lead times, and quality control. WRAP certified, BSCI compliant facility.",
   keywords: [
-    "garment factory",
-    "apparel manufacturing",
+    "apparel sourcing platform",
+    "garment manufacturer",
     "clothing manufacturer",
-    "B2B garment sourcing",
+    "B2B apparel sourcing",
     "overseas apparel production",
     "knit garments",
     "woven garments",
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Apex Garments Ltd.",
-    title: "Professional Garment Manufacturing & Apparel Sourcing",
+    siteName: "SourceLoom",
+    title: "Professional Apparel Manufacturing & Sourcing Platform",
     description:
-      "Evaluate manufacturing capability, compliance, and capacity for your apparel sourcing needs. WRAP certified B2B garment factory.",
+      "Evaluate manufacturing capability, compliance, and capacity for your apparel sourcing needs. WRAP certified B2B apparel manufacturer.",
   },
 };
 

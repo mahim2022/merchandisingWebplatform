@@ -86,14 +86,14 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6">
             Evaluate Our Manufacturing Capability{" "}
             <span className="text-primary">Before You Inquire</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Professional garment manufacturer for EU, Canadian, and Australian
+            Professional apparel manufacturer for EU, Canadian, and Australian
             markets. Transparent data on capabilities, capacity, compliance, and
             quality control to support your sourcing decisions.
           </p>
@@ -105,21 +105,21 @@ export default function Home() {
               View Manufacturing Capabilities
             </CTAButton>
           </div>
-          <div className="mt-10 overflow-hidden rounded-lg border border-border shadow-sm">
-            <Image
-              src="/images/home/hero-factory-floor.jpg"
-              alt="Garment production line inside factory floor"
-              width={2400}
-              height={1400}
-              className="h-auto w-full object-cover"
-              priority
-            />
-          </div>
+        </div>
+        <div className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-lg border border-border shadow-lg">
+          <Image
+            src="/images/home/hero-factory-floor.jpg"
+            alt="Garment production line inside factory floor"
+            width={960}
+            height={640}
+            className="h-auto w-full object-cover"
+            priority
+          />
         </div>
       </section>
 
       {/* Key Metrics Section */}
-      <section className="section-container">
+      <section className="section-container pattern-dots">
         <div className="section-header">
           <h2>Manufacturing At A Glance</h2>
           <p className="mt-4 text-muted-foreground">
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       {/* Manufacturing Capabilities Summary */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container gradient-subtle">
         <div className="section-header">
           <h2>Manufacturing Capabilities</h2>
           <p className="mt-4 text-muted-foreground">
@@ -142,7 +142,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <Card className="hover:shadow-lg transition-shadow">
+          <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-knit.jpg"
@@ -174,7 +174,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-lg transition-shadow">
+          <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-woven.jpg"
@@ -206,7 +206,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-lg transition-shadow">
+          <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-denim.jpg"
@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* Compliance & Certifications */}
-      <section className="section-container">
+      <section className="section-container gradient-accent">
         <div className="section-header">
           <ShieldCheck className="h-12 w-12 text-primary mx-auto mb-4" />
           <h2>Compliance & Certifications</h2>
@@ -274,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* Production Process Timeline */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container pattern-grid">
         <div className="section-header">
           <h2>Production Process Overview</h2>
           <p className="mt-4 text-muted-foreground">

@@ -51,8 +51,8 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     
     await resend.emails.send({
-      from: 'inquiries@apexgarments.com',
-      to: 'export@apexgarments.com',
+      from: 'inquiries@sourceloom.me',
+      to: 'export@sourceloom.me',
       subject: `New Production Inquiry - ${validatedData.companyName}`,
       html: `
         <h2>New Production Inquiry Received</h2>

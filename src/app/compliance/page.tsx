@@ -115,7 +115,7 @@ export default function CompliancePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <ShieldCheck className="h-16 w-16 text-primary mx-auto mb-6" />
           <h1 className="mb-6">Compliance & Certifications</h1>
@@ -172,7 +172,7 @@ export default function CompliancePage() {
       </section>
 
       {/* Compliance Areas */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container gradient-accent">
         <h2 className="mb-8 text-center">Compliance Framework</h2>
         <div className="grid gap-6 md:grid-cols-2">
           {complianceAreas.map((area, index) => (
@@ -198,7 +198,7 @@ export default function CompliancePage() {
       </section>
 
       {/* Audit History */}
-      <section className="section-container">
+      <section className="section-container pattern-grid">
         <h2 className="mb-8 text-center">Audit History</h2>
         <Card>
           <CardHeader>
@@ -221,7 +221,7 @@ export default function CompliancePage() {
       </section>
 
       {/* Market-Specific Compliance */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container pattern-dots">
         <h2 className="mb-8 text-center">Market-Specific Compliance</h2>
         <div className="grid gap-6 md:grid-cols-3">
           <Card>
@@ -284,7 +284,7 @@ export default function CompliancePage() {
       </section>
 
       {/* Certificate Downloads */}
-      <section className="section-container">
+      <section className="section-container gradient-subtle">
         <h2 className="mb-8 text-center">Certificate Downloads</h2>
         <Card>
           <CardHeader>

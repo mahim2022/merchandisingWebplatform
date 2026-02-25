@@ -70,7 +70,7 @@ export default function CapacityPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6">Production Capacity & Lead Times</h1>
           <p className="text-lg text-muted-foreground">
@@ -91,7 +91,7 @@ export default function CapacityPage() {
       </section>
 
       {/* Monthly Output Capacity */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container gradient-accent">
         <h2 className="mb-8 text-center">Monthly Production Capacity</h2>
         <Card>
           <CardHeader>
@@ -155,7 +155,7 @@ export default function CapacityPage() {
       </section>
 
       {/* Sampling Lead Times */}
-      <section className="section-container">
+      <section className="section-container pattern-grid">
         <h2 className="mb-8 text-center">Sampling Lead Times</h2>
         <Card>
           <CardHeader>
@@ -175,7 +175,7 @@ export default function CapacityPage() {
       </section>
 
       {/* Bulk Production Lead Times */}
-      <section className="section-container bg-muted/30">
+      <section className="section-container pattern-dots">
         <h2 className="mb-8 text-center">Bulk Production Lead Times</h2>
         <Card>
           <CardHeader>
