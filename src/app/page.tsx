@@ -3,6 +3,7 @@ import CertificationBadge from "@/components/ui/CertificationBadge";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 import {
   Factory,
   Users,
@@ -104,6 +105,16 @@ export default function Home() {
               View Manufacturing Capabilities
             </CTAButton>
           </div>
+          <div className="mt-10 overflow-hidden rounded-lg border border-border shadow-sm">
+            <Image
+              src="/images/home/hero-factory-floor.jpg"
+              alt="Garment production line inside factory floor"
+              width={2400}
+              height={1400}
+              className="h-auto w-full object-cover"
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -132,6 +143,15 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <Card className="hover:shadow-lg transition-shadow">
+            <div className="overflow-hidden rounded-t-lg">
+              <Image
+                src="/images/home/capability-knit.jpg"
+                alt="Knit garment production and fabric handling"
+                width={1200}
+                height={900}
+                className="h-48 w-full object-cover"
+              />
+            </div>
             <CardHeader>
               <Shirt className="h-10 w-10 text-primary mb-4" />
               <CardTitle>Knit Garments</CardTitle>
@@ -155,6 +175,15 @@ export default function Home() {
           </Card>
 
           <Card className="hover:shadow-lg transition-shadow">
+            <div className="overflow-hidden rounded-t-lg">
+              <Image
+                src="/images/home/capability-woven.jpg"
+                alt="Woven garment manufacturing in factory"
+                width={1200}
+                height={900}
+                className="h-48 w-full object-cover"
+              />
+            </div>
             <CardHeader>
               <Scan className="h-10 w-10 text-primary mb-4" />
               <CardTitle>Woven Garments</CardTitle>
@@ -178,6 +207,15 @@ export default function Home() {
           </Card>
 
           <Card className="hover:shadow-lg transition-shadow">
+            <div className="overflow-hidden rounded-t-lg">
+              <Image
+                src="/images/home/capability-denim.jpg"
+                alt="Denim garment production and finishing"
+                width={1200}
+                height={900}
+                className="h-48 w-full object-cover"
+              />
+            </div>
             <CardHeader>
               <Users className="h-10 w-10 text-primary mb-4" />
               <CardTitle>Denim Products</CardTitle>
@@ -211,6 +249,15 @@ export default function Home() {
             Certified and audited for international markets
           </p>
         </div>
+        <div className="mx-auto mb-8 max-w-4xl overflow-hidden rounded-lg border border-border shadow-sm">
+          <Image
+            src="/images/home/compliance-audit.jpg"
+            alt="Factory compliance audit and quality documentation review"
+            width={1600}
+            height={1000}
+            className="h-auto w-full object-cover"
+          />
+        </div>
         <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
           <CertificationBadge name="WRAP Certified" />
           <CertificationBadge name="BSCI Compliant" />
@@ -242,6 +289,15 @@ export default function Home() {
       {/* Final CTA Section */}
       <section className="section-container">
         <div className="mx-auto max-w-3xl text-center rounded-lg border border-border bg-card p-12 shadow-sm">
+          <div className="mb-8 overflow-hidden rounded-lg border border-border">
+            <Image
+              src="/images/home/cta-shipment.jpg"
+              alt="Packed garments prepared for export shipment"
+              width={1600}
+              height={1000}
+              className="h-auto w-full object-cover"
+            />
+          </div>
           <h2 className="mb-4">Ready to Evaluate Our Factory?</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Submit a production evaluation request with your requirements. We
