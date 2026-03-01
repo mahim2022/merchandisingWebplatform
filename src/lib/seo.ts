@@ -14,7 +14,15 @@ export function getSiteUrl(): URL {
     : `https://${configuredUrl}`;
 
   try {
-    return new URL(normalizedUrl);
+    const parsedUrl = new URL(normalizedUrl);
+    const isLocalhost =
+      parsedUrl.hostname === "localhost" || parsedUrl.hostname === "127.0.0.1";
+
+    if (process.env.NODE_ENV === "production" && isLocalhost) {
+      return new URL(FALLBACK_SITE_URL);
+    }
+
+    return parsedUrl;
   } catch {
     return new URL(FALLBACK_SITE_URL);
   }
