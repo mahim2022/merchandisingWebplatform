@@ -6,9 +6,15 @@ const pages = [
   "/capabilities",
   "/capacity",
   "/compliance",
+  "/denim-jeans-private-label",
   "/factory",
   "/inquiry",
+  "/knit-garment-manufacturer",
+  "/low-moq-clothing-manufacturer",
   "/quality",
+  "/usa-canada-apparel-sourcing",
+  "/woven-apparel-manufacturer-usa",
+  "/wrap-bsci-compliant-factory",
   "/work-with-us",
 ] as const;
 

@@ -6,6 +6,7 @@ import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Factory,
   Users,
@@ -298,6 +299,54 @@ export default function Home() {
         </div>
         <div className="max-w-5xl mx-auto">
           <ProcessTimeline steps={productionProcess} />
+        </div>
+      </section>
+
+      {/* Buyer Intent Pages */}
+      <section className="section-container gradient-subtle">
+        <div className="section-header">
+          <h2>Buyer-Focused Manufacturing Pages</h2>
+          <p className="mt-4 text-muted-foreground">
+            Explore dedicated pages for product type, compliance focus, and market needs
+          </p>
+        </div>
+        <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <Link
+            href="/knit-garment-manufacturer"
+            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
+          >
+            B2B Knit Garment Manufacturer
+          </Link>
+          <Link
+            href="/woven-apparel-manufacturer-usa"
+            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
+          >
+            Woven Apparel Manufacturer for USA Buyers
+          </Link>
+          <Link
+            href="/denim-jeans-private-label"
+            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
+          >
+            Private Label Denim Jeans Manufacturer
+          </Link>
+          <Link
+            href="/wrap-bsci-compliant-factory"
+            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
+          >
+            WRAP & BSCI Compliant Garment Factory
+          </Link>
+          <Link
+            href="/low-moq-clothing-manufacturer"
+            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
+          >
+            Low MOQ Clothing Manufacturer
+          </Link>
+          <Link
+            href="/usa-canada-apparel-sourcing"
+            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
+          >
+            Apparel Manufacturing Partner for USA & Canada
+          </Link>
         </div>
       </section>
 

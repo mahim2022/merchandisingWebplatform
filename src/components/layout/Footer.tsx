@@ -68,6 +68,22 @@ export default function Footer() {
                   Compliance & Certifications
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/usa-canada-apparel-sourcing"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  USA & Canada Sourcing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/low-moq-clothing-manufacturer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Low MOQ Manufacturing
+                </Link>
+              </li>
             </ul>
           </div>
 
