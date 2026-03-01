@@ -3,14 +3,21 @@ import StatCard from "@/components/ui/StatCard";
 import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { buildPageMetadata } from "@/lib/seo";
 import { Factory, Users, Gauge, Calendar } from "lucide-react";
 import { StatCardData } from "@/types";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Production Capacity & Lead Times",
   description:
     "Detailed production capacity information including number of lines, monthly output by category, peak vs off-peak capacity, and typical lead times for sampling and bulk production.",
-};
+  path: "/capacity",
+  keywords: [
+    "garment production capacity",
+    "apparel lead times",
+    "manufacturing output planning",
+  ],
+});
 
 export default function CapacityPage() {
   const facilityStats: StatCardData[] = [

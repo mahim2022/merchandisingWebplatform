@@ -2,14 +2,21 @@ import { Metadata } from "next";
 import StatCard from "@/components/ui/StatCard";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { buildPageMetadata } from "@/lib/seo";
 import { Building2, Users, Zap, Droplets, Factory, Leaf } from "lucide-react";
 import { StatCardData } from "@/types";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Factory Overview",
   description:
     "Company background, facility information, infrastructure, workforce, and sustainability practices. Transparent factory overview for B2B sourcing partners.",
-};
+  path: "/factory",
+  keywords: [
+    "garment factory overview",
+    "apparel manufacturing facility",
+    "Bangladesh clothing exporter",
+  ],
+});
 
 export default function FactoryPage() {
   const facilityStats: StatCardData[] = [

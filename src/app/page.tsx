@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import StatCard from "@/components/ui/StatCard";
 import CertificationBadge from "@/components/ui/CertificationBadge";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import {
   Factory,
@@ -15,6 +17,19 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { StatCardData, ProcessStep } from "@/types";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "B2B Apparel Manufacturing & Sourcing Platform",
+  description:
+    "Professional apparel manufacturer for EU, Canadian, and Australian markets. Evaluate capabilities, compliance, capacity, lead times, and quality control before inquiry.",
+  path: "/",
+  keywords: [
+    "apparel sourcing platform",
+    "B2B apparel manufacturer",
+    "garment factory Bangladesh",
+    "knit woven denim manufacturer",
+  ],
+});
 
 const keyMetrics: StatCardData[] = [
   {

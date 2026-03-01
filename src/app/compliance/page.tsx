@@ -3,13 +3,20 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { buildPageMetadata } from "@/lib/seo";
 import { ShieldCheck, Download, Calendar, FileCheck } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Compliance & Certifications",
   description:
     "Complete list of factory certifications, audit bodies, expiry dates, and compliance documentation for EU, Canadian, and Australian markets.",
-};
+  path: "/compliance",
+  keywords: [
+    "WRAP certification",
+    "BSCI compliant factory",
+    "apparel compliance documentation",
+  ],
+});
 
 export default function CompliancePage() {
   const certifications = [

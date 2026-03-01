@@ -29,7 +29,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo/Brand */}
           <div className="flex min-w-0 items-center">
-            <Link href="/" className="truncate text-base font-bold text-foreground sm:text-xl">
+            <Link href="/" className="truncate text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
               <span className="text-primary">Source</span>Loom
             </Link>
           </div>

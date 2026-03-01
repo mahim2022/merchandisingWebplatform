@@ -3,13 +3,20 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { buildPageMetadata } from "@/lib/seo";
 import { ShieldCheck, Search, Eye, ClipboardCheck } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Quality Control Process",
   description:
     "Comprehensive quality control procedures including raw material inspection, inline QC, final inspection, AQL standards, and defect handling protocol.",
-};
+  path: "/quality",
+  keywords: [
+    "garment quality control",
+    "AQL 2.5 inspection",
+    "apparel defect handling protocol",
+  ],
+});
 
 export default function QualityPage() {
   const rawMaterialChecks = [

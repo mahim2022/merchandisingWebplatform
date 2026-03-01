@@ -2,14 +2,21 @@ import { Metadata } from "next";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { buildPageMetadata } from "@/lib/seo";
 import { FileText, MessageSquare, Clock, DollarSign } from "lucide-react";
 import { ProcessStep } from "@/types";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "How to Work With Us",
   description:
     "Step-by-step sourcing process, requirements from buyers, communication workflow, payment terms, and how to start production with SourceLoom.",
-};
+  path: "/work-with-us",
+  keywords: [
+    "apparel sourcing process",
+    "how to place garment order",
+    "B2B clothing production workflow",
+  ],
+});
 
 export default function WorkWithUsPage() {
   const sourcingProcess: ProcessStep[] = [

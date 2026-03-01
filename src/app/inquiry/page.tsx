@@ -44,6 +44,12 @@ const inquirySchema = z.object({
 
 type InquiryFormValues = z.infer<typeof inquirySchema>;
 
+const publicContactEmail =
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "export@sourceloom.me";
+const publicContactPhone =
+  process.env.NEXT_PUBLIC_CONTACT_PHONE?.trim() || "+880 1234 567 890";
+const publicContactPhoneHref = `tel:${publicContactPhone.replace(/[^+\d]/g, "")}`;
+
 export default function InquiryPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -158,10 +164,10 @@ export default function InquiryPage() {
               <Mail className="h-8 w-8 text-primary mx-auto mb-3" />
               <h4 className="font-semibold mb-2">Email</h4>
               <a
-                href="mailto:export@sourceloom.me"
+                href={`mailto:${publicContactEmail}`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                export@sourceloom.me
+                {publicContactEmail}
               </a>
             </CardContent>
           </Card>
@@ -171,10 +177,10 @@ export default function InquiryPage() {
               <Phone className="h-8 w-8 text-primary mx-auto mb-3" />
               <h4 className="font-semibold mb-2">Phone</h4>
               <a
-                href="tel:+8801234567890"
+                href={publicContactPhoneHref}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                +880 1234 567 890
+                {publicContactPhone}
               </a>
             </CardContent>
           </Card>

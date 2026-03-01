@@ -1,0 +1,102 @@
+import type { Metadata } from "next";
+
+const FALLBACK_SITE_URL = "http://localhost:3000";
+
+export function getSiteUrl(): URL {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+
+  if (!configuredUrl) {
+    return new URL(FALLBACK_SITE_URL);
+  }
+
+  const normalizedUrl = /^https?:\/\//i.test(configuredUrl)
+    ? configuredUrl
+    : `https://${configuredUrl}`;
+
+  try {
+    return new URL(normalizedUrl);
+  } catch {
+    return new URL(FALLBACK_SITE_URL);
+  }
+}
+
+export function getSiteName(): string {
+  return process.env.NEXT_PUBLIC_COMPANY_NAME?.trim() || "SourceLoom";
+}
+
+export function getContactEmail(): string {
+  return process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "";
+}
+
+export function getContactPhone(): string {
+  return process.env.NEXT_PUBLIC_CONTACT_PHONE?.trim() || "";
+}
+
+export function getLogoUrl(): string {
+  return process.env.NEXT_PUBLIC_LOGO_URL?.trim() || "";
+}
+
+export function getPrimaryMarkets(): string[] {
+  return ["United States", "Canada", "Australia", "European Union"];
+}
+
+export function getGoogleSiteVerification(): string {
+  return process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || "";
+}
+
+type BuildPageMetadataInput = {
+  title: string;
+  description: string;
+  path: string;
+  keywords?: string[];
+};
+
+export function buildPageMetadata({
+  title,
+  description,
+  path,
+  keywords,
+}: BuildPageMetadataInput): Metadata {
+  const siteName = getSiteName();
+
+  return {
+    title,
+    description,
+    keywords,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+        "max-snippet": -1,
+      },
+    },
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      title,
+      description,
+      url: path,
+      siteName,
+      type: "website",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: `${siteName} preview image`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/twitter-image"],
+    },
+  };
+}

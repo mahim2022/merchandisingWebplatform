@@ -3,13 +3,20 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { buildPageMetadata } from "@/lib/seo";
 import { Shirt, Scan, Users } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Manufacturing Capabilities",
   description:
     "Detailed garment manufacturing capabilities across knit, woven, and denim categories. Fabric experience, stitch capabilities, GSM ranges, MOQ, and sampling policy.",
-};
+  path: "/capabilities",
+  keywords: [
+    "garment manufacturing capabilities",
+    "knit woven denim production",
+    "MOQ and sampling policy",
+  ],
+});
 
 export default function CapabilitiesPage() {
   const knitFabrics = [

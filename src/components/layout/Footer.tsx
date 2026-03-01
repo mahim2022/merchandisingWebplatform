@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { getContactEmail, getContactPhone } from "@/lib/seo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const contactEmail = getContactEmail() || "export@sourceloom.me";
+  const contactPhone = getContactPhone() || "+880 1234 567 890";
+  const contactPhoneHref = `tel:${contactPhone.replace(/[^+\d]/g, "")}`;
 
   return (
     <footer className="border-t border-border bg-muted/30 mt-auto">
@@ -10,9 +14,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold text-foreground mb-4">
+            <Link href="/" className="mb-4 inline-flex items-center text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl" aria-label="sourceloom homepage">
               <span className="text-primary">Source</span>Loom
-            </h3>
+            </Link>
             <p className="text-sm text-muted-foreground mb-4 max-w-md">
               Professional apparel manufacturer specializing in knit, woven, and
               denim apparel for EU, Canadian, and Australian markets. Committed
@@ -77,18 +81,18 @@ export default function Footer() {
               <p>Dhaka, Bangladesh</p>
               <p className="mt-4">
                 <a
-                  href="mailto:export@sourceloom.me"
+                  href={`mailto:${contactEmail}`}
                   className="hover:text-primary transition-colors"
                 >
-                  export@sourceloom.me
+                  {contactEmail}
                 </a>
               </p>
               <p>
                 <a
-                  href="tel:+8801234567890"
+                  href={contactPhoneHref}
                   className="hover:text-primary transition-colors"
                 >
-                  +880 1234 567 890
+                  {contactPhone}
                 </a>
               </p>
             </address>
