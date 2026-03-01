@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const FALLBACK_SITE_URL = "http://localhost:3000";
+const FALLBACK_SITE_URL = "https://sourceloom.me";
 
 export function getSiteUrl(): URL {
   const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
