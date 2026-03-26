@@ -23,7 +23,7 @@ export default function CapacityPage() {
   const facilityStats: StatCardData[] = [
     {
       label: "Production Lines",
-      value: "12",
+      value: "50",
       description: "Active manufacturing lines",
       icon: <Factory className="h-6 w-6" />,
     },
@@ -48,12 +48,12 @@ export default function CapacityPage() {
   ];
 
   const monthlyCapacity = [
-    ["T-Shirts & Basics", "45,000 - 50,000", "55,000", "40,000"],
-    ["Polos & Pique Garments", "30,000 - 35,000", "40,000", "28,000"],
-    ["Hoodies & Sweatshirts", "15,000 - 18,000", "22,000", "12,000"],
-    ["Woven Shirts", "20,000 - 25,000", "30,000", "18,000"],
-    ["Woven Pants", "18,000 - 22,000", "28,000", "15,000"],
-    ["Denim Jeans", "12,000 - 15,000", "18,000", "10,000"],
+    ["T-Shirts & Basics", "200,000 - 220,000", "250,000", "180,000"],
+    ["Polos & Pique Garments", "150,000 - 170,000", "200,000", "140,000"],
+    ["Hoodies & Sweatshirts", "100,000 - 120,000", "150,000", "90,000"],
+    ["Woven Shirts", "180,000 - 200,000", "220,000", "160,000"],
+    ["Woven Pants", "160,000 - 180,000", "200,000", "150,000"],
+    ["Denim Jeans", "120,000 - 130,000", "150,000", "110,000"],
   ];
 
   const leadTimesBySampling = [
