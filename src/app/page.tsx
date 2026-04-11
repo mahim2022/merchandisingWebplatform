@@ -3,10 +3,11 @@ import StatCard from "@/components/ui/StatCard";
 import CertificationBadge from "@/components/ui/CertificationBadge";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import CTAButton from "@/components/ui/CTAButton";
+import ImageCarousel from "@/components/ui/ImageCarousel";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Factory,
   Users,
@@ -98,67 +99,98 @@ const productionProcess: ProcessStep[] = [
   },
 ];
 
+const heroSlides = [
+  {
+    src: "/images/home/hero-factory-floor.jpg",
+    alt: "Garment production line inside factory floor",
+  },
+  {
+    src: "/images/home/capability-knit.jpg",
+    alt: "Knit garment production and fabric handling",
+  },
+  {
+    src: "/images/home/capability-woven.jpg",
+    alt: "Woven garment manufacturing in factory",
+  },
+  {
+    src: "/images/home/capability-denim.jpg",
+    alt: "Denim garment production and finishing",
+  },
+];
+
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-6">
-            Evaluate Our Manufacturing Capability{" "}
-            <span className="text-primary">Before You Inquire</span>
-          </h1>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Professional apparel manufacturer for EU, Canadian, and Australian
-            markets. Transparent data on capabilities, capacity, compliance, and
-            quality control to support your sourcing decisions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton href="/inquiry" size="lg">
-              Request Production Evaluation
-            </CTAButton>
-            <CTAButton href="/capabilities" variant="outline" size="lg">
-              View Manufacturing Capabilities
-            </CTAButton>
-          </div>
+          <ScrollReveal>
+            <h1 className="mb-6 text-pop">
+              Evaluate Our Manufacturing Capability{" "}
+              <span className="text-primary">Before You Inquire</span>
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal delayMs={120}>
+            <p className="text-xl font-medium text-muted-foreground mb-8 leading-relaxed text-pop">
+              Professional apparel manufacturer for EU, Canadian, and Australian
+              markets. Transparent data on capabilities, capacity, compliance,
+              and quality control to support your sourcing decisions.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delayMs={220}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <CTAButton href="/inquiry" size="lg">
+                Request Production Evaluation
+              </CTAButton>
+              <CTAButton href="/capabilities" variant="outline" size="lg">
+                View Manufacturing Capabilities
+              </CTAButton>
+            </div>
+          </ScrollReveal>
         </div>
-        <div className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-lg border border-border shadow-lg">
-          <Image
-            src="/images/home/hero-factory-floor.jpg"
-            alt="Garment production line inside factory floor"
+        <ScrollReveal delayMs={320}>
+          <ImageCarousel
+            slides={heroSlides}
             width={960}
             height={640}
-            className="h-auto w-full object-cover"
-            priority
+            autoPlayIntervalMs={2500}
+            priorityFirst
           />
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Key Metrics Section */}
       <section className="section-container pattern-dots">
-        <div className="section-header">
-          <h2>Manufacturing At A Glance</h2>
-          <p className="mt-4 text-muted-foreground">
-            Key metrics to evaluate our production capacity and capabilities
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="section-header">
+            <h2 className="text-pop">Manufacturing At A Glance</h2>
+            <p className="mt-4 text-lg font-medium text-muted-foreground">
+              Key metrics to evaluate our production capacity and capabilities
+            </p>
+          </div>
+        </ScrollReveal>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {keyMetrics.map((metric, index) => (
-            <StatCard key={index} data={metric} />
+            <ScrollReveal key={index} delayMs={120 + index * 90}>
+              <StatCard data={metric} />
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       {/* Manufacturing Capabilities Summary */}
       <section className="section-container gradient-subtle">
-        <div className="section-header">
-          <h2>Manufacturing Capabilities</h2>
-          <p className="mt-4 text-muted-foreground">
-            Specialized production across three core categories
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="section-header">
+            <h2 className="text-pop">Manufacturing Capabilities</h2>
+            <p className="mt-4 text-lg font-medium text-muted-foreground">
+              Specialized production across three core categories
+            </p>
+          </div>
+        </ScrollReveal>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <Card className="hover:shadow-lg transition-shadow card-shimmer">
+          <ScrollReveal delayMs={100}>
+            <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-knit.jpg"
@@ -170,10 +202,10 @@ export default function Home() {
             </div>
             <CardHeader>
               <Shirt className="h-10 w-10 text-primary mb-4" />
-              <CardTitle>Knit Garments</CardTitle>
+              <CardTitle className="text-2xl font-bold tracking-tight">Knit Garments</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-base font-medium text-muted-foreground">
                 <li>• T-shirts, polos, hoodies, sweatshirts</li>
                 <li>• Single jersey, pique, fleece, rib</li>
                 <li>• GSM 140-320</li>
@@ -188,9 +220,11 @@ export default function Home() {
                 View Knit Capabilities
               </CTAButton>
             </CardContent>
-          </Card>
+            </Card>
+          </ScrollReveal>
 
-          <Card className="hover:shadow-lg transition-shadow card-shimmer">
+          <ScrollReveal delayMs={200}>
+            <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-woven.jpg"
@@ -202,10 +236,10 @@ export default function Home() {
             </div>
             <CardHeader>
               <Scan className="h-10 w-10 text-primary mb-4" />
-              <CardTitle>Woven Garments</CardTitle>
+              <CardTitle className="text-2xl font-bold tracking-tight">Woven Garments</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-base font-medium text-muted-foreground">
                 <li>• Shirts, pants, jackets, workwear</li>
                 <li>• Twill, poplin, canvas, oxford</li>
                 <li>• GSM 100-280</li>
@@ -220,9 +254,11 @@ export default function Home() {
                 View Woven Capabilities
               </CTAButton>
             </CardContent>
-          </Card>
+            </Card>
+          </ScrollReveal>
 
-          <Card className="hover:shadow-lg transition-shadow card-shimmer">
+          <ScrollReveal delayMs={300}>
+            <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-denim.jpg"
@@ -234,10 +270,10 @@ export default function Home() {
             </div>
             <CardHeader>
               <Users className="h-10 w-10 text-primary mb-4" />
-              <CardTitle>Denim Products</CardTitle>
+              <CardTitle className="text-2xl font-bold tracking-tight">Denim Products</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-base font-medium text-muted-foreground">
                 <li>• Jeans, jackets, shirts, skirts</li>
                 <li>• Ring spun, slub, stretch denim</li>
                 <li>• Oz 8-14</li>
@@ -252,126 +288,101 @@ export default function Home() {
                 View Denim Capabilities
               </CTAButton>
             </CardContent>
-          </Card>
+            </Card>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Compliance & Certifications */}
       <section className="section-container gradient-accent">
-        <div className="section-header">
-          <ShieldCheck className="h-12 w-12 text-primary mx-auto mb-4" />
-          <h2>Compliance & Certifications</h2>
-          <p className="mt-4 text-muted-foreground">
-            Certified and audited for international markets
-          </p>
-        </div>
-        <div className="mx-auto mb-8 max-w-4xl overflow-hidden rounded-lg border border-border shadow-sm">
-          <Image
-            src="/images/home/compliance-audit.jpg"
-            alt="Factory compliance audit and quality documentation review"
-            width={1600}
-            height={1000}
-            className="h-auto w-full object-cover"
-          />
-        </div>
-        <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-          <CertificationBadge name="WRAP Certified" />
-          <CertificationBadge name="BSCI Compliant" />
-          <CertificationBadge name="Oeko-Tex Standard 100" />
-          <CertificationBadge name="ISO 9001:2015" />
-          <CertificationBadge name="SEDEX Member" />
-          <CertificationBadge name="GOTS (In Progress)" />
-        </div>
-        <div className="text-center mt-8">
-          <CTAButton href="/compliance" variant="outline">
-            View All Certifications & Audit Reports
-          </CTAButton>
-        </div>
-      </section>
-
-      {/* Production Process Timeline */}
-      <section className="section-container pattern-grid">
-        <div className="section-header">
-          <h2>Production Process Overview</h2>
-          <p className="mt-4 text-muted-foreground">
-            Transparent workflow from inquiry to shipment
-          </p>
-        </div>
-        <div className="max-w-5xl mx-auto">
-          <ProcessTimeline steps={productionProcess} />
-        </div>
-      </section>
-
-      {/* Buyer Intent Pages */}
-      <section className="section-container gradient-subtle">
-        <div className="section-header">
-          <h2>Buyer-Focused Manufacturing Pages</h2>
-          <p className="mt-4 text-muted-foreground">
-            Explore dedicated pages for product type, compliance focus, and market needs
-          </p>
-        </div>
-        <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Link
-            href="/knit-garment-manufacturer"
-            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
-          >
-            B2B Knit Garment Manufacturer
-          </Link>
-          <Link
-            href="/woven-apparel-manufacturer-usa"
-            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
-          >
-            Woven Apparel Manufacturer for USA Buyers
-          </Link>
-          <Link
-            href="/denim-jeans-private-label"
-            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
-          >
-            Private Label Denim Jeans Manufacturer
-          </Link>
-          <Link
-            href="/wrap-bsci-compliant-factory"
-            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
-          >
-            WRAP & BSCI Compliant Garment Factory
-          </Link>
-          <Link
-            href="/low-moq-clothing-manufacturer"
-            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
-          >
-            Low MOQ Clothing Manufacturer
-          </Link>
-          <Link
-            href="/usa-canada-apparel-sourcing"
-            className="rounded-lg border border-border bg-card p-5 text-sm font-medium hover:bg-accent"
-          >
-            Apparel Manufacturing Partner for USA & Canada
-          </Link>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="section-container">
-        <div className="mx-auto max-w-3xl text-center rounded-lg border border-border bg-card p-12 shadow-sm">
-          <div className="mb-8 overflow-hidden rounded-lg border border-border">
+        <ScrollReveal>
+          <div className="section-header">
+            <ShieldCheck className="h-12 w-12 text-primary mx-auto mb-4" />
+            <h2 className="text-pop">Compliance & Certifications</h2>
+            <p className="mt-4 text-lg font-medium text-muted-foreground">
+              Certified and audited for international markets
+            </p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delayMs={110}>
+          <div className="mx-auto mb-8 max-w-4xl overflow-hidden rounded-lg border border-border shadow-sm">
             <Image
-              src="/images/home/cta-shipment.jpg"
-              alt="Packed garments prepared for export shipment"
+              src="/images/home/compliance-audit.jpg"
+              alt="Factory compliance audit and quality documentation review"
               width={1600}
               height={1000}
               className="h-auto w-full object-cover"
             />
           </div>
-          <h2 className="mb-4">Ready to Evaluate Our Factory?</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Submit a production evaluation request with your requirements. We
-            respond within 24 hours with capability confirmation, lead times,
-            and preliminary costing.
-          </p>
-          <CTAButton href="/inquiry" size="lg">
-            Request Production Evaluation
-          </CTAButton>
-        </div>
+        </ScrollReveal>
+        <ScrollReveal delayMs={190}>
+          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+            <CertificationBadge name="WRAP Certified" />
+            <CertificationBadge name="BSCI Compliant" />
+            <CertificationBadge name="Oeko-Tex Standard 100" />
+            <CertificationBadge name="ISO 9001:2015" />
+            <CertificationBadge name="SEDEX Member" />
+            <CertificationBadge name="GOTS (In Progress)" />
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delayMs={260}>
+          <div className="text-center mt-8">
+            <CTAButton href="/compliance" variant="outline">
+              View All Certifications & Audit Reports
+            </CTAButton>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Production Process Timeline */}
+      <section className="section-container pattern-grid">
+        <ScrollReveal>
+          <div className="section-header">
+            <h2 className="text-pop text-5xl font-extrabold">Production Process Overview</h2>
+            <p className="mt-4 text-xl font-semibold text-muted-foreground">
+              Transparent workflow from inquiry to shipment
+            </p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delayMs={110}>
+          <div className="max-w-5xl mx-auto">
+            <ProcessTimeline steps={productionProcess} />
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="section-container">
+        <ScrollReveal>
+          <div className="mx-auto max-w-3xl text-center rounded-lg border border-border bg-card p-12 shadow-sm">
+            <ScrollReveal delayMs={90}>
+              <div className="mb-8 overflow-hidden rounded-lg border border-border">
+                <Image
+                  src="/images/home/cta-shipment.jpg"
+                  alt="Packed garments prepared for export shipment"
+                  width={1600}
+                  height={1000}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delayMs={150}>
+              <h2 className="mb-4 text-pop">Ready to Evaluate Our Factory?</h2>
+            </ScrollReveal>
+            <ScrollReveal delayMs={220}>
+              <p className="text-xl font-medium text-muted-foreground mb-8">
+                Submit a production evaluation request with your requirements.
+                We respond within 24 hours with capability confirmation, lead
+                times, and preliminary costing.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delayMs={290}>
+              <CTAButton href="/inquiry" size="lg">
+                Request Production Evaluation
+              </CTAButton>
+            </ScrollReveal>
+          </div>
+        </ScrollReveal>
       </section>
     </div>
   );

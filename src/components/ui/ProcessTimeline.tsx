@@ -15,29 +15,29 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`relative flex items-start gap-6 ${
+            className={`group relative flex items-start gap-6 ${
               index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
             }`}
           >
             {/* Step number circle */}
-            <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-background text-sm font-semibold text-primary lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-background text-base font-bold text-primary transition-transform duration-200 group-hover:scale-105 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
               {index + 1}
             </div>
 
             {/* Step content */}
             <div
-              className={`flex-1 rounded-lg border border-border bg-card p-6 shadow-sm ${
+              className={`flex-1 rounded-lg border border-border bg-card p-7 shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-md ${
                 index % 2 === 0 ? "lg:text-right" : "lg:text-left"
               }`}
             >
-              <h4 className="text-lg font-semibold text-foreground mb-2">
+              <h4 className="mb-3 text-2xl font-bold tracking-tight text-foreground">
                 {step.title}
               </h4>
-              <p className="text-sm text-muted-foreground mb-2">
+              <p className="mb-3 text-base font-medium leading-relaxed text-muted-foreground">
                 {step.description}
               </p>
               {step.duration && (
-                <p className="text-xs font-medium text-primary">
+                <p className="text-sm font-semibold tracking-wide text-primary">
                   {step.duration}
                 </p>
               )}

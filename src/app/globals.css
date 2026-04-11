@@ -128,16 +128,16 @@
   
   /* Corporate typography for B2B */
   h1 {
-    @apply text-4xl font-bold tracking-tight lg:text-5xl;
+    @apply text-5xl font-extrabold tracking-tight lg:text-6xl;
   }
   h2 {
-    @apply text-3xl font-bold tracking-tight lg:text-4xl;
+    @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
   h3 {
-    @apply text-2xl font-semibold tracking-tight lg:text-3xl;
+    @apply text-3xl font-bold tracking-tight lg:text-4xl;
   }
   h4 {
-    @apply text-xl font-semibold tracking-tight;
+    @apply text-2xl font-semibold tracking-tight;
   }
   
   /* Professional link styles */
@@ -154,6 +154,19 @@
 
 .section-header {
   @apply mb-12 text-center;
+}
+
+.text-pop {
+  text-shadow: 0 1px 0 oklch(1 0 0 / 0.4);
+}
+
+.interactive-text {
+  @apply transition-all duration-200;
+}
+
+.interactive-text:hover {
+  color: var(--primary);
+  transform: translateY(-1px);
 }
 
 .stat-card {
