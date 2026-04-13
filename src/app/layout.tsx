@@ -161,6 +161,7 @@ export default function RootLayout({
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`${inter.variable} antialiased font-sans flex flex-col min-h-screen`}
       >
         <Header />

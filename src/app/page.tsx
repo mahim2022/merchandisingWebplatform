@@ -116,6 +116,7 @@ const heroSlides = [
     src: "/images/home/capability-denim.jpg",
     alt: "Denim garment production and finishing",
   },
+  
 ];
 
 export default function Home() {
@@ -305,9 +306,9 @@ export default function Home() {
           </div>
         </ScrollReveal>
         <ScrollReveal delayMs={110}>
-          <div className="mx-auto mb-8 max-w-4xl overflow-hidden rounded-lg border border-border shadow-sm">
+          <div className="mx-auto mb-8 max-w-4xl overflow-hidden rounded-lg border border-border shadow-xl">
             <Image
-              src="/images/home/compliance-audit.jpg"
+              src="/images/home/compliance-audit.png"
               alt="Factory compliance audit and quality documentation review"
               width={1600}
               height={1000}
