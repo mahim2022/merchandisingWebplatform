@@ -116,7 +116,15 @@ const heroSlides = [
     src: "/images/home/capability-denim.jpg",
     alt: "Denim garment production and finishing",
   },
-  
+  {
+    src: "/images/home/factory1.jpeg",
+    alt: "Factory floor 1",
+  },
+  {
+    src: "/images/home/factory2.jpeg",
+    alt: "Factory floor 2",
+  },
+
 ];
 
 export default function Home() {
