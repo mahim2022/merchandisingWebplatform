@@ -356,3 +356,242 @@ This is a proprietary B2B website for SourceLoom. All rights reserved.
 **Version:** 1.0.0  
 **Last Updated:** February 2026
 
+# Free Domain Email Setup (Namecheap + Gmail Forwarding)
+
+## 🎯 Goal
+
+Set up a **FREE domain email system** using:
+
+* Namecheap domain
+* Gmail inbox
+
+Result:
+
+* Receive emails at `hello@yourdomain.com`
+* Send emails from Gmail as `hello@yourdomain.com`
+
+---
+
+# 🧩 PART 1 — Namecheap Setup (Email Forwarding)
+
+## Step 1 — Open Domain Management
+
+1. Log in to Namecheap
+2. Go to **Domain List**
+3. Click **Manage** next to your domain
+
+---
+
+## Step 2 — Configure Mail Settings
+
+1. Go to **Advanced DNS**
+2. Find **Mail Settings**
+
+### Set it to:
+
+* **No Email Service**
+  OR
+* **Custom MX**
+
+3. Click **Save**
+
+---
+
+## Step 3 — Remove Google MX Records (if any)
+
+In **Advanced DNS → MX Records**, delete any of these if present:
+
+* ASPMX.L.GOOGLE.COM
+* ALT1.ASPMX.L.GOOGLE.COM
+* ALT2.ASPMX.L.GOOGLE.COM
+* ALT3.ASPMX.L.GOOGLE.COM
+* ALT4.ASPMX.L.GOOGLE.COM
+
+---
+
+## Step 4 — Add / Verify SPF Record
+
+In **Advanced DNS → TXT Records**, ensure this exists:
+
+* **Type:** TXT
+* **Host:** @
+* **Value:**
+
+  ```
+  v=spf1 include:spf.efwd.registrar-servers.com ~all
+  ```
+
+If not present, add it.
+
+---
+
+## Step 5 — Setup Email Forwarding
+
+⚠️ Important:
+**Email forwarding is NOT in Advanced DNS**
+
+### Correct location:
+
+* Go to **Domain → Redirect Email** (dropdown menu)
+
+---
+
+### Add Forwarder:
+
+* **Alias:** `hello`
+* **Forward to:** your Gmail address
+
+Example:
+
+```
+hello@yourdomain.com → yourgmail@gmail.com
+```
+
+---
+
+### Optional aliases:
+
+* `contact@yourdomain.com`
+* `admin@yourdomain.com`
+
+---
+
+## Step 6 — Wait & Test
+
+* Wait **10–30 minutes**
+* Send a test email to:
+
+  ```
+  hello@yourdomain.com
+  ```
+* Confirm it arrives in Gmail
+
+---
+
+# 🧩 PART 2 — Gmail Setup (Send Mail As)
+
+## Step 1 — Open Gmail Settings
+
+1. Open Gmail
+2. Click ⚙️ (top right)
+3. Click **See all settings**
+
+---
+
+## Step 2 — Go to Accounts
+
+* Open **Accounts and Import** tab
+
+---
+
+## Step 3 — Add Domain Email
+
+Under **Send mail as**:
+
+1. Click **Add another email address**
+2. Enter:
+
+   * Name: your name or brand
+   * Email: `hello@yourdomain.com`
+3. Keep:
+
+   * ✔ Treat as alias
+
+Click **Next**
+
+---
+
+## Step 4 — SMTP Configuration
+
+Fill:
+
+* SMTP Server: `smtp.gmail.com`
+* Port: `587`
+* Username: your Gmail address
+* Password: Gmail password OR App Password
+
+---
+
+## ⚠️ If 2FA is enabled (recommended)
+
+Use **App Password**:
+
+1. Go to Google Account → Security
+2. Open **App Passwords**
+3. Generate password for "Mail"
+4. Use that password instead
+
+---
+
+## Step 5 — Verify Email
+
+1. Gmail sends a code to `hello@yourdomain.com`
+2. It gets forwarded to your Gmail
+3. Copy code → paste into popup → Verify
+
+---
+
+# ⚙️ Optional Settings (Recommended)
+
+## Set Default Sender
+
+* Set `hello@yourdomain.com` as default in Gmail
+
+## Reply Behavior
+
+Enable:
+
+* “Reply from the same address the message was sent to”
+
+## Add Signature
+
+Example:
+
+```
+Your Name
+hello@yourdomain.com
+```
+
+---
+
+# 🧠 Final Setup Summary
+
+| Feature           | Status      |
+| ----------------- | ----------- |
+| Receive emails    | ✅ Working   |
+| Send emails       | ✅ Via Gmail |
+| Cost              | ✅ FREE      |
+| Professional look | ⚠️ Mostly   |
+
+---
+
+# ⚠️ Limitations
+
+* Not a real mailbox (forwarding only)
+* Emails may show “via gmail.com”
+* No DKIM (higher spam chance)
+* Not suitable for apps (OTP, automation)
+
+---
+
+# 🚀 When to Upgrade
+
+Upgrade to real email hosting when you need:
+
+* Better deliverability
+* Client communication
+* App/email automation
+* Full professional setup
+
+---
+
+# ✅ Final Notes
+
+* Always check **Redirect Email tab** (not DNS) for forwarding
+* Keep SPF record for forwarding
+* Avoid mixing with Gmail/Google MX unless using Workspace
+
+---
+
+✔ This setup is the **best free solution available**
+✔ Simple, stable, and good for small projects / portfolios
