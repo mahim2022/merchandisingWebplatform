@@ -323,6 +323,8 @@ Use this checklist after each production deployment to keep SEO stable.
 npm run build
 ```
 
+For a reusable implementation guide you can copy to other projects, see [SEO_PLAYBOOK.md](SEO_PLAYBOOK.md).
+
 ## 📝 Content Management
 
 Currently, all content is hardcoded in page components. For dynamic content management, consider:
