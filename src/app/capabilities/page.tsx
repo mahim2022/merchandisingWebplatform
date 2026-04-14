@@ -3,7 +3,7 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 import { Shirt, Scan, Users } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -21,6 +21,31 @@ export const metadata: Metadata = buildPageMetadata({
 const breadcrumbSchema = buildBreadcrumbSchema({
   title: "Manufacturing Capabilities",
   path: "/capabilities",
+});
+
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "Which apparel categories do you manufacture?",
+      answer:
+        "We produce knit, woven, and denim garments, including T-shirts, polos, hoodies, shirts, pants, jackets, and private label denim.",
+    },
+    {
+      question: "Do you handle low MOQ orders?",
+      answer:
+        "Yes. MOQ is category dependent, and we publish practical starting quantities for each fabric and product type so buyers can plan launches responsibly.",
+    },
+    {
+      question: "What fabrics and constructions do you work with?",
+      answer:
+        "Our capabilities include single jersey, pique, fleece, rib, interlock, poplin, twill, canvas, oxford, chambray, and denim constructions.",
+    },
+    {
+      question: "Do you support sampling before bulk confirmation?",
+      answer:
+        "Yes. We support development, pre-production, size set, and photo samples so buyers can verify fit and construction before bulk order approval.",
+    },
+  ],
 });
 
 export default function CapabilitiesPage() {
@@ -67,6 +92,10 @@ export default function CapabilitiesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero Section */}
       <section className="section-container gradient-hero">

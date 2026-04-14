@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 import { FileText, MessageSquare, Clock, DollarSign } from "lucide-react";
 import { ProcessStep } from "@/types";
 
@@ -21,6 +21,31 @@ export const metadata: Metadata = buildPageMetadata({
 const breadcrumbSchema = buildBreadcrumbSchema({
   title: "How to Work With Us",
   path: "/work-with-us",
+});
+
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "What should I send in the initial inquiry?",
+      answer:
+        "Send your product details, estimated quantity, timeline, destination market, and any compliance requirements so we can evaluate feasibility.",
+    },
+    {
+      question: "How long does the sourcing process take?",
+      answer:
+        "For a straightforward order, the process can run from inquiry through shipment in roughly 8 weeks, depending on sampling and production complexity.",
+    },
+    {
+      question: "What payment terms do you use?",
+      answer:
+        "Typical terms include a 30 to 40 percent deposit after order confirmation, with the balance due on BL copy or agreed shipment terms.",
+    },
+    {
+      question: "Do I need a tech pack or sample to start?",
+      answer:
+        "A tech pack or reference sample helps us confirm fit, materials, and costing more accurately, but we can also guide buyers who are still preparing specifications.",
+    },
+  ],
 });
 
 export default function WorkWithUsPage() {
@@ -86,6 +111,10 @@ export default function WorkWithUsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero Section */}
       <section className="section-container gradient-hero">

@@ -6,7 +6,7 @@ import CTAButton from "@/components/ui/CTAButton";
 import ImageCarousel from "@/components/ui/ImageCarousel";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import {
   Factory,
@@ -36,6 +36,31 @@ export const metadata: Metadata = buildPageMetadata({
 const breadcrumbSchema = buildBreadcrumbSchema({
   title: "B2B Apparel Manufacturing & Sourcing Platform",
   path: "/",
+});
+
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "What products do you manufacture?",
+      answer:
+        "We manufacture knit, woven, and denim apparel for B2B buyers, including T-shirts, polos, hoodies, shirts, pants, jackets, and jeans.",
+    },
+    {
+      question: "What is your typical MOQ?",
+      answer:
+        "MOQ usually starts around 500 to 1000 units per style or color, depending on the product category and construction complexity.",
+    },
+    {
+      question: "How quickly do you respond to inquiries?",
+      answer:
+        "We aim to respond within 24 hours with capability confirmation, MOQ guidance, and next-step information.",
+    },
+    {
+      question: "Can buyers review capabilities before sending an inquiry?",
+      answer:
+        "Yes. The site is designed so buyers can review capabilities, compliance, capacity, lead times, and quality controls before contacting us.",
+    },
+  ],
 });
 
 const keyMetrics: StatCardData[] = [
@@ -138,6 +163,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero Section */}
       <section className="section-container gradient-hero">

@@ -64,6 +64,13 @@ type BuildBreadcrumbSchemaInput = {
   path: string;
 };
 
+type BuildFaqSchemaInput = {
+  questions: Array<{
+    question: string;
+    answer: string;
+  }>;
+};
+
 export function buildPageMetadata({
   title,
   description,
@@ -148,3 +155,18 @@ export function buildBreadcrumbSchema({ title, path }: BuildBreadcrumbSchemaInpu
           ],
   };
 }
+
+    export function buildFaqSchema({ questions }: BuildFaqSchemaInput) {
+      return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: questions.map((entry) => ({
+          "@type": "Question",
+          name: entry.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: entry.answer,
+          },
+        })),
+      };
+    }

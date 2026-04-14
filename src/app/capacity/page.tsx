@@ -3,7 +3,7 @@ import StatCard from "@/components/ui/StatCard";
 import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 import { Factory, Users, Gauge, Calendar } from "lucide-react";
 import { StatCardData } from "@/types";
 
@@ -22,6 +22,31 @@ export const metadata: Metadata = buildPageMetadata({
 const breadcrumbSchema = buildBreadcrumbSchema({
   title: "Production Capacity & Lead Times",
   path: "/capacity",
+});
+
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "How many production lines do you operate?",
+      answer:
+        "We operate 50 production lines with a workforce of 850+ skilled operators and support staff.",
+    },
+    {
+      question: "How long does sampling take?",
+      answer:
+        "Development samples can take 5 to 7 days, pre-production samples 7 to 10 days, and size set samples 10 to 12 days depending on the style and fabric readiness.",
+    },
+    {
+      question: "What are typical bulk lead times?",
+      answer:
+        "Bulk lead times generally range from 30 to 60 days, depending on order size, category, and complexity.",
+    },
+    {
+      question: "Does capacity vary by product type?",
+      answer:
+        "Yes. Capacity differs by category, and we publish category-specific planning ranges for knit, woven, and denim products so buyers can set realistic timelines.",
+    },
+  ],
 });
 
 export default function CapacityPage() {
@@ -84,6 +109,10 @@ export default function CapacityPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero Section */}
       <section className="section-container gradient-hero">

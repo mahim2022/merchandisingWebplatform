@@ -3,7 +3,7 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 import { ShieldCheck, Search, Eye, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -21,6 +21,31 @@ export const metadata: Metadata = buildPageMetadata({
 const breadcrumbSchema = buildBreadcrumbSchema({
   title: "Quality Control Process",
   path: "/quality",
+});
+
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "How do you inspect raw materials?",
+      answer:
+        "Raw materials are checked using a 4-point fabric inspection system, along with color, GSM, shrinkage, dimensional stability, and color fastness tests.",
+    },
+    {
+      question: "What quality checkpoints are used during production?",
+      answer:
+        "We use inline QC checkpoints for pattern, cutting, sewing, measurements, and finishing so defects are caught early.",
+    },
+    {
+      question: "What AQL standards do you follow?",
+      answer:
+        "Our final inspection follows AQL 2.5 for major defects and AQL 4.0 for minor defects, with critical defects held at zero tolerance.",
+    },
+    {
+      question: "Do you allow third-party inspections?",
+      answer:
+        "Yes. Third-party audits and inspections are welcome, and defect handling follows a rework protocol before shipment.",
+    },
+  ],
 });
 
 export default function QualityPage() {
@@ -53,6 +78,10 @@ export default function QualityPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero Section */}
       <section className="section-container gradient-hero">

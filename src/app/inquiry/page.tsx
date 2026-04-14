@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Loader2, Mail, Phone, Building2 } from "lucide-react";
+import { buildFaqSchema } from "@/lib/seo";
 
 // Zod validation schema
 const inquirySchema = z.object({
@@ -49,6 +50,31 @@ const publicContactEmail =
 const publicContactPhone =
   process.env.NEXT_PUBLIC_CONTACT_PHONE?.trim() || "+880 1234 567 890";
 const publicContactPhoneHref = `tel:${publicContactPhone.replace(/[^+\d]/g, "")}`;
+
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "What information should I include in the inquiry form?",
+      answer:
+        "Include your buyer role, company name, contact details, product category, quantity, destination market, timeline, and any compliance requirements.",
+    },
+    {
+      question: "How quickly will you respond to my inquiry?",
+      answer:
+        "We aim to respond within 24 hours with capability confirmation and next-step guidance.",
+    },
+    {
+      question: "What happens after I submit the form?",
+      answer:
+        "Our team reviews the requirements, confirms MOQ and lead times, and provides preliminary costing if enough details are available.",
+    },
+    {
+      question: "Can I contact you directly instead of using the form?",
+      answer:
+        "Yes. You can contact us by the email and phone details shown on the page.",
+    },
+  ],
+});
 
 export default function InquiryPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -145,6 +171,10 @@ export default function InquiryPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

@@ -3,7 +3,7 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 import { ShieldCheck, Download, Calendar, FileCheck } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -21,6 +21,31 @@ export const metadata: Metadata = buildPageMetadata({
 const breadcrumbSchema = buildBreadcrumbSchema({
   title: "Compliance & Certifications",
   path: "/compliance",
+});
+
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "Which certifications do you currently hold?",
+      answer:
+        "We list WRAP Gold, BSCI, Oeko-Tex Standard 100, ISO 9001, and SEDEX status on the compliance page, with GOTS in progress.",
+    },
+    {
+      question: "Can buyers review audit history?",
+      answer:
+        "Yes. We share audit history, expiry dates, and non-conformance status so buyers can evaluate compliance readiness.",
+    },
+    {
+      question: "Do you support buyer audits and third-party verification?",
+      answer:
+        "Yes. Buyer audits and third-party verification are supported as part of the compliance review process.",
+    },
+    {
+      question: "Is compliance documentation available for export markets?",
+      answer:
+        "Yes. Our compliance documentation is organized for EU, Canadian, and Australian sourcing requirements.",
+    },
+  ],
 });
 
 export default function CompliancePage() {
@@ -129,6 +154,10 @@ export default function CompliancePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
