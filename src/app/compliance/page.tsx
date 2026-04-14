@@ -3,7 +3,7 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import { ShieldCheck, Download, Calendar, FileCheck } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -16,6 +16,11 @@ export const metadata: Metadata = buildPageMetadata({
     "BSCI compliant factory",
     "apparel compliance documentation",
   ],
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "Compliance & Certifications",
+  path: "/compliance",
 });
 
 export default function CompliancePage() {
@@ -121,6 +126,10 @@ export default function CompliancePage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

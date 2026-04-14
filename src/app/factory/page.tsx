@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import StatCard from "@/components/ui/StatCard";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import { Building2, Users, Zap, Droplets, Factory, Leaf } from "lucide-react";
 import { StatCardData } from "@/types";
 
@@ -16,6 +16,11 @@ export const metadata: Metadata = buildPageMetadata({
     "apparel manufacturing facility",
     "Bangladesh clothing exporter",
   ],
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "Factory Overview",
+  path: "/factory",
 });
 
 export default function FactoryPage() {
@@ -48,6 +53,10 @@ export default function FactoryPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

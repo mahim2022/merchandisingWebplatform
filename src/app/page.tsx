@@ -6,7 +6,7 @@ import CTAButton from "@/components/ui/CTAButton";
 import ImageCarousel from "@/components/ui/ImageCarousel";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import {
   Factory,
@@ -33,16 +33,21 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "B2B Apparel Manufacturing & Sourcing Platform",
+  path: "/",
+});
+
 const keyMetrics: StatCardData[] = [
   {
     label: "Production Lines",
-    value: "12",
+    value: "50",
     description: "Fully equipped manufacturing lines",
     icon: <Factory className="h-6 w-6" />,
   },
   {
     label: "Monthly Capacity",
-    value: "150K+",
+    value: "1M+",
     description: "Garments per month",
     icon: <Package className="h-6 w-6" />,
   },
@@ -130,6 +135,10 @@ const heroSlides = [
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

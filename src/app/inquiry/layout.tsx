@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import {
   getContactEmail,
   getContactPhone,
@@ -18,6 +18,11 @@ export const metadata: Metadata = buildPageMetadata({
     "garment manufacturing quote",
     "B2B sourcing request form",
   ],
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "Submit Production Inquiry",
+  path: "/inquiry",
 });
 
 const siteName = getSiteName();
@@ -47,6 +52,10 @@ export default function InquiryLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}

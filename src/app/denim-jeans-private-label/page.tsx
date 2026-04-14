@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Private Label Denim Jeans Manufacturer",
@@ -15,9 +15,18 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "Private Label Denim Jeans Manufacturer",
+  path: "/denim-jeans-private-label",
+});
+
 export default function DenimJeansPrivateLabelPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6">Private Label Denim Jeans Manufacturer</h1>

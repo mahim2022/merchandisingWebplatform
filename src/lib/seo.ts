@@ -59,6 +59,11 @@ type BuildPageMetadataInput = {
   keywords?: string[];
 };
 
+type BuildBreadcrumbSchemaInput = {
+  title: string;
+  path: string;
+};
+
 export function buildPageMetadata({
   title,
   description,
@@ -106,5 +111,40 @@ export function buildPageMetadata({
       description,
       images: ["/twitter-image"],
     },
+  };
+}
+
+export function buildBreadcrumbSchema({ title, path }: BuildBreadcrumbSchemaInput) {
+  const siteUrl = getSiteUrl();
+  const homeUrl = new URL("/", siteUrl).toString();
+  const pageUrl = new URL(path || "/", siteUrl).toString();
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement:
+      path === "/"
+        ? [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: title,
+              item: homeUrl,
+            },
+          ]
+        : [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: homeUrl,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: title,
+              item: pageUrl,
+            },
+          ],
   };
 }

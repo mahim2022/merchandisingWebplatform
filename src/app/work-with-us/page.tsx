@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import { FileText, MessageSquare, Clock, DollarSign } from "lucide-react";
 import { ProcessStep } from "@/types";
 
@@ -16,6 +16,11 @@ export const metadata: Metadata = buildPageMetadata({
     "how to place garment order",
     "B2B clothing production workflow",
   ],
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "How to Work With Us",
+  path: "/work-with-us",
 });
 
 export default function WorkWithUsPage() {
@@ -78,6 +83,10 @@ export default function WorkWithUsPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

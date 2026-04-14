@@ -3,7 +3,7 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import { ShieldCheck, Search, Eye, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -16,6 +16,11 @@ export const metadata: Metadata = buildPageMetadata({
     "AQL 2.5 inspection",
     "apparel defect handling protocol",
   ],
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "Quality Control Process",
+  path: "/quality",
 });
 
 export default function QualityPage() {
@@ -45,6 +50,10 @@ export default function QualityPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

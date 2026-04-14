@@ -3,7 +3,7 @@ import StatCard from "@/components/ui/StatCard";
 import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import { Factory, Users, Gauge, Calendar } from "lucide-react";
 import { StatCardData } from "@/types";
 
@@ -17,6 +17,11 @@ export const metadata: Metadata = buildPageMetadata({
     "apparel lead times",
     "manufacturing output planning",
   ],
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "Production Capacity & Lead Times",
+  path: "/capacity",
 });
 
 export default function CapacityPage() {
@@ -76,6 +81,10 @@ export default function CapacityPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

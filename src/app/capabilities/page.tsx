@@ -3,7 +3,7 @@ import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import { Shirt, Scan, Users } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -16,6 +16,11 @@ export const metadata: Metadata = buildPageMetadata({
     "knit woven denim production",
     "MOQ and sampling policy",
   ],
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "Manufacturing Capabilities",
+  path: "/capabilities",
 });
 
 export default function CapabilitiesPage() {
@@ -59,6 +64,10 @@ export default function CapabilitiesPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

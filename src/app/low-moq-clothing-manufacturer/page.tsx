@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Low MOQ Clothing Manufacturer",
@@ -15,9 +15,18 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
+const breadcrumbSchema = buildBreadcrumbSchema({
+  title: "Low MOQ Clothing Manufacturer",
+  path: "/low-moq-clothing-manufacturer",
+});
+
 export default function LowMoqClothingManufacturerPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6">Low MOQ Clothing Manufacturer</h1>
