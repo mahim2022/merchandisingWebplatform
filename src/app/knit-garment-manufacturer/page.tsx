@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "B2B Knit Garment Manufacturer",
@@ -20,12 +20,41 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   path: "/knit-garment-manufacturer",
 });
 
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "What knit products do you manufacture?",
+      answer:
+        "We manufacture T-shirts, polos, hoodies, sweatshirts, and other knit basics for export buyers.",
+    },
+    {
+      question: "Which knit fabrics do you work with?",
+      answer:
+        "We work with single jersey, pique, fleece, rib, and interlock fabrics depending on the style and end use.",
+    },
+    {
+      question: "Do you provide MOQ guidance?",
+      answer:
+        "Yes. We provide MOQ guidance based on style, color breakdown, and production complexity during early evaluation.",
+    },
+    {
+      question: "Can I review knit capabilities before sending an inquiry?",
+      answer:
+        "Yes. The page and related capability section are designed so buyers can review knit capacity, fabrics, and delivery expectations before inquiry.",
+    },
+  ],
+});
+
 export default function KnitGarmentManufacturerPage() {
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

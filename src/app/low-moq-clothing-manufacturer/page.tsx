@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Low MOQ Clothing Manufacturer",
@@ -20,12 +20,41 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   path: "/low-moq-clothing-manufacturer",
 });
 
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "Who is low MOQ manufacturing for?",
+      answer:
+        "It is best for emerging brands, capsule launches, and teams testing new categories before scaling up.",
+    },
+    {
+      question: "How do you handle small batch orders?",
+      answer:
+        "We use style-level MOQ guidance, sampling-first planning, and capacity checks to keep small batch orders practical.",
+    },
+    {
+      question: "Can low MOQ orders scale later?",
+      answer:
+        "Yes. We plan production so repeat and scale-up orders can be scheduled once the product proves out in market.",
+    },
+    {
+      question: "Will I get timeline guidance before ordering?",
+      answer:
+        "Yes. We provide transparent timeline guidance during the evaluation phase so launch planning is realistic.",
+    },
+  ],
+});
+
 export default function LowMoqClothingManufacturerPage() {
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

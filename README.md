@@ -300,6 +300,29 @@ Optional (for inquiry form):
 - Email service API keys (Resend, SendGrid, etc.)
 - Database connection strings
 
+## 🔎 SEO Deployment Checklist
+
+Use this checklist after each production deployment to keep SEO stable.
+
+1. Confirm production environment values:
+   - `NEXT_PUBLIC_SITE_URL` points to the canonical production domain.
+   - `NEXT_PUBLIC_COMPANY_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL`, and `NEXT_PUBLIC_CONTACT_PHONE` are current.
+   - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` is set when Search Console verification is required.
+2. Verify robots and sitemap endpoints are live:
+   - `https://your-domain.com/robots.txt`
+   - `https://your-domain.com/sitemap.xml`
+3. Validate canonical and social tags on core pages (`/`, `/capabilities`, `/capacity`, `/compliance`, `/inquiry`).
+4. Validate structured data with Google Rich Results Test for homepage and key landing pages.
+5. In Google Search Console:
+   - Submit or refresh the sitemap URL.
+   - Check indexing coverage and canonical selection.
+   - Review enhancement reports for structured data warnings.
+6. Re-run build validation before release:
+
+```bash
+npm run build
+```
+
 ## 📝 Content Management
 
 Currently, all content is hardcoded in page components. For dynamic content management, consider:

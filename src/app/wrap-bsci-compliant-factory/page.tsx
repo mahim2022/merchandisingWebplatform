@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "WRAP & BSCI Compliant Garment Factory",
@@ -20,12 +20,41 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   path: "/wrap-bsci-compliant-factory",
 });
 
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "What compliance focus do you maintain?",
+      answer:
+        "We focus on WRAP and BSCI-aligned production, with documentation and buyer audit readiness built into the workflow.",
+    },
+    {
+      question: "Do you support buyer audits?",
+      answer:
+        "Yes. Buyer audits and third-party verification are supported as part of the compliance review process.",
+    },
+    {
+      question: "How is non-conformance handled?",
+      answer:
+        "We have a defined corrective action workflow for non-conformance handling and transparent follow-up before shipment.",
+    },
+    {
+      question: "Can I review certifications separately?",
+      answer:
+        "Yes. The page links to the compliance overview so buyers can review the underlying certifications and audit history.",
+    },
+  ],
+});
+
 export default function WrapBsciCompliantFactoryPage() {
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

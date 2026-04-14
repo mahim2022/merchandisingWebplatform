@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Woven Apparel Manufacturer for USA Buyers",
@@ -20,12 +20,41 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   path: "/woven-apparel-manufacturer-usa",
 });
 
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "What woven products do you manufacture?",
+      answer:
+        "We manufacture woven shirts, trousers, jackets, uniforms, and workwear for U.S. buyers.",
+    },
+    {
+      question: "Which woven fabrics do you handle?",
+      answer:
+        "We work with poplin, twill, canvas, oxford, and chambray depending on product requirements.",
+    },
+    {
+      question: "How do you manage woven production quality?",
+      answer:
+        "We use development and PP sample checkpoints, inline controls across operations, and a final inspection before shipment.",
+    },
+    {
+      question: "Can I check woven capacity before ordering?",
+      answer:
+        "Yes. The page and linked capability section provide the context buyers need to evaluate fit, complexity, and lead times.",
+    },
+  ],
+});
+
 export default function WovenApparelManufacturerUsaPage() {
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

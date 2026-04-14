@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Private Label Denim Jeans Manufacturer",
@@ -20,12 +20,41 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   path: "/denim-jeans-private-label",
 });
 
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "What denim products do you make?",
+      answer:
+        "We produce jeans, denim shirts, jackets, and skirts for private label programs.",
+    },
+    {
+      question: "Do you support wash development?",
+      answer:
+        "Yes. We support rigid, stretch, and slub denim development along with wash and finishing specifications.",
+    },
+    {
+      question: "How is quality controlled for denim orders?",
+      answer:
+        "We use measurement and workmanship controls in-line, then perform a final audit before packing and shipment release.",
+    },
+    {
+      question: "Can I plan MOQ by wash and colorway?",
+      answer:
+        "Yes. MOQ planning is handled per style, wash, and colorway so denim launches can be structured accurately.",
+    },
+  ],
+});
+
 export default function DenimJeansPrivateLabelPage() {
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">

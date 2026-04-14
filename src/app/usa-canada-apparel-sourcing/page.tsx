@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Apparel Manufacturing Partner for USA & Canada",
@@ -20,12 +20,41 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   path: "/usa-canada-apparel-sourcing",
 });
 
+const faqSchema = buildFaqSchema({
+  questions: [
+    {
+      question: "Do you manufacture for USA and Canada buyers?",
+      answer:
+        "Yes. The page is specifically positioned for North American buyers needing compliant apparel production support.",
+    },
+    {
+      question: "What types of products can you source for North America?",
+      answer:
+        "We support knit, woven, and denim programs, including shirts, basics, pants, jackets, and private label production.",
+    },
+    {
+      question: "Do you handle compliance requirements?",
+      answer:
+        "Yes. We work with compliance-aligned production and quality control for retail standards and export markets.",
+    },
+    {
+      question: "Can I connect this to other product pages?",
+      answer:
+        "Yes. The page links into knit, woven, denim, and compliance-specific pages to help buyers route to the right capability.",
+    },
+  ],
+});
+
 export default function UsaCanadaApparelSourcingPage() {
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
