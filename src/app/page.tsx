@@ -171,39 +171,32 @@ export default function Home() {
       {/* Hero Section */}
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
-          <ScrollReveal>
-            <h1 className="mb-6 text-pop">
-              Evaluate Our Manufacturing Capability{" "}
-              <span className="text-primary">Before You Inquire</span>
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delayMs={120}>
-            <p className="text-xl font-medium text-muted-foreground mb-8 leading-relaxed text-pop">
-              Professional apparel manufacturer for EU, Canadian, and Australian
-              markets. Transparent data on capabilities, capacity, compliance,
-              and quality control to support your sourcing decisions.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delayMs={220}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CTAButton href="/inquiry" size="lg">
-                Request Production Evaluation
-              </CTAButton>
-              <CTAButton href="/capabilities" variant="outline" size="lg">
-                View Manufacturing Capabilities
-              </CTAButton>
-            </div>
-          </ScrollReveal>
+          <h1 className="mb-6 text-pop">
+            Evaluate Our Manufacturing Capability{" "}
+            <span className="text-primary">Before You Inquire</span>
+          </h1>
+          <p className="text-xl font-medium text-muted-foreground mb-8 leading-relaxed text-pop">
+            Professional apparel manufacturer for EU, Canadian, and Australian
+            markets. Transparent data on capabilities, capacity, compliance,
+            and quality control to support your sourcing decisions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <CTAButton href="/inquiry" size="lg">
+              Request Production Evaluation
+            </CTAButton>
+            <CTAButton href="/capabilities" variant="outline" size="lg">
+              View Manufacturing Capabilities
+            </CTAButton>
+          </div>
         </div>
-        <ScrollReveal delayMs={320}>
-          <ImageCarousel
-            slides={heroSlides}
-            width={960}
-            height={640}
-            autoPlayIntervalMs={2500}
-            priorityFirst
-          />
-        </ScrollReveal>
+        <ImageCarousel
+          slides={heroSlides}
+          width={960}
+          height={640}
+          sizes="(max-width: 768px) 100vw, 960px"
+          autoPlayIntervalMs={2500}
+          priorityFirst
+        />
       </section>
 
       {/* Key Metrics Section */}
@@ -244,6 +237,7 @@ export default function Home() {
                 alt="Knit garment production and fabric handling"
                 width={1200}
                 height={900}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-48 w-full object-cover"
               />
             </div>
@@ -278,6 +272,7 @@ export default function Home() {
                 alt="Woven garment manufacturing in factory"
                 width={1200}
                 height={900}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-48 w-full object-cover"
               />
             </div>
@@ -312,6 +307,7 @@ export default function Home() {
                 alt="Denim garment production and finishing"
                 width={1200}
                 height={900}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-48 w-full object-cover"
               />
             </div>
@@ -358,6 +354,7 @@ export default function Home() {
               alt="Factory compliance audit and quality documentation review"
               width={1600}
               height={1000}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 896px"
               className="h-auto w-full object-cover"
             />
           </div>
@@ -409,6 +406,7 @@ export default function Home() {
                   alt="Packed garments prepared for export shipment"
                   width={1600}
                   height={1000}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 85vw, 768px"
                   className="h-auto w-full object-cover"
                 />
               </div>

@@ -14,6 +14,7 @@ type ImageCarouselProps = {
   slides: CarouselSlide[];
   width: number;
   height: number;
+  sizes?: string;
   className?: string;
   autoPlayIntervalMs?: number;
   priorityFirst?: boolean;
@@ -23,6 +24,7 @@ export default function ImageCarousel({
   slides,
   width,
   height,
+  sizes = "100vw",
   className,
   autoPlayIntervalMs = 4500,
   priorityFirst = false,
@@ -71,8 +73,11 @@ export default function ImageCarousel({
               alt={slide.alt}
               width={width}
               height={height}
+              sizes={sizes}
               className="h-auto w-full object-cover"
               priority={priorityFirst && index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+              quality={index === 0 ? 75 : 65}
             />
           </div>
         ))}
