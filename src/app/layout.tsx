@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import dynamic from "next/dynamic";
 import "./globals.css";
-import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import {
   getContactEmail,
@@ -12,6 +12,11 @@ import {
   getSiteName,
   getSiteUrl,
 } from "@/lib/seo";
+
+const Header = dynamic(() => import("@/components/layout/Header"), {
+  ssr: true,
+  loading: () => <header className="border-b border-border bg-white sticky top-0 z-50 h-16" />,
+});
 
 const inter = Inter({
   variable: "--font-inter",

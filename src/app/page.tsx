@@ -4,7 +4,6 @@ import CertificationBadge from "@/components/ui/CertificationBadge";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import CTAButton from "@/components/ui/CTAButton";
 import ImageCarousel from "@/components/ui/ImageCarousel";
-import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
@@ -201,36 +200,29 @@ export default function Home() {
 
       {/* Key Metrics Section */}
       <section className="section-container pattern-dots">
-        <ScrollReveal>
-          <div className="section-header">
-            <h2 className="text-pop">Manufacturing At A Glance</h2>
-            <p className="mt-4 text-lg font-medium text-muted-foreground">
-              Key metrics to evaluate our production capacity and capabilities
-            </p>
-          </div>
-        </ScrollReveal>
+        <div className="section-header">
+          <h2 className="text-pop">Manufacturing At A Glance</h2>
+          <p className="mt-4 text-lg font-medium text-muted-foreground">
+            Key metrics to evaluate our production capacity and capabilities
+          </p>
+        </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {keyMetrics.map((metric, index) => (
-            <ScrollReveal key={index} delayMs={120 + index * 90}>
-              <StatCard data={metric} />
-            </ScrollReveal>
+            <StatCard key={index} data={metric} />
           ))}
         </div>
       </section>
 
       {/* Manufacturing Capabilities Summary */}
       <section className="section-container gradient-subtle">
-        <ScrollReveal>
-          <div className="section-header">
-            <h2 className="text-pop">Manufacturing Capabilities</h2>
-            <p className="mt-4 text-lg font-medium text-muted-foreground">
-              Specialized production across three core categories
-            </p>
-          </div>
-        </ScrollReveal>
+        <div className="section-header">
+          <h2 className="text-pop">Manufacturing Capabilities</h2>
+          <p className="mt-4 text-lg font-medium text-muted-foreground">
+            Specialized production across three core categories
+          </p>
+        </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <ScrollReveal delayMs={100}>
-            <Card className="hover:shadow-lg transition-shadow card-shimmer">
+          <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-knit.jpg"
@@ -262,10 +254,8 @@ export default function Home() {
               </CTAButton>
             </CardContent>
             </Card>
-          </ScrollReveal>
 
-          <ScrollReveal delayMs={200}>
-            <Card className="hover:shadow-lg transition-shadow card-shimmer">
+          <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-woven.jpg"
@@ -297,10 +287,8 @@ export default function Home() {
               </CTAButton>
             </CardContent>
             </Card>
-          </ScrollReveal>
 
-          <ScrollReveal delayMs={300}>
-            <Card className="hover:shadow-lg transition-shadow card-shimmer">
+          <Card className="hover:shadow-lg transition-shadow card-shimmer">
             <div className="overflow-hidden rounded-t-lg">
               <Image
                 src="/images/home/capability-denim.jpg"
@@ -332,23 +320,19 @@ export default function Home() {
               </CTAButton>
             </CardContent>
             </Card>
-          </ScrollReveal>
         </div>
       </section>
 
       {/* Compliance & Certifications */}
       <section className="section-container gradient-accent">
-        <ScrollReveal>
-          <div className="section-header">
-            <ShieldCheck className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h2 className="text-pop">Compliance & Certifications</h2>
-            <p className="mt-4 text-lg font-medium text-muted-foreground">
-              Certified and audited for international markets
-            </p>
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delayMs={110}>
-          <div className="mx-auto mb-8 max-w-4xl overflow-hidden rounded-lg border border-border shadow-xl">
+        <div className="section-header">
+          <ShieldCheck className="h-12 w-12 text-primary mx-auto mb-4" />
+          <h2 className="text-pop">Compliance & Certifications</h2>
+          <p className="mt-4 text-lg font-medium text-muted-foreground">
+            Certified and audited for international markets
+          </p>
+        </div>
+        <div className="mx-auto mb-8 max-w-4xl overflow-hidden rounded-lg border border-border shadow-xl">
             <Image
               src="/images/home/compliance-audit.png"
               alt="Factory compliance audit and quality documentation review"
@@ -357,77 +341,58 @@ export default function Home() {
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 896px"
               className="h-auto w-full object-cover"
             />
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delayMs={190}>
-          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+        </div>
+        <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             <CertificationBadge name="WRAP Certified" />
             <CertificationBadge name="BSCI Compliant" />
             <CertificationBadge name="Oeko-Tex Standard 100" />
             <CertificationBadge name="ISO 9001:2015" />
             <CertificationBadge name="SEDEX Member" />
             <CertificationBadge name="GOTS (In Progress)" />
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delayMs={260}>
-          <div className="text-center mt-8">
-            <CTAButton href="/compliance" variant="outline">
-              View All Certifications & Audit Reports
-            </CTAButton>
-          </div>
-        </ScrollReveal>
+        </div>
+        <div className="text-center mt-8">
+          <CTAButton href="/compliance" variant="outline">
+            View All Certifications & Audit Reports
+          </CTAButton>
+        </div>
       </section>
 
       {/* Production Process Timeline */}
       <section className="section-container pattern-grid">
-        <ScrollReveal>
-          <div className="section-header">
-            <h2 className="text-pop text-5xl font-extrabold">Production Process Overview</h2>
-            <p className="mt-4 text-xl font-semibold text-muted-foreground">
-              Transparent workflow from inquiry to shipment
-            </p>
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delayMs={110}>
-          <div className="max-w-5xl mx-auto">
-            <ProcessTimeline steps={productionProcess} />
-          </div>
-        </ScrollReveal>
+        <div className="section-header">
+          <h2 className="text-pop text-5xl font-extrabold">Production Process Overview</h2>
+          <p className="mt-4 text-xl font-semibold text-muted-foreground">
+            Transparent workflow from inquiry to shipment
+          </p>
+        </div>
+        <div className="max-w-5xl mx-auto">
+          <ProcessTimeline steps={productionProcess} />
+        </div>
       </section>
 
       {/* Final CTA Section */}
       <section className="section-container">
-        <ScrollReveal>
-          <div className="mx-auto max-w-3xl text-center rounded-lg border border-border bg-card p-12 shadow-sm">
-            <ScrollReveal delayMs={90}>
-              <div className="mb-8 overflow-hidden rounded-lg border border-border">
-                <Image
-                  src="/images/home/cta-shipment.jpg"
-                  alt="Packed garments prepared for export shipment"
-                  width={1600}
-                  height={1000}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 85vw, 768px"
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delayMs={150}>
-              <h2 className="mb-4 text-pop">Ready to Evaluate Our Factory?</h2>
-            </ScrollReveal>
-            <ScrollReveal delayMs={220}>
-              <p className="text-xl font-medium text-muted-foreground mb-8">
-                Submit a production evaluation request with your requirements.
-                We respond within 24 hours with capability confirmation, lead
-                times, and preliminary costing.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delayMs={290}>
-              <CTAButton href="/inquiry" size="lg">
-                Request Production Evaluation
-              </CTAButton>
-            </ScrollReveal>
+        <div className="mx-auto max-w-3xl text-center rounded-lg border border-border bg-card p-12 shadow-sm">
+          <div className="mb-8 overflow-hidden rounded-lg border border-border">
+            <Image
+              src="/images/home/cta-shipment.jpg"
+              alt="Packed garments prepared for export shipment"
+              width={1600}
+              height={1000}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 85vw, 768px"
+              className="h-auto w-full object-cover"
+            />
           </div>
-        </ScrollReveal>
+          <h2 className="mb-4 text-pop">Ready to Evaluate Our Factory?</h2>
+          <p className="text-xl font-medium text-muted-foreground mb-8">
+            Submit a production evaluation request with your requirements.
+            We respond within 24 hours with capability confirmation, lead
+            times, and preliminary costing.
+          </p>
+          <CTAButton href="/inquiry" size="lg">
+            Request Production Evaluation
+          </CTAButton>
+        </div>
       </section>
     </div>
   );
