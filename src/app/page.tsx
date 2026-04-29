@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import StatCard from "@/components/ui/StatCard";
 import CertificationBadge from "@/components/ui/CertificationBadge";
-import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import CTAButton from "@/components/ui/CTAButton";
 import ImageCarousel from "@/components/ui/ImageCarousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,6 +18,11 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { StatCardData, ProcessStep } from "@/types";
+
+const ProcessTimeline = dynamic(() => import("@/components/ui/ProcessTimeline"), {
+  ssr: true,
+  loading: () => <div className="h-96 bg-muted rounded-lg animate-pulse" />,
+});
 
 export const metadata: Metadata = buildPageMetadata({
   title: "B2B Apparel Manufacturing & Sourcing Platform",
@@ -340,6 +345,7 @@ export default function Home() {
               height={1000}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 896px"
               className="h-auto w-full object-cover"
+              loading="lazy"
             />
         </div>
         <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
@@ -381,6 +387,7 @@ export default function Home() {
               height={1000}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 85vw, 768px"
               className="h-auto w-full object-cover"
+              loading="lazy"
             />
           </div>
           <h2 className="mb-4 text-pop">Ready to Evaluate Our Factory?</h2>
