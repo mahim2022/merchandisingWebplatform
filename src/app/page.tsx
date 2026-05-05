@@ -135,7 +135,7 @@ const productionProcess: ProcessStep[] = [
 
 const heroSlides = [
   {
-    src: "/images/home/hero-factory-floor.jpg",
+    src: "/images/home/hero-factory-floor-optimized.jpg",
     alt: "Garment production line inside factory floor",
   },
   {
@@ -195,9 +195,9 @@ export default function Home() {
         </div>
         <ImageCarousel
           slides={heroSlides}
-          width={960}
-          height={640}
-          sizes="(max-width: 768px) 100vw, 960px"
+          width={864}
+          height={576}
+          sizes="(max-width: 768px) 100vw, 864px"
           autoPlayIntervalMs={2500}
           priorityFirst
         />
