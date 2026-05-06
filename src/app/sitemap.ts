@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { statSync } from "fs";
 import path from "path";
 import { getSiteUrl } from "@/lib/seo";
+import { getBlogPosts } from "@/lib/blog";
 
 const pages = [
   {
@@ -60,7 +61,16 @@ const pages = [
     path: "/work-with-us",
     source: "src/app/work-with-us/page.tsx",
   },
+  {
+    path: "/blog",
+    source: "src/app/blog/page.tsx",
+  },
 ] as const;
+
+const blogPages = getBlogPosts().map((post) => ({
+  path: `/blog/${post.slug}`,
+  source: "src/lib/blog.ts",
+}));
 
 function getLastModified(source: string): Date {
   try {
@@ -73,10 +83,11 @@ function getLastModified(source: string): Date {
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
 
-  return pages.map(({ path: pagePath, source }) => ({
+  return [...pages, ...blogPages].map(({ path: pagePath, source }) => ({
     url: new URL(pagePath || "/", siteUrl).toString(),
     lastModified: getLastModified(source),
-    changeFrequency: pagePath === "" ? "weekly" : "monthly",
+    changeFrequency:
+      pagePath === "" ? "weekly" : pagePath.startsWith("/blog") ? "weekly" : "monthly",
     priority: pagePath === "" ? 1 : 0.8,
   }));
 }

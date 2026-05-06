@@ -70,6 +70,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/blog"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Blog & Guides
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/usa-canada-apparel-sourcing"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >

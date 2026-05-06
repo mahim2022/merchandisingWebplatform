@@ -7,6 +7,7 @@ const navigation = [
   { name: "Capacity & Lead Times", href: "/capacity" },
   { name: "Quality Control", href: "/quality" },
   { name: "Compliance", href: "/compliance" },
+  { name: "Blog", href: "/blog" },
   { name: "Factory Overview", href: "/factory" },
   { name: "Work With Us", href: "/work-with-us" },
 ];
