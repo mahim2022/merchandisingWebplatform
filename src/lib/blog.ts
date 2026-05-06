@@ -279,6 +279,203 @@ const blogPosts: BlogPost[] = [
     ],
     relatedSlugs: ["moq-for-apparel-production", "apparel-production-capacity-guide"],
   },
+  {
+    slug: "low-moq-factory-sourcing",
+    title: "How to Find and Vet a Low-MOQ Apparel Manufacturer",
+    excerpt:
+      "A practical roadmap for navigating the low-MOQ factory landscape without sacrificing quality or reliability.",
+    category: "Sourcing",
+    readTime: "7 min read",
+    publishedAt: "2026-05-05",
+    updatedAt: "2026-05-05",
+    heroImage: "/images/home/capability-knit.jpg",
+    heroAlt: "Low-MOQ apparel manufacturing facility",
+    supportPage: {
+      label: "Explore low-MOQ manufacturing",
+      href: "/low-moq-clothing-manufacturer",
+    },
+    keywords: [
+      "low MOQ apparel manufacturer",
+      "find clothing manufacturer low minimum",
+      "low minimum order quantity clothing",
+    ],
+    intro:
+      "Finding a low-MOQ factory is not about accepting lower standards. It is about identifying a manufacturer with experience scaling smaller orders, systems to track them, and the willingness to invest in your brand even when the first order is modest.",
+    takeaways: [
+      "Low MOQ does not mean low quality—it means structured efficiency.",
+      "Vet the factory's ability to handle smaller orders, not just the willingness.",
+      "Communication clarity early on determines success across all order sizes.",
+    ],
+    sections: [
+      {
+        heading: "Understand why a factory accepts low MOQs",
+        paragraphs: [
+          "Not all factories can profitably handle MOQs below 500 or 1,000 units per style. Those that do have usually invested in flexible production systems, modular workflows, and strong supply chain partnerships.",
+          "When vetting a low-MOQ factory, ask about their production philosophy. Do they batch similar products together to reduce setup time? Do they have flexible fabric suppliers? Have they built repeatable processes for small-order sampling?",
+        ],
+        bullets: [
+          "Low-MOQ factories usually invest in lean workflows and modular setups.",
+          "They often batch similar styles to reduce machine changeover and waste.",
+          "Supply relationships are tighter and more carefully managed.",
+          "Quality control systems are usually more rigorous to offset lower scale.",
+        ],
+      },
+      {
+        heading: "Evaluate their production infrastructure",
+        paragraphs: [
+          "Ask for evidence of how they handle small order logistical logistics. Request samples from previous small orders, timelines they've met for low-MOQ buyers, and how they manage fabric and component purchasing when orders do not justify bulk minimums.",
+        ],
+        callout:
+          "A low-MOQ factory should have references from other emerging brands or small order buyers. Those references tell you whether the infrastructure is real or just theoretical.",
+      },
+      {
+        heading: "Build the relationship from sampling onward",
+        paragraphs: [
+          "The first order is often where misalignment happens. Be clear about what you need: exact timeline, quality tolerance, communication cadence, and how you want to handle changes or rework.",
+          "A strong low-MOQ factory will confirm these details upfront and deliver against them. That builds trust for future orders, higher volumes, and easier collaboration.",
+        ],
+        bullets: [
+          "Confirm the sample timeline and approval process in writing.",
+          "Define quality standards and inspection checkpoints during sampling.",
+          "Establish a clear escalation path for production issues.",
+          "Discuss how orders scale if the style sells well.",
+        ],
+      },
+    ],
+    relatedSlugs: ["moq-for-apparel-production", "apparel-compliance-checklist"],
+  },
+  {
+    slug: "usa-canada-apparel-sourcing-guide",
+    title: "Nearshoring Apparel: Why Source from USA and Canada Factories",
+    excerpt:
+      "A guide for brands considering domestic manufacturing on the continent and the economics that make it viable.",
+    category: "Sourcing",
+    readTime: "6 min read",
+    publishedAt: "2026-05-04",
+    updatedAt: "2026-05-04",
+    heroImage: "/images/home/factory2.jpeg",
+    heroAlt: "North American apparel manufacturing facility",
+    supportPage: {
+      label: "Explore USA and Canada sourcing",
+      href: "/usa-canada-apparel-sourcing",
+    },
+    keywords: [
+      "apparel manufacturing USA Canada",
+      "nearshoring clothing production",
+      "domestic apparel manufacturer",
+    ],
+    intro:
+      "USA and Canada manufacturers are viable for many brands, especially those prioritizing fast feedback, shorter lead times, and supply chain transparency. The cost premium is real, but so are the business advantages for certain product categories and market segments.",
+    takeaways: [
+      "Nearshoring works best for basics, essentials, and reorders with fast turnaround.",
+      "Lead times are shorter and supply transparency is clearer.",
+      "Production minimums may differ, but the trade-off is often worth it for smaller brands.",
+    ],
+    sections: [
+      {
+        heading: "When nearshoring makes economic sense",
+        paragraphs: [
+          "USA and Canada manufacturing typically costs 30–50% more per unit than offshore production. That premium is only sensible if you gain something concrete: faster time-to-market, better communication, supply chain security, or a marketing advantage.",
+          "Nearshoring is most profitable for products with thin, seasonal windows or high-velocity basics where the speed and flexibility justify the higher COGS.",
+        ],
+        bullets: [
+          "Seasonal styles with tight launch windows (2–4 weeks)",
+          "Basics that sell quickly and need repeat orders",
+          "Test orders for new styles before offshore scaling",
+          "Small launches or capsule collections aimed at domestic consumers",
+        ],
+      },
+      {
+        heading: "The supply chain advantage",
+        paragraphs: [
+          "Sourcing closer to home reduces logistics complexity, shortens lead times, and often allows tighter communication with production. Problems are visible faster. Changes can be implemented without crossing time zones.",
+          "For brands concerned with supply chain transparency or those building narrative around domestic manufacturing, nearshoring is also a storytelling asset.",
+        ],
+        callout:
+          "The real value of USA and Canada sourcing is agility, not just speed. If your business model depends on inventory turns and responsive production, nearshoring often pays for itself.",
+      },
+      {
+        heading: "Structure orders for USA/Canada success",
+        paragraphs: [
+          "Because lead times are shorter and minimums may be tighter, structure orders carefully. Plan further ahead than you would for overseas production, lock in fabric early, and confirm delivery windows well in advance.",
+          "Nearshoring manufacturers often expect clearer specs and tighter communication because the turnaround is faster.",
+        ],
+        bullets: [
+          "Confirm MOQ and lead time by category before committing to design specs.",
+          "Lock fabric and notions at least 6–8 weeks before bulk shipment.",
+          "Set up a regular communication cadence during production.",
+          "Plan for a slightly longer sampling phase to refine details upfront.",
+        ],
+      },
+    ],
+    relatedSlugs: ["moq-for-apparel-production", "apparel-compliance-checklist"],
+  },
+  {
+    slug: "apparel-sampling-approval-process",
+    title: "How to Manage Apparel Sampling and Build an Approval Workflow",
+    excerpt:
+      "A step-by-step guide to sampling clarity, approval gates, and avoiding costly revisions before bulk production.",
+    category: "Production",
+    readTime: "6 min read",
+    publishedAt: "2026-05-03",
+    updatedAt: "2026-05-03",
+    heroImage: "/images/home/capability-knit.jpg",
+    heroAlt: "Apparel sample approval and production planning",
+    supportPage: {
+      label: "See manufacturing capabilities",
+      href: "/capabilities",
+    },
+    keywords: [
+      "apparel sampling process",
+      "sample approval workflow",
+      "garment production samples",
+    ],
+    intro:
+      "Sampling is the bridge between design concept and production reality. A clear sampling workflow saves time, prevents costly revisions, and builds confidence before bulk orders commit.",
+    takeaways: [
+      "A documented approval process prevents misaligned expectations.",
+      "Be specific about what you are approving at each sample stage.",
+      "Agree on revision limits upfront to avoid endless cycles.",
+    ],
+    sections: [
+      {
+        heading: "Define sample stages and approval gates",
+        paragraphs: [
+          "Most sampling processes include first sample, approval sample, and production sample stages. Each stage should have a clear purpose and decision gate. First sample establishes fit and basic construction. Approval sample confirms color, finish, and all trims. Production sample is the final check before bulk launch.",
+          "Without clear gates, sampling drifts and costs spiral. A strong workflow sets expectations at each stage and requires sign-off before moving forward.",
+        ],
+        bullets: [
+          "First sample: fit check, construction proof, basic approval",
+          "Approval sample: color, trims, finish, labeling",
+          "Production sample: final verification before bulk cut",
+          "Set turnaround expectations for each stage in advance",
+        ],
+      },
+      {
+        heading: "Build a clear approval criteria checklist",
+        paragraphs: [
+          "Before samples arrive, your team should agree on what passes and what requires revision. This checklist keeps evaluations consistent and prevents scope creep.",
+          "Share this checklist with the factory so they understand your standards and can plan revisions efficiently.",
+        ],
+        callout:
+          "Approval clarity eliminates back-and-forth rework. When both sides know exactly what is being evaluated and why, samples move through cycles faster.",
+      },
+      {
+        heading: "Set revision limits and move dates",
+        paragraphs: [
+          "Unlimited revisions destroy timelines and budgets. Establish upfront how many revision rounds are included and what happens if changes go beyond that. Most factories include one revision in the sampling fee; extra revisions are quoted separately.",
+          "Pair revision limits with hard move dates. When you hit the limit or the date, you decide: approve, redesign for the next order, or scale back scope.",
+        ],
+        bullets: [
+          "Included revisions: typically one round per sample stage",
+          "Timeline: set a hard move date (e.g., approve by Day X or defer)",
+          "Major vs. minor changes: agree on what counts as each",
+          "Cost: clarify who pays for revisions beyond the standard allowance",
+        ],
+      },
+    ],
+    relatedSlugs: ["moq-for-apparel-production", "apparel-compliance-checklist"],
+  },
 ];
 
 export function getBlogPosts() {
