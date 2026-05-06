@@ -6,7 +6,7 @@ import CertificationBadge from "@/components/ui/CertificationBadge";
 import CTAButton from "@/components/ui/CTAButton";
 import ImageCarousel from "@/components/ui/ImageCarousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata, buildOrganizationSchema, buildLocalBusinessSchema } from "@/lib/seo";
 import Image from "next/image";
 import {
   Factory,
@@ -42,6 +42,10 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   title: "B2B Apparel Manufacturing & Sourcing Platform",
   path: "/",
 });
+
+const organizationSchema = buildOrganizationSchema();
+
+const localBusinessSchema = buildLocalBusinessSchema();
 
 const faqSchema = buildFaqSchema({
   questions: [
@@ -168,6 +172,14 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

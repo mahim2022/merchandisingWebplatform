@@ -170,3 +170,77 @@ export function buildBreadcrumbSchema({ title, path }: BuildBreadcrumbSchemaInpu
         })),
       };
     }
+
+export function buildOrganizationSchema() {
+  const siteUrl = getSiteUrl();
+  const siteName = getSiteName();
+  const email = getContactEmail();
+  const phone = getContactPhone();
+  const logoUrl = getLogoUrl();
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteName,
+    url: siteUrl.toString(),
+    email,
+    telephone: phone,
+    ...(logoUrl && { logo: logoUrl }),
+    sameAs: [
+      "https://www.linkedin.com/company/sourceloom",
+      "https://www.facebook.com/sourceloom",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "BD",
+      addressLocality: "Dhaka",
+    },
+    description: "B2B apparel manufacturing and sourcing platform for international brands",
+    knowsAbout: [
+      "Knit Garment Manufacturing",
+      "Woven Apparel Production",
+      "Denim Manufacturing",
+      "BSCI Compliance",
+      "Quality Assurance",
+    ],
+  };
+}
+
+export function buildLocalBusinessSchema() {
+  const siteUrl = getSiteUrl();
+  const siteName = getSiteName();
+  const email = getContactEmail();
+  const phone = getContactPhone();
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: siteName,
+    image: getLogoUrl(),
+    description: "BSCI-compliant apparel manufacturing factory for B2B buyers",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Factory Location",
+      addressLocality: "Dhaka",
+      addressRegion: "Dhaka",
+      postalCode: "",
+      addressCountry: "BD",
+    },
+    contact: {
+      "@type": "ContactPoint",
+      telephone: phone,
+      contactType: "Customer Service",
+      email,
+    },
+    url: siteUrl.toString(),
+    priceRange: "Custom Quotes Available",
+    areaServed: ["US", "CA", "AU", "GB", "DE", "FR"],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+      description: "Standard business hours (Bangladesh Time)",
+    },
+  };
+}
