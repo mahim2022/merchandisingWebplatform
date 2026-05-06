@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import StatCard from "@/components/ui/StatCard";
 import CertificationBadge from "@/components/ui/CertificationBadge";
 import CTAButton from "@/components/ui/CTAButton";
@@ -192,6 +193,13 @@ export default function Home() {
               View Manufacturing Capabilities
             </CTAButton>
           </div>
+          <p className="text-base text-muted-foreground mt-6">
+            We are{" "}
+            <Link href="/compliance" className="font-semibold text-primary hover:underline">
+              BSCI-compliant
+            </Link>
+            {" "} and internationally certified for North American, EU, and Australian markets.
+          </p>
         </div>
         <ImageCarousel
           slides={heroSlides}
@@ -208,7 +216,11 @@ export default function Home() {
         <div className="section-header">
           <h2 className="text-pop">Manufacturing At A Glance</h2>
           <p className="mt-4 text-lg font-medium text-muted-foreground">
-            Key metrics to evaluate our production capacity and capabilities
+            Key metrics to evaluate our production{" "}
+            <Link href="/capacity" className="font-semibold text-primary hover:underline">
+              capacity
+            </Link>
+            {" "} and capabilities
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -223,7 +235,15 @@ export default function Home() {
         <div className="section-header">
           <h2 className="text-pop">Manufacturing Capabilities</h2>
           <p className="mt-4 text-lg font-medium text-muted-foreground">
-            Specialized production across three core categories
+            Specialized production across three core categories. Learn about our{" "}
+            <Link href="/capacity" className="font-semibold text-primary hover:underline">
+              production capacity
+            </Link>
+            {" "} and{" "}
+            <Link href="/compliance" className="font-semibold text-primary hover:underline">
+              compliance credentials
+            </Link>
+            .
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -394,7 +414,15 @@ export default function Home() {
           <p className="text-xl font-medium text-muted-foreground mb-8">
             Submit a production evaluation request with your requirements.
             We respond within 24 hours with capability confirmation, lead
-            times, and preliminary costing.
+            times, and preliminary costing. View our{" "}
+            <Link href="/compliance" className="font-semibold text-primary hover:underline">
+              compliance certifications
+            </Link>
+            {" "} and{" "}
+            <Link href="/quality" className="font-semibold text-primary hover:underline">
+              quality standards
+            </Link>
+            .
           </p>
           <CTAButton href="/inquiry" size="lg">
             Request Production Evaluation
