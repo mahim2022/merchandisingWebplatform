@@ -13,7 +13,7 @@ import {
   getSiteName,
   getSiteUrl,
 } from "@/lib/seo";
-import { getBlogPostBySlug, getBlogPosts } from "@/lib/blog";
+import { getBlogPostBySlug, getBlogPosts, buildFAQSchema } from "@/lib/blog";
 import { ArrowLeft, CalendarDays, Clock3, Tag } from "lucide-react";
 
 type BlogPostPageProps = {
@@ -107,6 +107,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   };
 
   const relatedPosts = getBlogPosts().filter((entry) => post.relatedSlugs.includes(entry.slug));
+  const faqSchema = buildFAQSchema(post);
 
   return (
     <div>
@@ -118,6 +119,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-10">
@@ -221,6 +228,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   ))}
               </ul>
             </section>
+
+            {post.faqs && post.faqs.length > 0 && (
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tight text-foreground">
+                  Frequently asked questions
+                </h2>
+                <div className="space-y-3">
+                  {post.faqs.map((faq) => (
+                    <details
+                      key={faq.question}
+                      className="group rounded-lg border border-border bg-background p-4 transition-colors hover:bg-accent/40"
+                    >
+                      <summary className="cursor-pointer text-base font-semibold leading-7 text-foreground">
+                        {faq.question}
+                      </summary>
+                      <p className="mt-3 text-base leading-7 text-muted-foreground">
+                        {faq.answer}
+                      </p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
           </article>
 
           <aside className="space-y-6 self-start lg:sticky lg:top-24">

@@ -5,6 +5,11 @@ export type BlogSection = {
   callout?: string;
 };
 
+export type FAQItem = {
+  question: string;
+  answer: string;
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -24,6 +29,7 @@ export type BlogPost = {
   takeaways: string[];
   sections: BlogSection[];
   relatedSlugs: string[];
+  faqs?: FAQItem[];
 };
 
 const blogPosts: BlogPost[] = [
@@ -50,7 +56,7 @@ const blogPosts: BlogPost[] = [
       "low MOQ Bangladesh manufacturer",
     ],
     intro:
-      "Bangladesh manufactures over 80 million garments annually and serves as the sourcing hub for brands across North America, Europe, and Australia. But not all Bangladesh manufacturers are the same. Choosing the right partner means understanding what separates quality factories from price-driven operations, and knowing which red flags to watch for before you commit capacity and samples.",
+      "Bangladesh manufactures over 80 million garments annually and serves as the sourcing hub for brands across North America, Europe, and Australia. But not all Bangladesh manufacturers are the same. Choosing the right partner means understanding what separates quality factories from price-driven operations, and knowing which red flags to watch for before you commit capacity and samples. Whether you are evaluating knit, woven, or denim capabilities, or working within tight MOQ constraints, this guide covers the vetting process that protects your brand and your margin.",
     takeaways: [
       "Bangladesh offers the best value-to-quality ratio for apparel, but partner selection is critical.",
       "Low MOQ does not mean low standards—look for factories with compliance certifications and transparent QC.",
@@ -86,7 +92,7 @@ const blogPosts: BlogPost[] = [
       {
         heading: "Evaluate MOQ and production capability realistically",
         paragraphs: [
-          "MOQ is often the first question, but it should not be the only one. A factory that quotes 500 units per style sounds good, but can they handle it without cutting corners? Will they produce 500 units of your exact specifications, or will they batch similar styles together and hope it works?",
+          "MOQ is often the first question, but it should not be the only one. A factory that quotes 500 units per style sounds good, but can they handle it without cutting corners? Will they produce 500 units of your exact specifications, or will they batch similar styles together and hope it works? For deeper guidance on managing MOQ decisions, review our full guide on how MOQ affects your product launch timeline and cost structure.",
           "The right question is not just 'What is your MOQ?' but 'How do you manage my specific MOQ, and what quality standards apply at that volume?' A factory that has managed dozens of low-MOQ orders from other startups has the process down. One that rarely goes below 2,000 units is likely to struggle with your 500-unit order.",
         ],
         bullets: [
@@ -100,7 +106,7 @@ const blogPosts: BlogPost[] = [
       {
         heading: "Verify compliance certifications and audit history",
         paragraphs: [
-          "Compliance is not optional if you sell into North American or European markets. Buyers in these regions increasingly require proof of ethical manufacturing, safe working conditions, and environmental responsibility. The right Bangladesh factory will have current certifications and be transparent about their audit history.",
+          "Compliance is not optional if you sell into North American or European markets. Buyers in these regions increasingly require proof of ethical manufacturing, safe working conditions, and environmental responsibility. The right Bangladesh factory will have current certifications and be transparent about their audit history. Learn about what compliance standards actually protect your supply chain and your brand reputation.",
           "The most recognized certifications are BSCI (Business Social Compliance Initiative), WRAP (Worldwide Responsible Accredited Production), and SEDEX. Some factories also carry ISO 9001 (quality management) and ISO 14001 (environmental management). Do not accept just a list of badge names—ask for actual audit reports or certification summaries from the last 12 months.",
         ],
         callout:
@@ -115,7 +121,7 @@ const blogPosts: BlogPost[] = [
       {
         heading: "Assess fabric sourcing, dyeing, and finishing capabilities",
         paragraphs: [
-          "What the factory can produce depends heavily on what fabrics and finishes they can access or create. Some buyers need custom dyes (specific Pantone matches, colorfast standards). Others need advanced washing effects (vintage fading, stonewashed, over-dyed). Some require specialized finishes like softening or performance treatments.",
+          "What the factory can produce depends heavily on what fabrics and finishes they can access or create. Some buyers need custom dyes (specific Pantone matches, colorfast standards). Others need advanced washing effects (vintage fading, stonewashed, over-dyed). Some require specialized finishes like softening or performance treatments. Understanding whether a factory offers knit, woven, denim, or multi-category capabilities helps you align products with production strengths.",
           "A factory with in-house dyeing and washing teams can deliver faster, more consistent results. A factory that outsources these steps to partners needs strong relationships with those partners and clear QC checkpoints built into the process. Either can work, but you need to know which one you are dealing with and plan accordingly.",
         ],
         bullets: [
@@ -172,6 +178,40 @@ const blogPosts: BlogPost[] = [
           "If the first order goes smoothly, you have a strong signal to proceed with larger orders or more complex styles. If there are issues, you have learned valuable lessons without risking a large shipment. Poor first orders should change your decision about whether to continue with that factory.",
           "Once you have a factory you trust, the real partnership begins. Consistent orders, clear communication, and realistic expectations make the factory more invested in your success. That investment translates into better quality, faster turnaround, and more flexibility as your brand grows.",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the typical lead time for apparel from Bangladesh?",
+        answer: "Sample lead time is usually 5–7 days for standard items, and 10–14 days for complex or custom products. Bulk production typically takes 30–45 days from order confirmation, depending on complexity, fabric sourcing, and finishing requirements. Always confirm exact timelines with your factory before ordering.",
+      },
+      {
+        question: "Do I need to visit a Bangladesh factory before ordering?",
+        answer: "A factory visit is valuable for larger orders or long-term partnerships, but not always necessary for first-time sourcing. Strong communication during sampling, verified compliance documentation, and reference calls with other buyers can build confidence. Many successful brands start remotely and visit only after a few successful orders.",
+      },
+      {
+        question: "What is the minimum MOQ for small brands?",
+        answer: "MOQ varies widely by factory and product type. Many Bangladesh manufacturers support MOQs as low as 300–500 units per style for knit basics, and 500–1,000 for woven or denim items. Factories that specialize in low-MOQ orders (like Sourceloom partners) treat smaller batches with the same care as larger shipments, ensuring quality and consistency regardless of scale.",
+      },
+      {
+        question: "How do I know if a factory is compliant and ethical?",
+        answer: "Ask for current audit reports and certifications (BSCI, WRAP, SEDEX, ISO). Request specific documentation from the last 12 months—do not accept certification names alone. Ask for references from other buyers and clarify how the factory handles working conditions, Environmental Standards, and labor practices. A reputable, compliant factory will provide transparent documentation.",
+      },
+      {
+        question: "What should I do if my approval samples don't meet expectations?",
+        answer: "Clear communication with your factory is key. Document specific issues, request revision samples on a clear timeline, and agree upfront on how many revision rounds are included. If the factory is unresponsive or dismissive, it is a red flag—this is your chance to switch before bulk production starts. Quality concerns in sampling will likely worsen in production.",
+      },
+      {
+        question: "Can manufacturers handle custom dyes and wash effects?",
+        answer: "Many Bangladesh factories have in-house dyeing and washing capabilities, or strong partnerships with specialized vendors. Before ordering, confirm whether the factory handles these processes and ask to see examples of previous custom dyes and washes. Lead time and cost will vary based on complexity and whether outsourcing is involved.",
+      },
+      {
+        question: "What if I need to change styles or sizes mid-production?",
+        answer: "Changes mid-production are costly and risky. Before production starts, confirm the exact specifications, color, size mix, and quantities in writing. Once production begins, inform your factory immediately of any needed changes and expect additional costs and delays. This is why clarity in sampling and PO specifications is so critical.",
+      },
+      {
+        question: "How do I manage payment and payment terms with a new factory?",
+        answer: "Typical terms are 50% deposit with order and 50% upon shipment inspection. Some factories accept 30% upfront for first-time orders. Always negotiate terms upfront, and use a third party or escrow service if you are unfamiliar with the factory. Once a relationship is established, more flexible terms become available.",
       },
     ],
     relatedSlugs: [
@@ -640,4 +680,23 @@ export function getBlogPosts() {
 
 export function getBlogPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
+}
+
+export function buildFAQSchema(post: BlogPost) {
+  if (!post.faqs || post.faqs.length === 0) {
+    return null;
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 }
