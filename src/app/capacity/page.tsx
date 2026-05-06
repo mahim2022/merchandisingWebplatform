@@ -10,7 +10,7 @@ import { StatCardData } from "@/types";
 export const metadata: Metadata = buildPageMetadata({
   title: "Production Capacity & Lead Times",
   description:
-    "Detailed production capacity information including number of lines, monthly output by category, peak vs off-peak capacity, and typical lead times for sampling and bulk production.",
+    "Production capacity: 50 lines, 1M+ monthly output | Lead times: 5–7 days samples, 30–45 days bulk | Real-time tracking | Book your order now.",
   path: "/capacity",
   keywords: [
     "garment production capacity",

@@ -28,7 +28,7 @@ const ProcessTimeline = dynamic(() => import("@/components/ui/ProcessTimeline"),
 export const metadata: Metadata = buildPageMetadata({
   title: "B2B Apparel Manufacturing & Sourcing Platform",
   description:
-    "Professional apparel manufacturer for EU, Canadian, and Australian markets. Evaluate capabilities, compliance, capacity, lead times, and quality control before inquiry.",
+    "BSCI-compliant apparel manufacturer | 50 production lines | 1M+ monthly capacity | Low MOQ (500–1000 units) | Knit, woven, denim | Request free evaluation.",
   path: "/",
   keywords: [
     "apparel sourcing platform",

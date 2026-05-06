@@ -9,7 +9,7 @@ import { Shirt, Scan, Users } from "lucide-react";
 export const metadata: Metadata = buildPageMetadata({
   title: "Manufacturing Capabilities",
   description:
-    "Detailed garment manufacturing capabilities across knit, woven, and denim categories. Fabric experience, stitch capabilities, GSM ranges, MOQ, and sampling policy.",
+    "Knit, woven & denim manufacturing capabilities | 50 production lines | Stitching, embroidery, finishing | MOQ 500–1000 units | Free sampling. Evaluate before inquiry.",
   path: "/capabilities",
   keywords: [
     "garment manufacturing capabilities",

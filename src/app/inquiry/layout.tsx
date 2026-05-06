@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = buildPageMetadata({
   title: "Submit Production Inquiry",
   description:
-    "Send your apparel production requirements and receive capability confirmation, MOQ guidance, and indicative lead times within 24 hours.",
+    "Submit your apparel production requirements. Get capability confirmation, MOQ guidance, lead times & pricing within 24 hours. BSCI-compliant factory.",
   path: "/inquiry",
   keywords: [
     "apparel production inquiry",
