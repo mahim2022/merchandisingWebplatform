@@ -6,17 +6,20 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 import { getBlogPosts } from "@/lib/blog";
-import { ArrowRight, CalendarDays, Clock3 } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock3, Download } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Blog",
+  title: "Apparel Sourcing Blog & Manufacturing Guides",
   description:
-    "Practical apparel sourcing guides on MOQ, capacity, compliance, and product planning. Built to help buyers move faster from research to inquiry.",
+    "Free buyer guides on MOQ, factory compliance, capacity planning, and apparel sourcing best practices. Learn how to choose manufacturers in Bangladesh, evaluate quality, and launch faster.",
   path: "/blog",
   keywords: [
     "apparel sourcing blog",
     "garment manufacturing guides",
     "MOQ compliance capacity articles",
+    "how to choose apparel manufacturer",
+    "factory vetting checklist",
+    "Bangladesh manufacturing guides",
   ],
 });
 
@@ -28,6 +31,9 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 export default function BlogPage() {
   const blogPosts = getBlogPosts();
   const featuredPost = blogPosts[0];
+  
+  // Extract unique categories
+  const categories = Array.from(new Set(blogPosts.map(post => post.category)));
 
   return (
     <div>
@@ -40,15 +46,13 @@ export default function BlogPage() {
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
           <div className="max-w-3xl">
             <Badge variant="secondary" className="mb-4">
-              Blog / Guides
+              Free Sourcing Guides
             </Badge>
             <h1 className="mb-4 text-5xl font-extrabold tracking-tight text-foreground lg:text-6xl">
-              Practical apparel sourcing guides for buyers
+              Navigate apparel manufacturing with confidence
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-muted-foreground lg:text-xl">
-              Short, useful articles about MOQ, capacity, compliance, and product
-              planning. Each post supports a core service page so readers can move
-              from research to action.
+              Research-backed guides on choosing factories, evaluating capacity, verifying compliance, and managing MOQ. Designed for brands sourcing apparel in Bangladesh, North America, and beyond.
             </p>
           </div>
         </div>
@@ -69,7 +73,7 @@ export default function BlogPage() {
             </div>
             <CardContent className="p-6 lg:p-8">
               <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                <Badge variant="secondary">Featured</Badge>
+                <Badge variant="secondary">Featured / Pillar Post</Badge>
                 <span className="inline-flex items-center gap-2">
                   <CalendarDays className="h-4 w-4" />
                   {new Date(featuredPost.publishedAt).toLocaleDateString("en-US", {
@@ -93,7 +97,7 @@ export default function BlogPage() {
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <CTAButton href={`/blog/${featuredPost.slug}`} size="sm">
-                  Read article
+                  Read the full guide
                 </CTAButton>
                 <CTAButton href={featuredPost.supportPage.href} variant="outline" size="sm">
                   Open supporting page
@@ -177,28 +181,48 @@ export default function BlogPage() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="border-2 border-primary bg-primary/5">
             <CardHeader>
-              <CardTitle className="text-xl font-bold tracking-tight text-foreground">
-                Core topics
+              <CardTitle className="flex items-center gap-2 text-lg font-bold tracking-tight text-foreground">
+                <Download className="h-5 w-5 text-primary" />
+                Get the vetting checklist
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3 text-sm text-muted-foreground">
-              <p>MOQ and launch planning</p>
-              <p>Capacity and lead times</p>
-              <p>Compliance and quality control</p>
-              <p>Knit, woven, and denim selection</p>
+            <CardContent className="space-y-3 text-sm">
+              <p className="leading-6 text-muted-foreground">
+                Download a free checklist to evaluate manufacturers before production. Covers compliance, capacity, communications, and MOQ vetting.
+              </p>
+              <CTAButton href="#" size="sm" className="w-full pointer-events-none opacity-70">
+                Coming soon: Free PDF
+              </CTAButton>
             </CardContent>
           </Card>
 
-          <Card className="bg-muted/50">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg font-bold tracking-tight text-foreground">
+                By category
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2 text-sm">
+              {categories.map((category) => (
+                <div key={category} className="py-2 px-0 border-b border-border last:border-b-0">
+                  <p className="font-medium text-foreground">{category}</p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {blogPosts.filter(p => p.category === category).length} article{blogPosts.filter(p => p.category === category).length !== 1 ? 's' : ''}
+                  </p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-accent">
             <CardContent className="space-y-4 p-6">
-              <p className="text-sm font-medium uppercase tracking-wide text-primary">
-                Need a quick answer?
+              <p className="text-sm font-medium uppercase tracking-wide text-accent-foreground">
+                Ready to source?
               </p>
-              <p className="text-sm leading-7 text-muted-foreground">
-                Send your product details, order quantity, and delivery window. We
-                will confirm feasibility within 24 hours.
+              <p className="text-sm leading-7 text-accent-foreground/90">
+                Send your product details, order quantity, and delivery window. We will confirm feasibility within 24 hours.
               </p>
               <CTAButton href="/inquiry" size="sm" className="w-full">
                 Request Production Evaluation

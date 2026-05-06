@@ -670,6 +670,143 @@ const blogPosts: BlogPost[] = [
     ],
     relatedSlugs: ["moq-for-apparel-production", "apparel-compliance-checklist"],
   },
+  {
+    slug: "why-source-apparel-bangladesh-not-domestic",
+    title: "Why Brands Source Apparel from Bangladesh Instead of Domestic Manufacturing",
+    excerpt:
+      "A comparison of Bangladesh vs. USA/Canada/Europe manufacturing: cost structure, lead times, complexity capacity, and when each makes sense for your brand.",
+    category: "Sourcing",
+    readTime: "7 min read",
+    publishedAt: "2026-05-06",
+    updatedAt: "2026-05-06",
+    heroImage: "/images/home/factory2.jpeg",
+    heroAlt: "Global apparel manufacturing comparison",
+    supportPage: {
+      label: "Explore Bangladesh manufacturing",
+      href: "/factory",
+    },
+    keywords: [
+      "Bangladesh apparel manufacturing vs USA",
+      "where to manufacture clothes",
+      "apparel sourcing comparison",
+      "nearshoring vs offshore manufacturing",
+      "best country for clothing manufacturing",
+    ],
+    intro:
+      "The decision to source from Bangladesh, USA/Canada, Europe, or elsewhere is not just about cost. It is about lead time, capacity flexibility, complexity handling, and long-term supply chain scalability. Most global brands use multiple sourcing regions for different product types. This guide explains the trade-offs and helps you decide which regions align with your business.",
+    takeaways: [
+      "Bangladesh excels at high volume, complex styles, and established supply chains—but requires longer lead times.",
+      "USA/Canada offers fast feedback, transparency, and shorter lead times—at 2–4x the per-unit cost.",
+      "Europe is strong for premium/sustainable segments but often requires higher MOQ and longer timelines.",
+      "The best strategy uses multiple regions: Bangladesh for bulk, domestic for testing or fast-moving essentials.",
+    ],
+    sections: [
+      {
+        heading: "Cost structure: Bangladesh advantage is real but not absolute",
+        paragraphs: [
+          "Bangladesh labor costs are 60–70% lower than USA/Canada and 50–60% lower than Europe. This translates to final garment costs that are typically 40–50% cheaper for basics and 25–35% cheaper for complex items. However, shipping, compliance, and sampling add overhead that narrows the gap for very small orders.",
+          "For your first 500 units of a style, the Bangladesh cost advantage may be marginal. For your tenth reorder of 5,000 units, the advantage becomes substantial. That is why smart brands often test locally and scale offshore.",
+        ],
+        bullets: [
+          "Basic knit T-shirt: Bangladesh ~$2.50–3.50 vs. USA ~$5.50–7.00",
+          "Structured woven shirt: Bangladesh ~$4.50–6.50 vs. USA ~$10–14",
+          "Denim jeans: Bangladesh ~$6–8 vs. USA ~$14–18",
+          "Costs vary by factory, style complexity, and order volume.",
+        ],
+      },
+      {
+        heading: "Lead time is a trade-off, not a dealbreaker",
+        paragraphs: [
+          "Bangladesh production typically takes 30–45 days after order confirmation. USA/Canada is 10–21 days. The Bangladesh timeline is longer, but planning around it is possible—and increasingly necessary in competitive markets.",
+          "For most apparel brands, one season's production plan is set 8–12 weeks in advance. That timeline accommodates Bangladesh sourcing for core/seasonal items easily. For fast-moving basics or urgent reorders, domestic is the only option.",
+        ],
+        bullets: [
+          "Bangladesh: 5–7 day samples, 30–45 day bulk (depending on complexity)",
+          "USA/Canada: 3–5 day samples, 10–21 day bulk",
+          "Europe: 7–10 day samples, 20–35 day bulk",
+          "Planning window is more important than raw lead time.",
+        ],
+      },
+      {
+        heading: "Complexity and style flexibility favor Bangladesh",
+        paragraphs: [
+          "Bangladesh factories have spent 30+ years perfecting complex garments: detailed wash effects on denim, intricate embroidery, custom dyes, mixed-fabric constructions. USA and European factories are strong on basics and premium items, but specialized complexity often favors Bangladesh expertise.",
+          "If you design a 5-piece garment with custom dyeing, hand-binding, and specialty trims, Bangladesh offers more factories equipped to handle it. If you just need a rock-solid basic tee, domestic can match quality at higher cost.",
+        ],
+        bullets: [
+          "Denim wash effects: Bangladesh has stronger specialist base",
+          "Custom dyeing and advanced finishes: Bangladesh advantage",
+          "Basic knits and wovens: Competitive across regions",
+          "Sustainable/organic production: Growing strength in Bangladesh, strong in Europe",
+        ],
+      },
+      {
+        heading: "Supply chain resilience and transparency",
+        paragraphs: [
+          "USA/Canada sourcing offers direct factory relationships, easier audits, and faster communication. Bangladesh requires working through agents or larger suppliers, which adds a layer of complexity but also provides buffers during logistics disruptions.",
+          "Post-COVID, many brands discovered that sole-sourcing any region created risk. A portfolio approach—core production in Bangladesh, fast-turn production domestically—manages risk while optimizing cost.",
+        ],
+        bullets: [
+          "Transparency ranking: USA > Europe > Bangladesh (due to supply chain agents)",
+          "Disruption recovery time: USA fastest, Bangladesh requires planning",
+          "Supplier viability: Bangladesh offers more scale, USA offers more flexibility",
+          "A balanced approach hedges risk while managing cost.",
+        ],
+      },
+      {
+        heading: "MOQ and order volume thresholds",
+        paragraphs: [
+          "Bangladesh factories efficiently handle orders from 300 units all the way to 100,000+ units per style. USA/Canada factories often optimize for specific volume bands: some prefer orders under 1,000 units, others want 2,000–5,000 minimum.",
+          "For tiny test orders (100–300 units), neither option is ideal, but Bangladesh agents often bundle small orders together. For mid-range orders (500–2,000), both regions work. For scale (10,000+), Bangladesh becomes the obvious choice.",
+        ],
+        bullets: [
+          "Tiny orders (100–500): Bangladesh via agents or sample specialists",
+          "Mid-range (500–5,000): Both regions work; choose by timeline and cost",
+          "Large-scale (10,000+): Bangladesh advantage widens due to efficiency and cost",
+        ],
+      },
+      {
+        heading: "Building a multi-region sourcing strategy",
+        paragraphs: [
+          "Most successful growing brands use a combination: Bangladesh for core seasonal/bulk production, USA/Canada for small fast-turn tests and best-sellers, maybe Europe for premium or sustainability-focused lines.",
+          "Start by mapping your SKU mix by volume and timeline needs. High-volume/planned: Bangladesh. Test/urgent/best-sellers: Domestic. Premium/compliance-critical: Region-specific.",
+        ],
+        bullets: [
+          "Core production (80% of volume): Bangladesh, 1–2 factories for redundancy",
+          "Fast-turn production (15% of volume): USA/Canada or local agent",
+          "Premium or specialty (5% of volume): Region matched to product story",
+          "Rebalance annually as business scales and product mix shifts.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Is Bangladesh apparel manufacturing safe and compliant with US/EU standards?",
+        answer: "Yes, major Bangladesh factories operating for international brands carry BSCI, WRAP, SEDEX, and even ISO certifications. The industry learned hard lessons in the 2010s and now invests heavily in compliance. That said, due diligence is required—audit the factory's certification status and ask for references from other brands.",
+      },
+      {
+        question: "What happens if I have quality issues with a Bangladesh order?",
+        answer: "Working through agents or suppliers can create delays in issue resolution, but most reputable factories stand behind their work. Build into your timeline 5–7 days for issue escalation and revised samples if needed. Establish clear quality standards and inspection checkpoints before bulk production starts.",
+      },
+      {
+        question: "Can I switch suppliers mid-season if Bangladesh production is delayed?",
+        answer: "Switching suppliers is disruptive and expensive. The better approach is to plan 8–12 weeks ahead and build buffer time into your schedule. If a crisis happens, having a secondary supplier (or a domestic backup for critical items) is your safety net. Plan ahead rather than improvise.",
+      },
+      {
+        question: "Is nearshoring (USA/Canada) worth the premium for my brand?",
+        answer: "It depends on your market and product. Nearshoring makes sense if: you sell to brands that value 'Made in USA' stories, you need frequent feedback cycles, or your products are high-volume fast-movers (reorders). For most small–mid-size brands, a hybrid approach (nearshoring for tests, Bangladesh for scale) is optimal.",
+      },
+      {
+        question: "How do I manage a multi-region sourcing strategy without losing consistency?",
+        answer: "Keep detailed specifications, reference samples, and QC standards documented. Build relationships with multiple factories and visit them periodically. Use the same third-party compliance auditors across regions. Consistency comes from process discipline, not single-source loyalty.",
+      },
+    ],
+    relatedSlugs: [
+      "how-to-choose-bangladesh-apparel-manufacturer",
+      "apparel-compliance-checklist",
+      "apparel-production-capacity-guide",
+    ],
+  },
 ];
 
 export function getBlogPosts() {
