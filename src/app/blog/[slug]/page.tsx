@@ -119,8 +119,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />
 
-      <section className="section-container gradient-hero">
-        <div className="mx-auto max-w-4xl">
+      <section className="border-b border-border bg-background">
+        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-10">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
@@ -128,7 +128,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <ArrowLeft className="h-4 w-4" /> Back to blog
           </Link>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3">
+          <div className="mt-5 flex flex-wrap items-center gap-3">
             <Badge>{post.category}</Badge>
             <span className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground">
               <CalendarDays className="h-4 w-4" />
@@ -144,12 +144,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </span>
           </div>
 
-          <h1 className="mt-6 max-w-3xl text-pop">{post.title}</h1>
-          <p className="mt-6 max-w-3xl text-xl font-medium leading-relaxed text-muted-foreground">
+          <h1 className="mt-5 max-w-4xl text-5xl font-extrabold tracking-tight text-foreground lg:text-6xl">
+            {post.title}
+          </h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground lg:text-xl">
             {post.excerpt}
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-4 sm:flex-row">
             <CTAButton href={post.supportPage.href}>
               {post.supportPage.label}
             </CTAButton>
@@ -160,11 +162,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </section>
 
-      <section className="section-container">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.45fr)_minmax(280px,0.55fr)]">
-          <article className="space-y-8">
-            <Card className="overflow-hidden">
-              <div className="relative h-[280px] overflow-hidden sm:h-[360px] lg:h-[420px]">
+      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(280px,0.42fr)]">
+          <article className="space-y-10">
+            <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
                   src={post.heroImage}
                   alt={post.heroAlt}
@@ -174,19 +176,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   priority
                 />
               </div>
-              <CardContent className="pt-6">
-                <p className="text-lg leading-8 text-muted-foreground">{post.intro}</p>
-              </CardContent>
-            </Card>
+            </div>
+
+            <div className="prose prose-neutral max-w-none">
+              <p className="text-lg leading-8 text-muted-foreground">
+                {post.intro}
+              </p>
+            </div>
 
             {post.sections.map((section) => (
-              <Card key={section.heading}>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold tracking-tight text-foreground">
-                    {section.heading}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-5">
+              <section key={section.heading} className="space-y-5 border-b border-border pb-10 last:border-b-0 last:pb-0">
+                <h2 className="text-3xl font-bold tracking-tight text-foreground">
+                  {section.heading}
+                </h2>
+                <div className="space-y-5">
                   {section.paragraphs.map((paragraph) => (
                     <p key={paragraph} className="text-base leading-8 text-muted-foreground">
                       {paragraph}
@@ -204,27 +207,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       {section.callout}
                     </div>
                   ) : null}
-                </CardContent>
-              </Card>
+                </div>
+              </section>
             ))}
 
-            <Card className="gradient-subtle">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold tracking-tight text-foreground">
-                  Key takeaways
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-base leading-8 text-muted-foreground">
+            <section className="rounded-2xl border border-border bg-muted/30 p-6 lg:p-8">
+              <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
+                Key takeaways
+              </h2>
+              <ul className="space-y-3 text-base leading-8 text-muted-foreground">
                   {post.takeaways.map((takeaway) => (
                     <li key={takeaway}>• {takeaway}</li>
                   ))}
-                </ul>
-              </CardContent>
-            </Card>
+              </ul>
+            </section>
           </article>
 
-          <aside className="space-y-6 lg:sticky lg:top-24 self-start">
+          <aside className="space-y-6 self-start lg:sticky lg:top-24">
             <Card>
               <CardHeader>
                 <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
