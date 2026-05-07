@@ -20,6 +20,9 @@ export const metadata: Metadata = buildPageMetadata({
     "how to choose apparel manufacturer",
     "factory vetting checklist",
     "Bangladesh manufacturing guides",
+    "apparel manufacturing blog",
+    "garment sourcing articles",
+    "clothing manufacturer research",
   ],
 });
 
@@ -35,11 +38,34 @@ export default function BlogPage() {
   // Extract unique categories
   const categories = Array.from(new Set(blogPosts.map(post => post.category)));
 
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Apparel Sourcing Blog & Manufacturing Guides",
+    description:
+      "Free buyer guides on MOQ, factory compliance, capacity planning, and apparel sourcing best practices.",
+    url: "https://sourceloom.com/blog",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: blogPosts.slice(0, 10).map((post, index) => ({
+        "@type": "BlogPosting",
+        position: index + 1,
+        headline: post.title,
+        url: `https://sourceloom.com/blog/${post.slug}`,
+        datePublished: post.publishedAt,
+      })),
+    },
+  };
+
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
 
       <section className="border-b border-border bg-background">
