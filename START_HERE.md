@@ -12,7 +12,7 @@ This is your immediate action plan. Start with this.
 1. Go to: https://search.google.com/search-console
 2. Sign in with your Google account
 3. Click "URL prefix" (left option)
-4. Paste: `https://sourceloom.com`
+4. Paste: `https://sourceloom.me`
 5. Click Continue
 6. Choose "HTML file" verification
 7. **Download the HTML file** Google gives you
