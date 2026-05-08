@@ -213,13 +213,27 @@ export default function Home() {
             {" "} and internationally certified for North American, EU, and Australian markets.
           </p>
         </div>
+        {/* Server-rendered LCP hero image for faster LCP */}
+        <div className="mx-auto mt-8 max-w-6xl overflow-hidden rounded-lg border border-border shadow-lg">
+          <Image
+            src={heroSlides[0].src}
+            alt={heroSlides[0].alt}
+            width={864}
+            height={576}
+            sizes="(max-width: 768px) 100vw, 864px"
+            className="h-auto w-full object-cover"
+            priority
+            quality={75}
+          />
+        </div>
+
         <ImageCarousel
-          slides={heroSlides}
+          slides={heroSlides.slice(1)}
           width={864}
           height={576}
           sizes="(max-width: 768px) 100vw, 864px"
           autoPlayIntervalMs={2500}
-          priorityFirst
+          priorityFirst={false}
         />
       </section>
 
