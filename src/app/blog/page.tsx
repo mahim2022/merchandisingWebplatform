@@ -4,7 +4,7 @@ import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata, getSiteUrl } from "@/lib/seo";
 import { getBlogPosts } from "@/lib/blog";
 import { ArrowRight, CalendarDays, Clock3, Download } from "lucide-react";
 
@@ -34,9 +34,15 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 export default function BlogPage() {
   const blogPosts = getBlogPosts();
   const featuredPost = blogPosts[0];
-  
-  // Extract unique categories
-  const categories = Array.from(new Set(blogPosts.map(post => post.category)));
+  const siteUrl = getSiteUrl();
+  const categories = Array.from(new Set(blogPosts.map((post) => post.category)));
+  const pillarPages = [
+    { label: "Capabilities", href: "/capabilities" },
+    { label: "Capacity", href: "/capacity" },
+    { label: "Compliance", href: "/compliance" },
+    { label: "Factory", href: "/factory" },
+    { label: "Quality", href: "/quality" },
+  ];
 
   const collectionSchema = {
     "@context": "https://schema.org",
@@ -44,14 +50,14 @@ export default function BlogPage() {
     name: "Apparel Sourcing Blog & Manufacturing Guides",
     description:
       "Free buyer guides on MOQ, factory compliance, capacity planning, and apparel sourcing best practices.",
-    url: "https://sourceloom.com/blog",
+    url: new URL("/blog", siteUrl).toString(),
     mainEntity: {
       "@type": "ItemList",
       itemListElement: blogPosts.slice(0, 10).map((post, index) => ({
         "@type": "BlogPosting",
         position: index + 1,
         headline: post.title,
-        url: `https://sourceloom.com/blog/${post.slug}`,
+        url: new URL(`/blog/${post.slug}`, siteUrl).toString(),
         datePublished: post.publishedAt,
       })),
     },
@@ -87,7 +93,7 @@ export default function BlogPage() {
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1.45fr)_minmax(280px,0.55fr)] lg:px-8 lg:py-14">
         <div className="space-y-10">
           <Card className="overflow-hidden border-border">
-            <div className="relative aspect-[16/9] overflow-hidden">
+            <div className="relative aspect-video overflow-hidden">
               <Image
                 src={featuredPost.heroImage}
                 alt={featuredPost.heroAlt}
@@ -136,7 +142,7 @@ export default function BlogPage() {
             {blogPosts.slice(1).map((post) => (
               <Card key={post.slug} className="overflow-hidden border-border transition-shadow hover:shadow-md">
                 <div className="grid gap-0 md:grid-cols-[220px_minmax(0,1fr)]">
-                  <div className="relative min-h-[180px] overflow-hidden">
+                  <div className="relative min-h-45 overflow-hidden">
                     <Image
                       src={post.heroImage}
                       alt={post.heroAlt}
@@ -204,6 +210,25 @@ export default function BlogPage() {
                 If you are still comparing options, start with the guides. If you are
                 ready to confirm production details, move to the inquiry page.
               </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-bold tracking-tight text-foreground">
+                Manufacturing pillars
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="grid gap-3 sm:grid-cols-2">
+              {pillarPages.map((page) => (
+                <Link
+                  key={page.href}
+                  href={page.href}
+                  className="rounded-xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-primary"
+                >
+                  {page.label}
+                </Link>
+              ))}
             </CardContent>
           </Card>
 

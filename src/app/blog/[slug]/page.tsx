@@ -173,7 +173,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(280px,0.42fr)]">
           <article className="space-y-10">
             <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-              <div className="relative aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-video overflow-hidden">
                 <Image
                   src={post.heroImage}
                   alt={post.heroAlt}
@@ -190,6 +190,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.intro}
               </p>
             </div>
+
+              <div className="rounded-2xl border border-border bg-muted/30 p-5 text-sm leading-7 text-muted-foreground">
+                Start with the relevant service page for the operational details, then use the
+                <Link href="/blog" className="font-semibold text-primary hover:underline">
+                  blog hub
+                </Link>
+                {" "}to compare the supporting guides. For this article, the best next step is
+                <Link href={post.supportPage.href} className="font-semibold text-primary hover:underline">
+                  {" "}
+                  {post.supportPage.label}
+                </Link>
+                .
+              </div>
 
             {post.sections.map((section) => (
               <section key={section.heading} className="space-y-5 border-b border-border pb-10 last:border-b-0 last:pb-0">

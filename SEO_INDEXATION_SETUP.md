@@ -20,7 +20,7 @@
 1. You'll see two options:
    - **URL prefix** (left) ← Pick this
    - Domain (right)
-2. In the URL prefix field, paste: `https://sourceloom.com`
+2. In the URL prefix field, paste: `https://sourceloom.me`
 3. Click **Continue**
 
 ### Step 3: Verify Ownership - HTML File Method (EASIEST)

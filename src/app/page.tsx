@@ -28,7 +28,7 @@ const ProcessTimeline = dynamic(() => import("@/components/ui/ProcessTimeline"),
 export const metadata: Metadata = buildPageMetadata({
   title: "B2B Apparel Manufacturing & Sourcing Platform",
   description:
-    "BSCI-compliant apparel manufacturer | 50 production lines | 1M+ monthly capacity | Low MOQ (500–1000 units) | Knit, woven, denim | Request free evaluation.",
+    "SourceLoom is a B2B apparel manufacturing partner for U.S., Canada, Australia, and EU buyers. Review capabilities, compliance, capacity, and quality controls before you inquire.",
   path: "/",
   keywords: [
     "apparel sourcing platform",

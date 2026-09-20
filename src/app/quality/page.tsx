@@ -7,9 +7,9 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/
 import { ShieldCheck, Search, Eye, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Quality Control Process",
+  title: "Apparel Quality Control & Inspection Process",
   description:
-    "Comprehensive quality control procedures including raw material inspection, inline QC, final inspection, AQL standards, and defect handling protocol.",
+    "Review raw material inspection, inline QC, final inspection, AQL standards, and defect handling before shipment.",
   path: "/quality",
   keywords: [
     "garment quality control",

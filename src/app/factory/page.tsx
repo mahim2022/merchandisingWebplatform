@@ -7,9 +7,9 @@ import { Building2, Users, Zap, Droplets, Factory, Leaf } from "lucide-react";
 import { StatCardData } from "@/types";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Factory Overview",
+  title: "Apparel Factory Overview",
   description:
-    "Company background, facility information, infrastructure, workforce, and sustainability practices. Transparent factory overview for B2B sourcing partners.",
+    "See the facility, workforce, infrastructure, and sustainability systems behind SourceLoom's production for B2B sourcing partners.",
   path: "/factory",
   keywords: [
     "garment factory overview",

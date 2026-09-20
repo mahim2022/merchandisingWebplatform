@@ -10,7 +10,7 @@ Use this file as your actual checklist while setting up Google and Bing indexati
 - [ ] Open https://search.google.com/search-console
 - [ ] Sign in with Google email
 - [ ] Select "URL prefix" option
-- [ ] Enter: `https://sourceloom.com`
+- [ ] Enter: `https://sourceloom.me`
 - [ ] Click "Continue"
 - [ ] Select "HTML file" verification method
 - [ ] **Download the verification file** (e.g., `googleabcd1234.html`)
@@ -55,7 +55,7 @@ Use this file as your actual checklist while setting up Google and Bing indexati
 - [ ] Open https://www.bing.com/webmasters
 - [ ] Sign in with Microsoft account (create if needed)
 - [ ] Click "Add a site" (top right)
-- [ ] Enter: `https://sourceloom.com`
+- [ ] Enter: `https://sourceloom.me`
 - [ ] Click "Add"
 - [ ] Select "Upload an HTML file" verification
 - [ ] **Download the verification file** (usually `BingSiteAuth.xml`)
@@ -78,7 +78,7 @@ Use this file as your actual checklist while setting up Google and Bing indexati
 ### SUBMIT SITEMAP TO BING
 - [ ] In Bing Webmaster Tools, click "Sitemaps" (left menu)
 - [ ] Click "Submit sitemap"
-- [ ] Paste: `https://sourceloom.com/sitemap.xml` (full URL)
+- [ ] Paste: `https://sourceloom.me/sitemap.xml` (full URL)
 - [ ] Click "Submit"
 - [ ] Confirm it appears in the list ✅
 
@@ -100,7 +100,7 @@ Use this file as your actual checklist while setting up Google and Bing indexati
 
 ### Quick Google Index Check
 - [ ] Go to https://google.com
-- [ ] Search: `site:sourceloom.com blog`
+- [ ] Search: `site:sourceloom.me blog`
 - [ ] Do you see blog posts? If yes, Google is indexing ✅
 
 ### Monitor in Google Search Console

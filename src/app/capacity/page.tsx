@@ -8,9 +8,9 @@ import { Factory, Users, Gauge, Calendar } from "lucide-react";
 import { StatCardData } from "@/types";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Production Capacity & Lead Times",
+  title: "Apparel Production Capacity & Lead Times",
   description:
-    "Production capacity: 50 lines, 1M+ monthly output | Lead times: 5–7 days samples, 30–45 days bulk | Real-time tracking | Book your order now.",
+    "Review monthly output, sampling timelines, bulk lead times, and category-specific planning ranges before you set production dates.",
   path: "/capacity",
   keywords: [
     "garment production capacity",

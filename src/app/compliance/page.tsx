@@ -7,9 +7,9 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/
 import { ShieldCheck, Download, Calendar, FileCheck } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Compliance & Certifications",
+  title: "Apparel Compliance, Audits & Certifications",
   description:
-    "Complete list of factory certifications, audit bodies, expiry dates, and compliance documentation for EU, Canadian, and Australian markets.",
+    "Review WRAP, BSCI, Oeko-Tex, ISO, audit history, and export documentation to verify compliant manufacturing before production.",
   path: "/compliance",
   keywords: [
     "WRAP certification",

@@ -7,9 +7,9 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/
 import { Shirt, Scan, Users } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Manufacturing Capabilities",
+  title: "Knit, Woven & Denim Manufacturing Capabilities",
   description:
-    "Knit, woven & denim manufacturing capabilities | 50 production lines | Stitching, embroidery, finishing | MOQ 500–1000 units | Free sampling. Evaluate before inquiry.",
+    "Explore knit, woven, and denim production capabilities, key machinery, finishing options, and practical MOQ ranges before you start sampling.",
   path: "/capabilities",
   keywords: [
     "garment manufacturing capabilities",

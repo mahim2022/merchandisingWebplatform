@@ -22,10 +22,10 @@
 1. Look at the top-left of Google Search Console
 2. You'll see a dropdown showing your property
 3. Click it and look at your options:
-   - `https://sourceloom.com` ← Select THIS one
+   - `https://sourceloom.me` ← Select THIS one
    - `sourceloom.com`
    - `www.sourceloom.com`
-4. Make sure you're in the `https://sourceloom.com` property
+4. Make sure you're in the `https://sourceloom.me` property
 
 ### Fix #3: Wait a Few Minutes
 Sometimes Google needs time to process:

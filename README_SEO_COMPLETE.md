@@ -15,7 +15,7 @@
 - **Enhanced Blog Hub Page** with category filtering and lead magnet CTA
 - **Internal Linking Strategy** connecting posts to service pages
 - **Schema Markup** on all posts (BlogPosting, FAQ, CollectionPage)
-- **Sitemap** auto-generates all blog URLs for search engines
+- **Sitemap** auto-generates all blog URLs for search engines on the current `sourceloom.me` property
 - **Robots.txt** allows full crawling of blog content
 
 ### SEO Technical Setup ✅
@@ -109,9 +109,9 @@ These steps are required to get your blog discoverable:
 11. Additional posts as needed
 
 ### Where They Live
-- Hub: `https://sourceloom.com/blog`
-- Posts: `https://sourceloom.com/blog/[slug]`
-- Sitemap: `https://sourceloom.com/sitemap.xml`
+- Hub: `https://sourceloom.me/blog`
+- Posts: `https://sourceloom.me/blog/[slug]`
+- Sitemap: `https://sourceloom.me/sitemap.xml`
 
 ---
 
