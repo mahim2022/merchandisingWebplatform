@@ -4,9 +4,9 @@ import CTAButton from "@/components/ui/CTAButton";
 import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Low MOQ Clothing Manufacturer",
+  title: "Low MOQ Clothing Manufacturer for Small-Batch Apparel",
   description:
-    "Low MOQ clothing manufacturer for brands that need practical launch quantities with scalable production planning, quality checks, and transparent timelines.",
+    "SourceLoom supports small-batch apparel launches with practical MOQ planning, transparent timelines, and quality controls that scale into repeat production.",
   path: "/low-moq-clothing-manufacturer",
   keywords: [
     "low moq clothing manufacturer",
@@ -16,7 +16,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const breadcrumbSchema = buildBreadcrumbSchema({
-  title: "Low MOQ Clothing Manufacturer",
+  title: "Low MOQ Clothing Manufacturer for Small-Batch Apparel",
   path: "/low-moq-clothing-manufacturer",
 });
 

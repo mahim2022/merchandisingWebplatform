@@ -409,6 +409,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Core Sourcing Pages */}
+      <section className="section-container pattern-dots">
+        <div className="section-header">
+          <h2 className="text-pop">Start With The Core Sourcing Pages</h2>
+          <p className="mt-4 text-lg font-medium text-muted-foreground">
+            Use these pages to evaluate compliance, capacity, factory setup,
+            quality control, and low-MOQ fit before you inquire.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold tracking-tight text-foreground">Compliance</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                Review certifications, audit history, and export documentation.
+              </p>
+              <Link href="/compliance" className="mt-4 inline-flex text-sm font-semibold text-primary hover:underline">
+                Open compliance page
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold tracking-tight text-foreground">Capacity</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                Check production volume, sampling speed, and lead-time planning.
+              </p>
+              <Link href="/capacity" className="mt-4 inline-flex text-sm font-semibold text-primary hover:underline">
+                Open capacity page
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold tracking-tight text-foreground">Factory</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                See the facility, workforce, infrastructure, and sustainability setup.
+              </p>
+              <Link href="/factory" className="mt-4 inline-flex text-sm font-semibold text-primary hover:underline">
+                Open factory page
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold tracking-tight text-foreground">Quality</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                Review raw material checks, inline QC, and AQL inspection steps.
+              </p>
+              <Link href="/quality" className="mt-4 inline-flex text-sm font-semibold text-primary hover:underline">
+                Open quality page
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold tracking-tight text-foreground">Low MOQ</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                Evaluate small-batch launch options and scalable production planning.
+              </p>
+              <Link href="/low-moq-clothing-manufacturer" className="mt-4 inline-flex text-sm font-semibold text-primary hover:underline">
+                Open low MOQ page
+              </Link>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Production Process Timeline */}
       <section className="section-container pattern-grid">
         <div className="section-header">

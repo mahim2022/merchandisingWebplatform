@@ -7,9 +7,9 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/
 import { ShieldCheck, Search, Eye, ClipboardCheck } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Apparel Quality Control & Inspection Process",
+  title: "Apparel Quality Control, QC & AQL Inspection",
   description:
-    "Review raw material inspection, inline QC, final inspection, AQL standards, and defect handling before shipment.",
+    "SourceLoom explains raw material checks, inline QC, AQL inspection standards, and defect handling before shipment.",
   path: "/quality",
   keywords: [
     "garment quality control",
@@ -19,7 +19,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const breadcrumbSchema = buildBreadcrumbSchema({
-  title: "Quality Control Process",
+  title: "Apparel Quality Control, QC & AQL Inspection",
   path: "/quality",
 });
 

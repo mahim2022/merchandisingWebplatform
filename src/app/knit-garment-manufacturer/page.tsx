@@ -4,19 +4,20 @@ import CTAButton from "@/components/ui/CTAButton";
 import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "B2B Knit Garment Manufacturer",
+  title: "Knit Garment Manufacturer for T-Shirts, Hoodies & Basics",
   description:
-    "SourceLoom is a B2B knit garment manufacturer for U.S., Canada, Australia, and EU buyers. Produce t-shirts, polos, hoodies, and sweatshirts with clear MOQ and lead times.",
+    "Find a knit garment manufacturer for T-shirts, polos, hoodies, and sweatshirts with transparent MOQ guidance, quality control, and lead-time planning.",
   path: "/knit-garment-manufacturer",
   keywords: [
-    "b2b knit garment manufacturer",
-    "bulk t-shirt manufacturer",
-    "polo hoodie sweatshirt supplier",
+    "knit garment manufacturer",
+    "t shirt manufacturer",
+    "hoodie sweatshirt supplier",
+    "low MOQ knit apparel manufacturer",
   ],
 });
 
 const breadcrumbSchema = buildBreadcrumbSchema({
-  title: "B2B Knit Garment Manufacturer",
+  title: "Knit Garment Manufacturer for T-Shirts, Hoodies & Basics",
   path: "/knit-garment-manufacturer",
 });
 
@@ -58,10 +59,10 @@ export default function KnitGarmentManufacturerPage() {
       />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-6">B2B Knit Garment Manufacturer</h1>
+          <h1 className="mb-6">Knit Garment Manufacturer for T-Shirts, Hoodies & Basics</h1>
           <p className="text-lg text-muted-foreground">
-            We manufacture knit products for international brands, importers, and
-            sourcing teams with structured QC and predictable delivery.
+            We produce knit apparel for international brands, importers, and sourcing teams with clear MOQ guidance,
+            quality control, and reliable production planning from sampling to shipment.
           </p>
         </div>
       </section>
@@ -72,7 +73,7 @@ export default function KnitGarmentManufacturerPage() {
           <ul className="space-y-2 text-muted-foreground list-disc pl-6">
             <li>T-shirts, polos, hoodies, sweatshirts, and knit basics</li>
             <li>Single jersey, pique, fleece, rib, and interlock fabrics</li>
-            <li>MOQ guidance based on style and color breakdown</li>
+            <li>MOQ guidance based on style, color breakdown, and production complexity</li>
             <li>Sampling support before bulk confirmation</li>
           </ul>
 
@@ -82,6 +83,21 @@ export default function KnitGarmentManufacturerPage() {
             <li>Inline and final quality checks aligned with AQL</li>
             <li>Compliance-first production for export markets</li>
           </ul>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <Link href="/capacity" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
+              Review production capacity and lead times
+            </Link>
+            <Link href="/quality" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
+              Review quality control and inspection standards
+            </Link>
+            <Link href="/compliance" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
+              Review certifications and compliance status
+            </Link>
+            <Link href="/low-moq-clothing-manufacturer" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
+              Learn about low MOQ production options
+            </Link>
+          </div>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <CTAButton href="/inquiry" size="lg">

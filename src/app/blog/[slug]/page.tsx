@@ -108,6 +108,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const relatedPosts = getBlogPosts().filter((entry) => post.relatedSlugs.includes(entry.slug));
   const faqSchema = buildFAQSchema(post);
+  const manufacturingPages = [
+    { label: "Compliance", href: "/compliance", description: "Audit history, certifications, and export documentation." },
+    { label: "Capacity", href: "/capacity", description: "Production output, sampling speed, and lead times." },
+    { label: "Factory", href: "/factory", description: "Facility background, workforce, and infrastructure." },
+    { label: "Quality", href: "/quality", description: "QC checkpoints, AQL standards, and defect handling." },
+    { label: "Low MOQ", href: "/low-moq-clothing-manufacturer", description: "Small-batch production and scalable launch planning." },
+  ];
 
   return (
     <div>
@@ -190,6 +197,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.intro}
               </p>
             </div>
+
+            <section className="rounded-2xl border border-border bg-muted/30 p-6 lg:p-8">
+              <h2 className="mb-4 text-2xl font-bold tracking-tight text-foreground">
+                Related manufacturing pages
+              </h2>
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {manufacturingPages.map((page) => (
+                  <Link
+                    key={page.href}
+                    href={page.href}
+                    className="rounded-xl border border-border bg-background p-4 transition-colors hover:bg-accent"
+                  >
+                    <div className="text-base font-semibold text-foreground">{page.label}</div>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">{page.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
 
               <div className="rounded-2xl border border-border bg-muted/30 p-5 text-sm leading-7 text-muted-foreground">
                 Start with the relevant service page for the operational details, then use the

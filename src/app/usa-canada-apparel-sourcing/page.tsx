@@ -4,9 +4,9 @@ import CTAButton from "@/components/ui/CTAButton";
 import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Apparel Manufacturing Partner for USA & Canada",
+  title: "Apparel Manufacturing for USA & Canada Buyers",
   description:
-    "Apparel manufacturing partner for USA and Canada brands seeking compliant production, practical lead-time planning, and clear communication from inquiry to shipment.",
+    "SourceLoom helps USA and Canada brands source compliant apparel production with practical lead times, clear communication, and buyer-focused support.",
   path: "/usa-canada-apparel-sourcing",
   keywords: [
     "apparel manufacturer for usa and canada",
@@ -16,7 +16,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const breadcrumbSchema = buildBreadcrumbSchema({
-  title: "Apparel Manufacturing Partner for USA & Canada",
+  title: "Apparel Manufacturing for USA & Canada Buyers",
   path: "/usa-canada-apparel-sourcing",
 });
 

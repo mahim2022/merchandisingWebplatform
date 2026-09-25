@@ -6,9 +6,9 @@ export type BlogSection = {
 };
 
 export type FAQItem = {
-  question: string;
+    title: "European Apparel Sourcing Compliance Guide for Buyers",
   answer: string;
-};
+      "A practical guide for European apparel buyers covering compliance, documentation, supplier checks, and sourcing decisions before production.",
 
 export type BlogPost = {
   slug: string;
@@ -35,9 +35,9 @@ export type BlogPost = {
 const blogPosts: BlogPost[] = [
   {
     slug: "how-to-choose-bangladesh-apparel-manufacturer",
-    title: "How to Choose the Right Bangladesh Apparel Manufacturer for Your Brand",
+    title: "How to Choose a Bangladesh Apparel Manufacturer for Your Brand",
     excerpt:
-      "A comprehensive buyer guide to evaluating Bangladesh factories, understanding MOQ and compliance, avoiding common mistakes, and finding a reliable long-term partner.",
+      "A buyer guide to selecting a Bangladesh apparel manufacturer, evaluatingMOQ, compliance, quality, and long-term fit before production starts.",
     category: "Sourcing",
     readTime: "9 min read",
     publishedAt: "2026-05-06",
@@ -223,9 +223,9 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "moq-for-apparel-production",
-    title: "How to Choose the Right MOQ for Apparel Production",
+    title: "Low MOQ Apparel Manufacturing Guide for Small Brands",
     excerpt:
-      "A practical guide to matching minimum order quantity with fabric type, style complexity, and launch risk.",
+      "Learn how to set practical minimum order quantities, balance launch risk, and choose a clothing manufacturer that supports small-batch apparel production.",
     category: "MOQ",
     readTime: "5 min read",
     publishedAt: "2026-05-06",
@@ -240,6 +240,8 @@ const blogPosts: BlogPost[] = [
       "apparel MOQ guide",
       "minimum order quantity clothing",
       "low MOQ apparel manufacturer",
+      "small batch apparel production",
+      "clothing manufacturer low MOQ",
     ],
     intro:
       "MOQ should not be treated as a random factory rule. It is a planning tool that tells you whether a style is ready for launch, whether the margin works, and how much complexity the factory has to absorb.",
@@ -540,9 +542,9 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "usa-canada-apparel-sourcing-guide",
-    title: "Nearshoring Apparel: Why Source from USA and Canada Factories",
+    title: "USA & Canada Apparel Sourcing Guide for Buyers",
     excerpt:
-      "A guide for brands considering domestic manufacturing on the continent and the economics that make it viable.",
+      "A practical guide to sourcing apparel from the USA and Canada, including lead times, compliance, MOQ trade-offs, and when nearshoring makes sense.",
     category: "Sourcing",
     readTime: "6 min read",
     publishedAt: "2026-05-04",

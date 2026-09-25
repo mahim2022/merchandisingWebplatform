@@ -4,19 +4,20 @@ import CTAButton from "@/components/ui/CTAButton";
 import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Woven Apparel Manufacturer for USA Buyers",
+  title: "Woven Apparel Manufacturer USA | Shirts, Pants & Workwear",
   description:
-    "Woven apparel manufacturer supporting U.S. buyers with shirts, pants, jackets, and workwear production. Structured costing, MOQ planning, and quality control.",
+    "Source woven shirts, trousers, jackets, and workwear from a manufacturer supporting USA buyers with MOQ planning, quality control, and export-ready production.",
   path: "/woven-apparel-manufacturer-usa",
   keywords: [
     "woven apparel manufacturer usa",
     "woven shirt and pants supplier",
     "workwear manufacturer for brands",
+    "USA woven garment supplier",
   ],
 });
 
 const breadcrumbSchema = buildBreadcrumbSchema({
-  title: "Woven Apparel Manufacturer for USA Buyers",
+  title: "Woven Apparel Manufacturer USA | Shirts, Pants & Workwear",
   path: "/woven-apparel-manufacturer-usa",
 });
 
@@ -58,10 +59,10 @@ export default function WovenApparelManufacturerUsaPage() {
       />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-6">Woven Apparel Manufacturer for USA Buyers</h1>
+          <h1 className="mb-6">Woven Apparel Manufacturer USA | Shirts, Pants & Workwear</h1>
           <p className="text-lg text-muted-foreground">
-            Source woven products with clear production planning, compliance
-            readiness, and practical communication from sampling to shipment.
+            Source woven garments for U.S. buyers with practical MOQ planning, clear lead times, and production controls
+            that support quality and consistency from sample approval to shipment.
           </p>
         </div>
       </section>
@@ -82,6 +83,21 @@ export default function WovenApparelManufacturerUsaPage() {
             <li>Inline quality controls across key operations</li>
             <li>Final inspection before shipment handover</li>
           </ul>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <Link href="/usa-canada-apparel-sourcing" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
+              Explore USA and Canada sourcing support
+            </Link>
+            <Link href="/capacity" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
+              Review production capacity and lead times
+            </Link>
+            <Link href="/quality" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
+              Review quality control and AQL standards
+            </Link>
+            <Link href="/compliance" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
+              Review compliance and certifications
+            </Link>
+          </div>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <CTAButton href="/inquiry" size="lg">
