@@ -6,9 +6,9 @@ export type BlogSection = {
 };
 
 export type FAQItem = {
-    title: "European Apparel Sourcing Compliance Guide for Buyers",
+  question: string;
   answer: string;
-      "A practical guide for European apparel buyers covering compliance, documentation, supplier checks, and sourcing decisions before production.",
+};
 
 export type BlogPost = {
   slug: string;
