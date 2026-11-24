@@ -105,7 +105,7 @@ export default function BlogPage() {
             </div>
             <CardContent className="p-6 lg:p-8">
               <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                <Badge variant="secondary">Featured / Pillar Post</Badge>
+                <Badge variant="secondary">Featured Article</Badge>
                 <span className="inline-flex items-center gap-2">
                   <CalendarDays className="h-4 w-4" />
                   {new Date(featuredPost.publishedAt).toLocaleDateString("en-US", {
@@ -129,7 +129,7 @@ export default function BlogPage() {
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <CTAButton href={`/blog/${featuredPost.slug}`} size="sm">
-                  Read the full guide
+                  Read the full article
                 </CTAButton>
                 <CTAButton href={featuredPost.supportPage.href} variant="outline" size="sm">
                   Open supporting page
