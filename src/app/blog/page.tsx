@@ -202,8 +202,8 @@ export default function BlogPage() {
             </CardHeader>
             <CardContent className="space-y-4 text-sm leading-7 text-muted-foreground">
               <p>
-                This is a buyer-focused guide section, not a news feed. The articles
-                are meant to answer common sourcing questions and connect into the
+                This section combines buyer-focused guides with sourced updates on apparel
+                sourcing developments. Articles connect practical questions with the
                 main manufacturing pages.
               </p>
               <p>
