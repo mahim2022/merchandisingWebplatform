@@ -30,9 +30,42 @@ export type BlogPost = {
   sections: BlogSection[];
   relatedSlugs: string[];
   faqs?: FAQItem[];
+  sources?: { label: string; url: string }[];
+  imageCaption?: string;
 };
 
 const blogPosts: BlogPost[] = [
+  {
+    slug: "eu-digital-product-passport-registry-textile-buyers-2026",
+    title: "EU Digital Product Passport Registry: What Apparel Buyers Should Know",
+    excerpt: "The EU registry is live, but apparel-specific passport rules are still being developed. Here is what buyers can prepare now.",
+    category: "News",
+    readTime: "4 min read",
+    publishedAt: "2026-11-24",
+    updatedAt: "2026-11-24",
+    heroImage: "/images/blog/dpp-illustration.svg",
+    heroAlt: "Illustration of a garment and a digital product information record",
+    imageCaption: "Illustration: a garment and digital product information. This is not a photograph of an EU system or a factory.",
+    supportPage: { label: "Discuss an apparel sourcing brief", href: "/inquiry" },
+    keywords: ["EU digital product passport textiles", "apparel sourcing traceability", "textile DPP registry"],
+    intro: "On 20 July 2026, the European Commission announced that its Digital Product Passport registry and testing environment were live. For apparel buyers, the infrastructure milestone does not itself establish a current textile-specific passport deadline or a final list of required garment data.",
+    takeaways: [
+      "The registry and its testing environment are live; textile-specific requirements remain subject to a future delegated act.",
+      "The Commission's indicative target for adopting the textile act is Q4 2027 and may change.",
+      "Buyers can map their product information and supplier records now, while checking future official rules before setting compliance deadlines."
+    ],
+    sections: [
+      { heading: "What changed", paragraphs: ["The Commission says the registry provides infrastructure to register unique product identifiers and associated metadata, while product data is stored in a decentralised manner. A secure interface and an API are available. The registry will support product groups covered by the Ecodesign for Sustainable Products Regulation and other applicable legislation.", "The registry launch is a system milestone, not a declaration that every apparel product must already carry a passport."] },
+      { heading: "What remains to be decided for apparel", paragraphs: ["Textile apparel is a priority under the 2025–2030 ecodesign working plan. The Commission says the textile-specific passport requirements will be defined in the future delegated act, alongside ecodesign requirements. Its indicative adoption target is the fourth quarter of 2027; this is a target, not a final compliance date.", "The Commission lists possible information such as product identification, fibre composition, care, origin and economic operators. The exact requirements depend on the final legislation and technical specifications. Do not assume that every item on this illustrative list is already mandatory for all garments."] },
+      { heading: "A practical preparation checklist", paragraphs: ["Brands and importers can use the development period to locate reliable information and identify gaps, without treating a preliminary checklist as legal compliance."], bullets: ["Map the product, material and supplier records you already maintain, including who can provide supporting evidence.", "Ask the proposed production partners which documentation they can supply for the specific order and how changes will be recorded.", "Agree responsibility for maintaining information and resolving missing or inconsistent records across the supply chain.", "Monitor the Commission's textile page and seek advice for the final rules applicable to your products and business role."] },
+      { heading: "Discuss a sourcing brief", paragraphs: ["When discussing a garment project, share the product type, material specifications, destination market, approximate quantities and documentation needs. SourceLoom can discuss the proposed development and factory arrangement for the particular brief; any documentation and commercial terms should be confirmed for that order."] }
+    ],
+    sources: [
+      { label: "European Commission: Digital Product Passport Registry launch, 20 July 2026", url: "https://single-market-economy.ec.europa.eu/news/digital-product-passport-registry-now-live-2026-07-20_en" },
+      { label: "European Commission: Textile apparel and the Digital Product Passport", url: "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/textile-apparel_en" }
+    ],
+    relatedSlugs: ["european-apparel-sourcing-compliance-guide", "apparel-compliance-checklist"]
+  },
   {
     slug: "how-to-choose-bangladesh-apparel-manufacturer",
     title: "How to Choose a Bangladesh Apparel Manufacturer for Your Brand",

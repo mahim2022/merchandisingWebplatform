@@ -190,6 +190,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   priority
                 />
               </div>
+              {post.imageCaption && <p className="px-4 py-3 text-sm text-muted-foreground">{post.imageCaption}</p>}
             </div>
 
             <div className="prose prose-neutral max-w-none">
@@ -267,6 +268,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </ul>
             </section>
 
+            {post.sources && (
+              <section className="space-y-3">
+                <h2 className="text-3xl font-bold tracking-tight">Sources</h2>
+                <ul className="space-y-2">{post.sources.map((source) => (
+                  <li key={source.url}><a className="text-primary underline" href={source.url}>{source.label}</a></li>
+                ))}</ul>
+              </section>
+            )}
             {post.faqs && post.faqs.length > 0 && (
               <section className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tight text-foreground">

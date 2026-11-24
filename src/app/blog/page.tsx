@@ -78,13 +78,13 @@ export default function BlogPage() {
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
           <div className="max-w-3xl">
             <Badge variant="secondary" className="mb-4">
-              Free Sourcing Guides
+              Sourcing Guides & News
             </Badge>
             <h1 className="mb-4 text-5xl font-extrabold tracking-tight text-foreground lg:text-6xl">
               Navigate apparel manufacturing with confidence
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-muted-foreground lg:text-xl">
-              Research-backed guides on choosing factories, evaluating capacity, verifying compliance, and managing MOQ. Designed for brands sourcing apparel in Bangladesh, North America, and beyond.
+              Buyer guides and sourced updates on apparel manufacturing, supplier evaluation and trade developments for brands sourcing internationally.
             </p>
           </div>
         </div>
