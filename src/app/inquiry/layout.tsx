@@ -9,19 +9,19 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Submit Production Inquiry",
+  title: "Contact SourceLoom",
   description:
-    "Submit your apparel production requirements. Get capability confirmation, MOQ guidance, lead times & pricing within 24 hours. BSCI-compliant factory.",
+    "Contact SourceLoom about apparel production requirements by email or phone.",
   path: "/inquiry",
   keywords: [
     "apparel production inquiry",
     "garment manufacturing quote",
-    "B2B sourcing request form",
+    "apparel sourcing contact",
   ],
 });
 
 const breadcrumbSchema = buildBreadcrumbSchema({
-  title: "Submit Production Inquiry",
+  title: "Contact SourceLoom",
   path: "/inquiry",
 });
 
@@ -34,10 +34,10 @@ const primaryMarkets = getPrimaryMarkets();
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Submit Production Inquiry",
+  name: "Contact SourceLoom",
   url: `${siteOrigin}/inquiry`,
   description:
-    "Submit your apparel production inquiry and receive capability confirmation, MOQ guidance, and lead-time estimates.",
+    "Contact SourceLoom about apparel production requirements.",
   mainEntity: {
     "@type": "Organization",
     name: siteName,
@@ -64,3 +64,4 @@ export default function InquiryLayout({
     </>
   );
 }
+
