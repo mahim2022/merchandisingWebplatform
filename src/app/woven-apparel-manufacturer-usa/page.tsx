@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTAButton from "@/components/ui/CTAButton";
-import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Woven Apparel Manufacturer USA | Shirts, Pants & Workwear",
+  title: "Woven Apparel Sourcing for US Brands | SourceLoom",
   description:
-    "Source woven shirts, trousers, jackets, and workwear from a manufacturer supporting USA buyers with MOQ planning, quality control, and export-ready production.",
+    "Explore Bangladesh woven apparel sourcing for US brands, from an OEM buyer brief and sample review to order-specific production planning.",
   path: "/woven-apparel-manufacturer-usa",
   keywords: [
     "woven apparel manufacturer usa",
@@ -17,33 +17,8 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const breadcrumbSchema = buildBreadcrumbSchema({
-  title: "Woven Apparel Manufacturer USA | Shirts, Pants & Workwear",
+  title: "Woven Apparel Sourcing for US Brands",
   path: "/woven-apparel-manufacturer-usa",
-});
-
-const faqSchema = buildFaqSchema({
-  questions: [
-    {
-      question: "What woven products do you manufacture?",
-      answer:
-        "We manufacture woven shirts, trousers, jackets, uniforms, and workwear for U.S. buyers.",
-    },
-    {
-      question: "Which woven fabrics do you handle?",
-      answer:
-        "We work with poplin, twill, canvas, oxford, and chambray depending on product requirements.",
-    },
-    {
-      question: "How do you manage woven production quality?",
-      answer:
-        "We use development and PP sample checkpoints, inline controls across operations, and a final inspection before shipment.",
-    },
-    {
-      question: "Can I check woven capacity before ordering?",
-      answer:
-        "Yes. The page and linked capability section provide the context buyers need to evaluate fit, complexity, and lead times.",
-    },
-  ],
 });
 
 export default function WovenApparelManufacturerUsaPage() {
@@ -53,16 +28,12 @@ export default function WovenApparelManufacturerUsaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <section className="section-container gradient-hero">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-6">Woven Apparel Manufacturer USA | Shirts, Pants & Workwear</h1>
+          <h1 className="mb-6">Woven Apparel Sourcing for US Brands</h1>
           <p className="text-lg text-muted-foreground">
-            Source woven garments for U.S. buyers with practical MOQ planning, clear lead times, and production controls
-            that support quality and consistency from sample approval to shipment.
+            SourceLoom helps U.S. buyers develop and source woven garments through manufacturing relationships in Bangladesh.
+            Product fit, quantities and delivery terms are assessed for each order.
           </p>
         </div>
       </section>
@@ -83,6 +54,17 @@ export default function WovenApparelManufacturerUsaPage() {
             <li>Inline quality controls across key operations</li>
             <li>Final inspection before shipment handover</li>
           </ul>
+
+          <h2 className="mb-4 mt-10">What to Include in an OEM Woven Apparel Brief</h2>
+          <p className="text-muted-foreground">
+            Share a tech pack if available, or start with sketches and a reference sample. Include the garment type,
+            fabric composition and weight, measurements and size range, trims, labels and packaging. Add estimated
+            quantities by style and colour, destination and target delivery date so the production route can be assessed.
+          </p>
+          <p className="mt-4 text-muted-foreground">
+            Discuss fabric and construction options, sample approvals, inspection requirements and the proposed production
+            schedule before placing an order. Minimum quantities, costs and timing depend on the agreed specification and factory.
+          </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <Link href="/usa-canada-apparel-sourcing" className="rounded-xl border border-border bg-background p-4 text-sm font-medium text-foreground hover:bg-accent">
