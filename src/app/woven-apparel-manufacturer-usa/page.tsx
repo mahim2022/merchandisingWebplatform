@@ -4,7 +4,7 @@ import CTAButton from "@/components/ui/CTAButton";
 import { buildBreadcrumbSchema, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Woven Apparel Sourcing for US Brands | SourceLoom",
+  title: "Woven Apparel Sourcing for US Brands",
   description:
     "Explore Bangladesh woven apparel sourcing for US brands, from an OEM buyer brief and sample review to order-specific production planning.",
   path: "/woven-apparel-manufacturer-usa",
