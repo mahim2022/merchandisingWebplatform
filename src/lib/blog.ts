@@ -256,7 +256,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "moq-for-apparel-production",
-    title: "Low MOQ Apparel Manufacturing Guide for Small Brands",
+    title: "How to Choose an Apparel Minimum Order Quantity",
     excerpt:
       "Learn how to set practical minimum order quantities, balance launch risk, and choose a clothing manufacturer that supports small-batch apparel production.",
     category: "MOQ",
@@ -266,8 +266,8 @@ const blogPosts: BlogPost[] = [
     heroImage: "/images/home/capability-knit.jpg",
     heroAlt: "Knit garment production and fabric handling",
     supportPage: {
-      label: "Review manufacturing capabilities",
-      href: "/capabilities",
+      label: "Explore low MOQ apparel production",
+      href: "/low-moq-clothing-manufacturer",
     },
     keywords: [
       "apparel MOQ guide",

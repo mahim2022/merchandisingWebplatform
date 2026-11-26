@@ -1,10 +1,11 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import CapabilityTable from "@/components/ui/CapabilityTable";
 import CTAButton from "@/components/ui/CTAButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { buildBreadcrumbSchema, buildFaqSchema, buildPageMetadata } from "@/lib/seo";
-import { ShieldCheck, Download, Calendar, FileCheck } from "lucide-react";
+import { ShieldCheck, Download, FileCheck } from "lucide-react";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Apparel Compliance, Audits & Certifications",
@@ -408,6 +409,13 @@ export default function CompliancePage() {
             </div>
           </CardContent>
         </Card>
+      </section>
+
+      <section className="section-container">
+        <h2 className="mb-3">EU textile traceability update</h2>
+        <p className="max-w-3xl text-muted-foreground">
+          See our <Link className="font-medium text-primary underline underline-offset-4" href="/blog/eu-digital-product-passport-registry-textile-buyers-2026">Digital Product Passport registry update</Link> for what the launch means for apparel buyers and which textile requirements are still being developed.
+        </p>
       </section>
 
       {/* CTA Section */}

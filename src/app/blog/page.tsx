@@ -33,7 +33,9 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 export default function BlogPage() {
   const blogPosts = getBlogPosts();
-  const featuredPost = blogPosts[0];
+  const news = blogPosts.filter((post) => post.category === "News");
+  const guides = blogPosts.filter((post) => post.category !== "News");
+  const featuredPost = guides[0];
   const siteUrl = getSiteUrl();
   const categories = Array.from(new Set(blogPosts.map((post) => post.category)));
   const pillarPages = [
@@ -90,6 +92,25 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {news.length > 0 && (
+        <section aria-labelledby="sourcing-news" className="mx-auto max-w-7xl px-6 pt-10 lg:px-8">
+          <h2 id="sourcing-news" className="text-2xl font-bold tracking-tight">Latest sourcing news</h2>
+          <ul className="mt-4 divide-y divide-border border-y border-border">
+            {news.map((post) => (
+              <li key={post.slug} className="py-4">
+                <time dateTime={post.publishedAt} className="text-sm text-muted-foreground">
+                  {new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeZone: "UTC" }).format(new Date(post.publishedAt))}
+                </time>
+                <h3 className="mt-1 font-semibold">
+                  <Link href={`/blog/${post.slug}`} className="underline-offset-4 hover:underline">{post.title}</Link>
+                </h3>
+                <p className="mt-1 max-w-3xl text-sm text-muted-foreground">{post.excerpt}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1.45fr)_minmax(280px,0.55fr)] lg:px-8 lg:py-14">
         <div className="space-y-10">
           <Card className="overflow-hidden border-border">
@@ -139,7 +160,7 @@ export default function BlogPage() {
           </Card>
 
           <div className="space-y-6">
-            {blogPosts.slice(1).map((post) => (
+            {guides.slice(1).map((post) => (
               <Card key={post.slug} className="overflow-hidden border-border transition-shadow hover:shadow-md">
                 <div className="grid gap-0 md:grid-cols-[220px_minmax(0,1fr)]">
                   <div className="relative min-h-45 overflow-hidden">
