@@ -844,136 +844,40 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "european-apparel-sourcing-compliance-guide",
-    title: "European Apparel Sourcing: Compliance, Sustainability, and Supply Chain Strategy",
-    excerpt:
-      "A guide for European buyers navigating apparel sourcing: compliance requirements, sustainability expectations, nearshoring options, and Bangladesh factory vetting for EU standards.",
+    title: "EU Apparel Manufacturing Compliance: A Buyer Checklist",
+    excerpt: "A practical starting point for EU apparel buyers: fibre labels, supplier evidence, due diligence and developing digital product passport rules.",
     category: "Compliance",
-    readTime: "8 min read",
+    readTime: "5 min read",
     publishedAt: "2026-05-06",
-    updatedAt: "2026-05-06",
+    updatedAt: "2026-11-26",
     heroImage: "/images/home/compliance-audit.png",
-    heroAlt: "European compliance and sustainability standards in apparel manufacturing",
-    supportPage: {
-      label: "Review compliance standards",
-      href: "/wrap-bsci-compliant-factory",
-    },
-    keywords: [
-      "European apparel sourcing compliance",
-      "EU clothing manufacturing standards",
-      "sustainable apparel manufacturing Europe",
-      "BSCI compliant apparel factory",
-      "apparel sourcing Eastern Europe",
-      "Bangladesh manufacturing EU compliance",
-    ],
-    intro:
-      "European buyers face a unique sourcing landscape shaped by strict social compliance, environmental regulations, and growing sustainability expectations. Whether you source from Eastern Europe, Turkey, or Bangladesh, understanding EU requirements and supply chain transparency will set you apart and protect your brand reputation. This guide maps the compliance landscape and helps you build a sourcing strategy aligned with European market demands.",
+    heroAlt: "Illustration of apparel compliance documentation",
+    supportPage: { label: "Discuss your sourcing requirements", href: "/inquiry" },
+    keywords: ["apparel manufacturing compliance", "EU apparel sourcing", "textile labelling", "supplier due diligence"],
+    intro: "EU apparel buyers need to distinguish legal product requirements from the evidence a particular retailer requests. This checklist helps buyers frame questions for a proposed supplier and check current official guidance for their products and markets.",
     takeaways: [
-      "EU regulations (GSP+ benefits, anti-forced labor laws) require documented compliance at every factory level.",
-      "European buyers expect transparency: audit reports, third-party verification, and social impact metrics.",
-      "Nearshoring to Eastern Europe and Turkey offers benefits, but Bangladesh still dominates on cost and capacity.",
-      "The strongest European sourcing strategies combine regions: nearshoring for core/fast-turn, offset production for scale.",
+      "Check fibre composition labelling for the product and each intended EU market.",
+      "An audit or certification can support due diligence, but no single named audit is a universal EU requirement.",
+      "Textile-specific digital product passport requirements are still being developed.",
+      "Confirm documents, factory details and commercial terms for the specific order."
     ],
     sections: [
-      {
-        heading: "EU compliance requirements frame every sourcing decision",
-        paragraphs: [
-          "European regulations are among the world's strictest. The UK Modern Slavery Act, EU Due Diligence Directive, and GSP+ incentive program all require brands to audit, document, and remediate supply chain labor and environmental practices.",
-          "For overseas factories (Bangladesh, Vietnam, India), this means your supplier must have current, third-party audit reports proving compliance with BSCI or equivalent standards. For nearshoring partners in Eastern Europe or Turkey, the expectation is similar but audit frequency and depth may differ.",
-        ],
-        bullets: [
-          "BSCI (Business Social Compliance Initiative): Industry-standard audit for social compliance across Europe and Asia",
-          "SEDEX: Supply chain data platform used by major European retailers for transparency",
-          "WRAP (Worldwide Responsible Accredited Production): Focus on labor rights and ethical manufacturing",
-          "ISO 14001: Environmental management certification increasingly expected by EU brands",
-          "Due Diligence Directive (coming 2026–2027): Mandatory human rights and environmental impact assessments",
-        ],
-      },
-      {
-        heading: "Bangladesh factories serving EU brands: what audits reveal",
-        paragraphs: [
-          "Leading Bangladesh factories that supply European brands (like sportswear and apparel giants) maintain rigorous compliance standards. They understand that EU buyers require recent audits, transparent processes, and documented corrective action plans.",
-          "When vetting a Bangladesh factory for EU compliance, ask for: BSCI audit from the last 12 months, SEDEX membership proof, environmental certifications, and evidence of health & safety investments. Factories that provide these materials are serious about European trade.",
-        ],
-        bullets: [
-          "Most EU-serving Bangladesh factories have audit cycles every 12–18 months",
-          "Corrective action plans should be specific and time-bound, not vague commitments",
-          "Ask about living wage initiatives and worker grievance mechanisms—these matter to EU importers",
-          "Check SEDEX database directly if the factory claims membership",
-        ],
-      },
-      {
-        heading: "Nearshoring to Eastern Europe and Turkey: benefits and trade-offs",
-        paragraphs: [
-          "Poland, Romania, Bulgaria, and Turkey operate in or near EU borders, offering faster communication, easier audits, and simpler supply chain transparency. Production costs are 1.5–2x Bangladesh but faster timelines and fewer audit complications offset the premium for certain use cases.",
-          "Nearshoring makes sense if you need frequent sampling, rapid prototyping, or strong control over factory conditions for your brand story. It is less ideal if you are scaling high-volume generic basics where Bangladesh cost efficiency dominates.",
-        ],
-        bullets: [
-          "Eastern Europe (Poland, Romania): €3.50–6.00 per basic T-shirt (vs. €1.50–2.50 from Bangladesh)",
-          "Turkey: €2.50–5.00 per T-shirt (between Bangladesh and EU cost)",
-          "Lead times: Turkey 15–25 days, EU 20–30 days (vs. 35–45 from Bangladesh)",
-          "Nearshoring + Bangladesh hybrid: Essentials/reorders from nearshore, bulk innovation from Bangladesh",
-        ],
-      },
-      {
-        heading: "Sustainability expectations in the European market",
-        paragraphs: [
-          "European consumers increasingly expect sustainable sourcing information. Beyond compliance audits, brands are expected to address fabric sourcing (organic cotton, recycled materials), water usage, chemical management, and end-of-life textile responsibility.",
-          "Bangladesh is evolving on sustainability (many mills invest in water treatment and chemical safety), but Europe and Turkey still lead on certified organic and recycled material sourcing. Transparent disclosures help with both regions.",
-        ],
-        bullets: [
-          "Organic cotton sourcing: Stronger in India/Turkey/EU-adjacent suppliers",
-          "Recycled fiber production: Growing in Bangladesh but established advantage in Europe",
-          "Water and chemical audits: Request from any factory regardless of region",
-          "Carbon footprint disclosure: Increasingly expected by large EU retailers",
-          "Combine approaches: Bangladesh for base garments, nearshore for premium/sustainable lines",
-        ],
-      },
-      {
-        heading: "Building a compliant EU sourcing strategy",
-        paragraphs: [
-          "Start by auditing your current supplier base for compliance certifications and audit recency. Map products by compliance intensity: basic essentials can use standard BSCI suppliers, premium or home-focused items may need higher scrutiny.",
-          "Create a tiered sourcing plan: Tier 1 for transparent, audited, premium suppliers (nearshore or verified Bangladesh), Tier 2 for cost-optimized bulk (verified Bangladesh factories), Tier 3 for future expansion or specialty categories.",
-        ],
-        bullets: [
-          "Audit all suppliers within 12 months; prioritize Tier 1 to begin",
-          "Build a compliance documentation checklist: audit reports, certifications, corrective action plans, org charts",
-          "Train your team on audit interpretation—a report showing compliance is not enough; you must understand what was audited and how issues were resolved",
-          "Check third-party databases (SEDEX, audit repositories) to verify factory claims",
-          "Update your supply chain risk assessment annually as regulations tighten",
-        ],
-      },
+      { heading: "Start with the product and its destination", paragraphs: ["For textile products sold in the EU, fibre composition labelling rules apply, with specific provisions and exceptions. Check the product category, permitted fibre names, relevant language requirements and any non-textile parts of animal origin against official guidance. Other rules may apply depending on the product and the market.", "Specify the garment, fabric composition, intended countries, age group and end use in your sourcing brief. Agree who will check the label and the final product before it is placed on the market."] },
+      { heading: "Request evidence for the actual production facility", paragraphs: ["Ask who will make and process the order, which facilities are involved and which documents can be supplied. Compare facility names, scope and validity dates with the proposed work. A buyer may request social audit reports, corrective action plans or certificates, but requirements depend on the buyer, product and applicable rules.", "An audit describes an assessment at a point in time; it does not by itself guarantee ongoing compliance. Ask how findings are corrected and verified, and verify any certificate with its issuer where possible."], bullets: ["Identify sewing, washing, printing and other relevant facilities.", "Request recent applicable reports and follow-up on unresolved findings.", "Confirm material claims and the chain of supporting documents for the specific order."] },
+      { heading: "Understand due diligence and future passport rules", paragraphs: ["The EU corporate sustainability due diligence directive applies to companies within its defined scope; it is not a blanket requirement for every apparel buyer to hold a particular factory audit. The Commission says the directive was amended in 2026, with national measures to be applied from 26 July 2029, subject to the stated reporting exception. Check current law and your company's circumstances.", "Textile apparel is a priority under the EU ecodesign framework. The Commission says textile-specific digital product passport requirements will be defined in a future delegated act. Mapping product and supplier records now can help preparation, but the final textile data requirements and compliance dates should not be assumed."] },
+      { heading: "Prepare a useful request for a supplier", paragraphs: ["Share a technical pack or product description, fabrics, estimated quantities, destination markets, target delivery window and any retailer-specific documentation. Ask the proposed supplier to identify gaps and confirm which facilities and evidence are relevant before agreeing production.", "SourceLoom can discuss product development and factory arrangements for a particular brief. Facility documents, order size, price and timing should be confirmed for that project."] }
     ],
     faqs: [
-      {
-        question: "Can I source from Bangladesh if I sell to EU retailers?",
-        answer: "Yes, absolutely. Most major EU retailers source from Bangladesh factories with strong compliance records. The requirement is that the factory must have current BSCI (or equivalent) audits and transparent documentation. Work with agents or factories that understand EU requirements and provide audit reports without hesitation.",
-      },
-      {
-        question: "What is the difference between BSCI, WRAP, and SEDEX?",
-        answer: "BSCI is an audit program (social compliance focus). WRAP is a certification standard (ethical manufacturing). SEDEX is a data platform (transparency and audit library). Most EU-serving factories carry BSCI and SEDEX membership. WRAP is common but not universal.",
-      },
-      {
-        question: "Do I need to visit my Bangladesh factory if selling to Europe?",
-        answer: "Not required, but recommended for first-time partnerships. Audit reports and references from other EU brands provide confidence. A factory visit confirms facility conditions and builds the relationship. Many successful brands start remotely and visit after the first successful order.",
-      },
-      {
-        question: "How does nearshoring to Eastern Europe help with EU compliance?",
-        answer: "Eastern European factories are subject to EU labor law and inspections, reducing audit burden. Communication and sampling are faster. However, cost is significantly higher (1.5–2x Bangladesh). Use nearshoring selectively for core essentials or premium lines, and Bangladesh for high-volume scale.",
-      },
-      {
-        question: "What is the new EU Due Diligence Directive and how does it affect sourcing?",
-        answer: "The directive (effective 2026–2027) requires large companies to map supply chains, identify risks, and implement corrective actions for labor and environmental harm. Start now by documenting your supply chain and requesting audit reports from all factories regardless of region.",
-      },
-      {
-        question: "Which fabric sourcing is considered 'sustainable' by EU standards?",
-        answer: "Organic cotton (certified by GOTS or similar), recycled fiber (GRS standard), and responsibly sourced viscose (FSC) are increasingly standard. Transparency on water usage, chemical management, and carbon footprint matters too. Request sustainable sourcing options from fabric mills and factories; choices vary by region.",
-      },
+      { question: "Does EU law require every apparel factory to have a BSCI audit?", answer: "No single named audit is a universal EU requirement for every apparel factory. Individual customers may require particular audit evidence, and legal obligations depend on the product, company and applicable law." },
+      { question: "Are EU textile digital product passport requirements final?", answer: "The Commission says textile-specific requirements will be set in a future delegated act. Check its current textile guidance for developments." },
+      { question: "What information should I include in a sourcing enquiry?", answer: "Include the garment type, fabric composition, quantities, destination countries, target dates and any buyer-specific testing, audit or documentation needs." }
     ],
-    relatedSlugs: [
-      "apparel-compliance-checklist",
-      "why-source-apparel-bangladesh-not-domestic",
-      "how-to-choose-bangladesh-apparel-manufacturer",
+    sources: [
+      { label: "Your Europe: Textile labelling requirements", url: "https://europa.eu/youreurope/business/product-rules-compliance/textiles-and-footwear/textile-label/index_en.htm" },
+      { label: "European Commission: Corporate sustainability due diligence", url: "https://commission.europa.eu/topics/business-and-industry/company-law-and-corporate-governance/corporate-sustainability-due-diligence_en" },
+      { label: "European Commission: Textile apparel and the digital product passport", url: "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/textile-apparel_en" }
     ],
+    relatedSlugs: ["eu-digital-product-passport-registry-textile-buyers-2026", "apparel-compliance-checklist", "how-to-choose-bangladesh-apparel-manufacturer"]
   },
 ];
 
