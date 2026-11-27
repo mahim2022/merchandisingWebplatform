@@ -36,6 +36,37 @@ export type BlogPost = {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "eu-ecommerce-import-product-identifiers-apparel-2026",
+    title: "EU E-commerce Imports: Product Identifiers for Apparel Sellers",
+    excerpt: "A November 2026 customs reporting change affects qualifying low-value goods sold to EU customers at a distance. Here is what apparel sellers should check.",
+    category: "News",
+    readTime: "4 min read",
+    publishedAt: "2026-11-27",
+    updatedAt: "2026-11-27",
+    heroImage: "/images/blog/eu-import-identifiers.svg",
+    heroAlt: "Illustration of a garment, product label and parcel",
+    imageCaption: "Illustration: product information and an imported parcel; not an official EU document.",
+    supportPage: { label: "Discuss an apparel sourcing brief", href: "/inquiry" },
+    keywords: ["EU ecommerce imports product identifiers", "apparel customs product identifiers", "EU distance sales apparel"],
+    intro: "From 1 November 2026, EU customs requires product identifiers for qualifying goods sold at a distance and imported to EU buyers. The European Commission's detailed guidance focuses on consignments with an intrinsic value not exceeding EUR 150. Apparel brands shipping directly to EU customers should check how their sales and declarations are handled.",
+    takeaways: [
+      "The change concerns qualifying distance sales of imported goods; ordinary business-to-business flows are in principle outside the scope described in Commission guidance.",
+      "A customs declaration can require the seller's product reference and the manufacturer's model or style reference, plus a standardised identifier when one exists.",
+      "The customs declarant needs the information: confirm responsibilities with your platform, logistics provider or customs representative."
+    ],
+    sections: [
+      { heading: "Who should check the change?", paragraphs: ["The Commission describes the requirement as mainly affecting goods imported to customers in the EU through distance sales. Its October guidance says it applies to qualifying imported goods in consignments with an intrinsic value of no more than EUR 150 and that B2B flows are in principle not concerned. Confirm the treatment of your own transaction with your customs representative; do not assume every wholesale shipment is covered."] },
+      { heading: "Which identifiers are involved?", paragraphs: ["The merchant product identifier is the reference used for the product on the seller's website or marketplace. The non-standardised manufacturer identifier links the item to its manufacturer and model, such as a style number. The standardised manufacturer identifier follows an international format, such as an EAN or UPC, when the product has one.", "The Commission says that when a standardised identifier does not exist, the declaration must indicate this using the applicable exemption code. Existing information may already appear in listings, invoices or packaging; check it for each item rather than assuming a new barcode is always required."] },
+      { heading: "What apparel sellers can do now", paragraphs: ["Map the product references used by the store, manufacturer and customs declarant. Make sure the right references travel with order data, and agree who resolves missing or inconsistent information. Ask the platform, carrier or customs representative how they collect and declare it for each qualifying shipment.", "This customs reporting change is separate from the EU Digital Product Passport. Textile-specific passport requirements are still being developed; see our related update for the distinction."] },
+      { heading: "Planning a sourcing order", paragraphs: ["Share your target market, product specifications, expected sales and distribution model, and documentation needs when discussing an order. Confirm the information and commercial terms available for the particular project."] }
+    ],
+    sources: [
+      { label: "European Commission: Product identifiers for e-commerce imports, 3 November 2026", url: "https://taxation-customs.ec.europa.eu/news/product-identifiers-e-commerce-imports-mandatory-1-november-2026-2026-11-03_en" },
+      { label: "European Commission: Guidance for Member States and Trade, October 2026", url: "https://taxation-customs.ec.europa.eu/document/download/053e5b4e-f0be-4f20-9a23-3e3b659a6676_en?filename=Guidance_5_October_2026.pdf" }
+    ],
+    relatedSlugs: ["eu-digital-product-passport-registry-textile-buyers-2026", "european-apparel-sourcing-compliance-guide"]
+  },
+  {
     slug: "eu-digital-product-passport-registry-textile-buyers-2026",
     title: "EU Digital Product Passport Registry: What Apparel Buyers Should Know",
     excerpt: "The EU registry is live, but apparel-specific passport rules are still being developed. Here is what buyers can prepare now.",
@@ -877,7 +908,7 @@ const blogPosts: BlogPost[] = [
       { label: "European Commission: Corporate sustainability due diligence", url: "https://commission.europa.eu/topics/business-and-industry/company-law-and-corporate-governance/corporate-sustainability-due-diligence_en" },
       { label: "European Commission: Textile apparel and the digital product passport", url: "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/textile-apparel_en" }
     ],
-    relatedSlugs: ["eu-digital-product-passport-registry-textile-buyers-2026", "apparel-compliance-checklist", "how-to-choose-bangladesh-apparel-manufacturer"]
+    relatedSlugs: ["eu-ecommerce-import-product-identifiers-apparel-2026", "eu-digital-product-passport-registry-textile-buyers-2026", "apparel-compliance-checklist", "how-to-choose-bangladesh-apparel-manufacturer"]
   },
 ];
 
